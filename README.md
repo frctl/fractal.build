@@ -13,12 +13,14 @@ Fractal can also help you generate 'living' documentation pages for your compone
   - Viewing your component library
   - Creating components
   - Adding documentation pages
-- Components and variants
+- Configuration files
+- Components & variants
 - Documentation pages
-- CLI
-- Web UI
+- Assets
+- Collections
 - Template engines
-- 
+- Command-line interface
+- Web UI
 
 
 ### API
@@ -28,3 +30,8 @@ Fractal can also help you generate 'living' documentation pages for your compone
 - fractal.docs
 - fractal.cli
 - fractal.web
+- Entity
+- Collection
+- Source
+- Server
+- Builder
