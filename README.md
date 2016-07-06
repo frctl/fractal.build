@@ -15,7 +15,15 @@ Fractal can also help you generate 'living' documentation pages for your compone
   - Adding documentation pages
 - Configuration files
 - Components & variants
+  - Configuration options
+  - Using preview layouts
+  - Providing context data
+  - Defining variants
+  - Including sub-components
+  - Statuses
+  - Tips and tricks
 - Documentation pages
+  - Configuration options
 - Assets
 - Collections
 - Template engines
