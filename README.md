@@ -39,7 +39,6 @@ Fractal can also help you generate 'living' documentation pages for your compone
 - fractal.docs
 - fractal.cli
 - fractal.web
-
 - Entity
 - Collection
 - Source
