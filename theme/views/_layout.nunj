@@ -1,0 +1,35 @@
+{% import "_macros.nunj" as nav %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="stylesheet" href="{{ path('/theme/css/main.css') }}">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ frctl.get('project.title') }}</title>
+</head>
+<body>
+
+<div class="Frame">
+
+    <div class="Frame-sidebar">
+
+        <div class="Branding">
+            <a class="Branding-title" href="#">Fractal</a>
+            <p class="Branding-strapline">Guide and API documentation</p>
+        </div>
+
+        <nav class="Navigation">
+        {{ nav.tree(frctl.docs, doc, request) }}
+        </nav>
+
+    </div>
+
+    <div class="Frame-main">
+    {% block page %}{% endblock %}
+    </div>
+
+</div>
+
+</body>
+</html>

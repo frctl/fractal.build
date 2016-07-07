@@ -1,0 +1,18 @@
+{
+  "name": "@frctl/docs",
+  "version": "1.0.0",
+  "description": "Fractal documentation.",
+  "author": "Mark Perkins <mark@clearleft.com> (http://clearleft.com)",
+  "license": "MIT",
+  "dependencies": {
+    "@frctl/fractal": "^1.0.0-beta.0",
+    "@frctl/nunjucks": "^1.0.0-beta.0"
+  },
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sass-glob": "^1.0.5",
+    "normalize.css": "^4.2.0"
+  }
+}

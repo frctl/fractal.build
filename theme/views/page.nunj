@@ -1,0 +1,41 @@
+{% extends "_layout.nunj" %}
+
+{% set pathParam = request.params.path %}
+{% set doc = frctl.docs.find('path', pathParam | default('')) %}
+
+{% if pathParam and not doc %}{{ throw(404, 'Page not found') }}{% endif %}
+
+{% set page = {
+    title: doc.title
+} %}
+
+{% block page %}
+
+<div class="Page">
+
+    <div class="Page-header">
+        <h1 class="Page-title">{{ page.title }}</h1>
+    </div>
+
+    <div class="Page-content Prose">
+
+    {% block pageContent %}
+    {% if doc %}
+        {% set contents = doc.renderWithGlobals(null, { _request: request, _env: frctl.env }) | async(true) %}
+        {% if contents | isError %}
+        <p>
+            {{ contents.message }}
+        </p>
+        {% else %}
+        {{ contents }}
+        {% endif %}
+    {% else %}
+    {{ throw(404, 'Page not found') }}
+    {% endif %}
+    {% endblock %}
+
+    </div>
+
+</div>
+
+{% endblock %}

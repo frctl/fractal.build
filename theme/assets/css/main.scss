@@ -1,0 +1,14 @@
+@import "normalize.css/normalize";
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+@import 'frame';
+@import 'components/**/*.scss';

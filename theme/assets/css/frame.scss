@@ -1,0 +1,15 @@
+.Frame {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.Frame-sidebar {
+    width: 280px;
+    background-color: #f7f7f7;
+    flex-shrink: 0;
+}
+
+.Frame-main {
+    flex-grow: 1;
+}

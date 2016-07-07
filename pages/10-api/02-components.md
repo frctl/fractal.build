@@ -1,0 +1,3 @@
+---
+label: fractal.components
+---
