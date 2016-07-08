@@ -30,8 +30,11 @@ Fractal can also help you generate 'living' documentation pages for your compone
 - Assets
 - Collections
 - Template engines
-- Command-line interface
+- CLI tool
 - Web UI
+- Build tool integration
+  - Gulp
+  - NPM scripts
 
 
 ### API

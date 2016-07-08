@@ -16,7 +16,15 @@ fractal.set('project.title', 'Fractal Documentation');
  * Configure docs.
  */
 
-fractal.docs.engine(require('@frctl/nunjucks')());
+fractal.docs.engine(require('@frctl/nunjucks')({
+    globals: {
+        linkTo: function(handle){
+            fractal.pages.find(handle).then(page => {
+                return `/${page.path}`
+            });
+        }
+    }
+}));
 
 fractal.docs.set('path', `${__dirname}/pages`);
 

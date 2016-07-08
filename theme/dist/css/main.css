@@ -384,7 +384,8 @@ body {
 .Frame-sidebar {
   width: 280px;
   background-color: #f7f7f7;
-  flex-shrink: 0; }
+  flex-shrink: 0;
+  display: none; }
 
 .Frame-main {
   flex-grow: 1; }
