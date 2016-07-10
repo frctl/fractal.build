@@ -1,0 +1,26 @@
+.Header {
+    display: flex;
+    padding: 20px 0;
+}
+
+.Header-brand {
+    text-decoration: none;
+    font-size: 20px;
+    color: $color-text;
+    font-weight: bold;
+}
+
+.Header-nav {
+    margin-left: auto;
+}
+
+.Header-navItems {
+    display: flex;
+    list-style: none;
+}
+
+.Header-navItem {
+    & + & {
+        margin-left: 20px;
+    }
+}

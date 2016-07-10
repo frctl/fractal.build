@@ -1,0 +1,45 @@
+{% extends "_layouts/skeleton.nunj" %}
+
+{% block frame %}
+
+<div class="Frame Frame--sidebar">
+
+    <div class="Frame-inner">
+
+        <div class="Frame-header">
+            <header class="Header">
+                <a class="Header-brand" href="{{ path('/') }}">Fractal</a>
+                <nav class="Header-nav">
+                    <ul class="Header-navItems">
+                        <li class="Header-navItem"><a href="{{ path('/guide') }}">Guide</a></li>
+                        <li class="Header-navItem"><a href="{{ path('/api') }}">API</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+    </div>
+
+    <div class="Frame-body">
+
+        <div class="Frame-inner">
+
+            <div class="Frame-sidebar">
+
+                <nav class="SectionNav">
+                {% block navigation %}{% endblock %}
+                </nav>
+
+            </div>
+
+            <div class="Frame-main">
+            {% block page %}{% endblock %}
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

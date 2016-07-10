@@ -1,0 +1,6 @@
+repository: git@github.com:frctl/docs.git
+
+deploy:
+  branch: master
+  server: fractal
+  domain: fractal.build

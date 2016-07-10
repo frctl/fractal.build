@@ -1,0 +1,34 @@
+.Frame {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+.Frame-header {
+    width: 100%;
+    border-bottom: 1px solid $color-border;
+    padding: 0 30px;
+}
+
+.Frame-inner {
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+}
+
+.Frame-body {
+    padding-top: 30px;
+}
+
+.Frame-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    padding: 20px 30px;
+    border-right: 1px solid $color-border;
+}
+
+.Frame-main {
+    flex-grow: 1;
+    padding: 20px 30px;
+}

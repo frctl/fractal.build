@@ -16,7 +16,16 @@ module.exports = function(options){
     theme.setErrorView('error.nunj');
     theme.addStatic(Path.join(__dirname, 'dist'), '/theme');
 
-    theme.addRoute('/:path(.*?)', {
+    // theme.addRoute('/', {
+    //     handle: 'home',
+    //     view: 'index.nunj'
+    // });
+
+    theme.addRoute('/', {
+        redirect: '/guide'
+    });
+
+    theme.addRoute('/:path(.*)', {
         handle: 'page',
         view: 'page.nunj'
     }, function(app){
@@ -24,7 +33,7 @@ module.exports = function(options){
     });
 
     theme.on('init', function(env, app){
-        env.engine.addFilter('url', (item) => (! item.path ? '/' : theme.urlFromRoute('page', {path: item.path})));
+        env.engine.addFilter('url', (item) => theme.urlFromRoute('page', {path: item.path}) );
     });
 
     return theme;

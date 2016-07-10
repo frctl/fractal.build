@@ -368,39 +368,404 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8; }
+
+.hljs-comment,
+.hljs-quote {
+  color: #998;
+  font-style: italic; }
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #333;
+  font-weight: bold; }
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: #008080; }
+
+.hljs-string,
+.hljs-doctag {
+  color: #d14; }
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #900;
+  font-weight: bold; }
+
+.hljs-subst {
+  font-weight: normal; }
+
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold; }
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: #000080;
+  font-weight: normal; }
+
+.hljs-regexp,
+.hljs-link {
+  color: #009926; }
+
+.hljs-symbol,
+.hljs-bullet {
+  color: #990073; }
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #0086b3; }
+
+.hljs-meta {
+  color: #999;
+  font-weight: bold; }
+
+.hljs-deletion {
+  background: #fdd; }
+
+.hljs-addition {
+  background: #dfd; }
+
+.hljs-emphasis {
+  font-style: italic; }
+
+.hljs-strong {
+  font-weight: bold; }
+
+/* Hack */
+@font-face {
+  font-family: Hack;
+  src: url("../fonts/hack-regular-webfont.woff2") format("woff2"), url("../fonts/hack-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: Hack;
+  src: url("../fonts/hack-bold-webfont.woff2") format("woff2"), url("../fonts/hack-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: Hack;
+  src: url("../fonts/hack-italic-webfont.woff2") format("woff2"), url("../fonts/hack-italic-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: Hack;
+  src: url("../fonts/hack-bolditalic-webfont.woff2") format("woff2"), url("../fonts/hack-bolditalic-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+
+/* Open Sans */
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Italic.woff2") format("woff2"), url("../fonts/OpenSans-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Semibold.woff2") format("woff2"), url("../fonts/OpenSans-Semibold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-SemiboldItalic.woff2") format("woff2"), url("../fonts/OpenSans-SemiboldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+
 *,
 *:after,
 *:before {
-  box-sizing: border-box; }
+  box-sizing: inherit; }
+
+::selection {
+  background-color: rgba(0, 116, 217, 0.075); }
+
+html {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  font: 16px/1.5 "Open Sans", Helvetica, Arial, sans-serif;
+  color: #222;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
 
 body {
-  font-family: sans-serif; }
+  height: 100%;
+  width: 100%; }
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+pre {
+  margin: 0; }
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0; }
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color; }
+
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0; }
+
+iframe {
+  border: 0; }
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a {
+  color: #0074D9;
+  transition: all 0.15s ease-out; }
+  a:active {
+    color: #0074D9; }
+  a:hover {
+    color: #004b8d; }
+
+[tabindex="-1"]:focus {
+  outline: none !important; }
+
+code,
+pre {
+  font-family: Hack, Consolas, Monaco, "Andale Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.71429; }
+
+svg {
+  display: inline-block;
+  vertical-align: text-bottom;
+  fill: currentColor; }
+
+::-webkit-scrollbar {
+  height: 0.125rem;
+  width: 0.125rem; }
+
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0; }
+
+::-webkit-scrollbar-thumb {
+  background: rgba(34, 34, 34, 0.1);
+  border: 0 none transparent;
+  border-radius: 0; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 34, 34, 0.2); }
+
+::-webkit-scrollbar-thumb:active {
+  background: rgba(34, 34, 34, 0.3); }
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0 none transparent;
+  border-radius: 0; }
+
+::-webkit-scrollbar-track:hover {
+  background: transparent; }
+
+::-webkit-scrollbar-track:active {
+  background: transparent; }
+
+::-webkit-scrollbar-corner {
+  background: transparent; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222;
+  font-weight: bold; }
 
 .Frame {
   display: flex;
   min-height: 100vh;
-  width: 100%; }
+  width: 100%;
+  flex-direction: column; }
+
+.Frame-header {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding: 0 30px; }
+
+.Frame-inner {
+  max-width: 1400px;
+  display: flex;
+  flex-direction: row; }
+
+.Frame-body {
+  padding-top: 30px; }
 
 .Frame-sidebar {
   width: 280px;
-  background-color: #f7f7f7;
   flex-shrink: 0;
-  display: none; }
+  padding: 20px 30px;
+  border-right: 1px solid #ddd; }
 
 .Frame-main {
-  flex-grow: 1; }
+  flex-grow: 1;
+  padding: 20px 30px; }
 
 .Code {
   background: #f7f7f7;
   padding: 20px;
   display: block; }
 
-.Page-header {
-  background-color: #ccc;
-  padding: 10px 20px; }
+.Header {
+  display: flex;
+  padding: 20px 0; }
+
+.Header-brand {
+  text-decoration: none;
+  font-size: 20px;
+  color: #222;
+  font-weight: bold; }
+
+.Header-nav {
+  margin-left: auto; }
+
+.Header-navItems {
+  display: flex;
+  list-style: none; }
+
+.Header-navItem + .Header-navItem {
+  margin-left: 20px; }
 
 .Page-title {
-  margin: 0; }
+  margin: 0 0 1em 0; }
 
-.Page-content {
-  padding: 20px; }
+.Prose {
+  font-feature-settings: "liga", "dlig", "kern", "onum";
+  hanging-punctuation: first; }
+  .Prose > * {
+    margin-bottom: 0.75em; }
+  .Prose ul,
+  .Prose ol {
+    padding-left: 1.25em; }
+  .Prose li,
+  .Prose li > ul,
+  .Prose li > ol {
+    margin-bottom: 0.25em; }
+  .Prose ul > li {
+    list-style-type: square; }
+  .Prose ol > li {
+    list-style-type: decimal; }
+  .Prose h1 {
+    font: bold 1.75rem/1.14286 "Open Sans", Helvetica, Arial, sans-serif;
+    font-feature-settings: "dlig" 1;
+    letter-spacing: -0.025em; }
+  .Prose h2 {
+    font: bold 1.3125rem/1.14286 "Open Sans", Helvetica, Arial, sans-serif;
+    font-feature-settings: "dlig" 1;
+    margin-bottom: 1em;
+    color: #222; }
+  .Prose *:not(hr) + h2 {
+    margin-top: 1.5em; }
+  .Prose h3 {
+    font: bold 1.125rem/1.33333 "Open Sans", Helvetica, Arial, sans-serif;
+    font-feature-settings: "dlig" 1;
+    margin-bottom: 0.75em;
+    opacity: 0.8; }
+  .Prose * + h3 {
+    margin-top: 1.5em; }
+  .Prose hr {
+    height: 0;
+    border: 0;
+    border-top: 0.125rem solid #ddd;
+    margin: 2em 0; }
+  .Prose abbr {
+    font-feature-settings: "c2sc"; }
+  .Prose code,
+  .Prose code pre {
+    background-color: #f5f5f5; }
+  .Prose p code,
+  .Prose li code {
+    padding: 0.125rem; }
+  .Prose code pre {
+    padding: 0.3rem 0.5rem;
+    margin: 1rem -0.5rem; }
+  .Prose table {
+    width: 100%;
+    margin: 1rem -0.5rem;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    font-feature-settings: "lnum" 1, "tnum" 1; }
+  .Prose caption {
+    font: normal 0.8125rem/1.53846 "Open Sans", Helvetica, Arial, sans-serif;
+    padding: 0 0.5rem;
+    font-style: italic;
+    text-align: start;
+    color: rgba(34, 34, 34, 0.75);
+    opacity: 0.8; }
+  .Prose td,
+  .Prose th {
+    padding: 0.75em 0.5rem;
+    text-align: start; }
+    [dir="ltr"] .Prose td, [dir="ltr"]
+    .Prose th {
+      text-align: left; }
+    [dir="rtl"] .Prose td, [dir="rtl"]
+    .Prose th {
+      text-align: right; }
+  .Prose tr:nth-child(even) {
+    background-color: rgba(34, 34, 34, 0.05); }
+  .Prose th {
+    background-color: rgba(34, 34, 34, 0.075);
+    border-bottom: 1px solid rgba(34, 34, 34, 0.1); }
+
+.Tree .Tree-item {
+  margin-bottom: 6px; }
+
+.Tree-collectionLabel {
+  margin-bottom: 4px;
+  margin-top: 8px; }
+
+.Tree-depth-2 .Tree-item {
+  margin-left: 20px; }

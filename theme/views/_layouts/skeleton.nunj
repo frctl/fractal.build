@@ -1,4 +1,3 @@
-{% import "_macros.nunj" as nav %}
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -10,26 +9,7 @@
 </head>
 <body>
 
-<div class="Frame">
-
-    <div class="Frame-sidebar">
-
-        <div class="Branding">
-            <a class="Branding-title" href="#">Fractal</a>
-            <p class="Branding-strapline">Guide and API documentation</p>
-        </div>
-
-        <nav class="Navigation">
-        {{ nav.tree(frctl.docs, doc, request) }}
-        </nav>
-
-    </div>
-
-    <div class="Frame-main">
-    {% block page %}{% endblock %}
-    </div>
-
-</div>
+{% block frame %}{% endblock %}
 
 </body>
 </html>

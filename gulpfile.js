@@ -6,23 +6,32 @@ const sassGlob = require('gulp-sass-glob');
 const del      = require('del');
 
 const fractal  = require('./fractal.js');
+const logger = fractal.cli.console;
 
-gulp.task('fractal:start', function(){
-    const server = fractal.web.server({
-        sync: true
-    });
-    server.on('error', err => {
-        fractal.cli.error(err.message);
-    });
-    return server.start();
-});
+/*
+ * Fractal
+ */
 
-gulp.task('fractal:build', function(){
-    const builder = fractal.web.builder();
-    return builder.build().then(() => {
-        fractal.cli.success('Fractal build completed!');
-    });
-});
+ gulp.task('fractal:start', function(){
+     const server = fractal.web.server();
+     server.on('error', err => logger.error(err.message));
+     return server.start().then(() => {
+         logger.success(`Fractal server is now running at ${server.urls.sync.local}`);
+     });
+ });
+
+ gulp.task('fractal:build', function(){
+     const builder = fractal.web.builder();
+     builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
+     builder.on('error', err => logger.error(err.message));
+     return builder.build().then(() => {
+         logger.success('Fractal build completed!');
+     });
+ });
+
+/*
+ * Fonts
+ */
 
 gulp.task('css:process', function() {
   return gulp.src('theme/assets/css/main.scss')
@@ -45,5 +54,27 @@ gulp.task('css:watch', function () {
 
 gulp.task('css', gulp.series('css:clean', 'css:process'));
 
-gulp.task('default', gulp.parallel('css'));
-gulp.task('watch', gulp.parallel('css:watch'));
+/*
+ * Fonts
+ */
+
+gulp.task('fonts:clean', function() {
+    return del(['theme/dist/fonts']);
+});
+
+gulp.task('fonts:copy', function() {
+   return gulp.src('theme/assets/fonts/**/*').pipe(gulp.dest('theme/dist/fonts'));
+});
+
+gulp.task('fonts:watch', function () {
+    gulp.watch([
+        'theme/assets/fonts/**/*',
+    ], gulp.series('fonts'));
+});
+
+gulp.task('fonts', gulp.series('fonts:clean', 'fonts:copy'));
+
+gulp.task('default', gulp.parallel('css', 'fonts'));
+gulp.task('watch', gulp.parallel('css:watch', 'fonts:watch'));
+
+gulp.task('dev', gulp.parallel('default', 'watch', 'fractal:start'));

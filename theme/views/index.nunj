@@ -1,0 +1,16 @@
+{% extends "_layouts/full.nunj" %}
+
+{% block page %}
+
+<h1>Fractal</h1>
+
+<ul>
+    <li><a href="{{ path('/guide') }}">Guide</a></li>
+    <li><a href="{{ path('/api') }}">API</a></li>
+</ul>
+
+{% for doc in frctl.docs.flatten().items() %}
+    <li>{{ doc.path }}</li>
+{% endfor %}
+
+{% endblock %}

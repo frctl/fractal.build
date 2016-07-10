@@ -1,13 +1,18 @@
-{% extends "_layout.nunj" %}
+{% extends "_layouts/standard.nunj" %}
+{% import "_macros.nunj" as nav %}
 
-{% set pathParam = request.params.path %}
-{% set doc = frctl.docs.find('path', pathParam | default('')) %}
+{% set pagePath = request.segments[0] if request.segments | length == 1 else request.params.path %}
+{% set doc = frctl.docs.find('path', pagePath) %}
 
-{% if pathParam and not doc %}{{ throw(404, 'Page not found') }}{% endif %}
+{% if not doc %}{{ throw(404, 'Page not found') }}{% endif %}
 
 {% set page = {
     title: doc.title
 } %}
+
+{% block navigation %}
+{{ nav.tree(frctl.docs.findCollection('name', request.segments[0]), doc, request) }}
+{% endblock %}
 
 {% block page %}
 
@@ -23,14 +28,10 @@
     {% if doc %}
         {% set contents = doc.renderWithGlobals(null, { _request: request, _env: frctl.env }) | async(true) %}
         {% if contents | isError %}
-        <p>
-            {{ contents.message }}
-        </p>
+        <p>{{ contents.message }}</p>
         {% else %}
         {{ contents }}
         {% endif %}
-    {% else %}
-    {{ throw(404, 'Page not found') }}
     {% endif %}
     {% endblock %}
 

@@ -7,29 +7,23 @@ Fractal is installed as a Node module in your project using NPM.
 
 There is also an (optional, but recommended) Command-Line Interface (CLI) tool which can be installed globally on your system, again using NPM.
 
-## Requirements
-
-Fractal requires Node v4.0+ to run.
-
 ## Installing Fractal in your project
 
 If you have not already created a folder for your project, do so now and then run `npm init` from within the folder to initialise your project directory.
 
-Once this is done, run:
+Once this is done, run the following command to install Fractal in your project:
 
-```
+```shell
 npm install --save @frctl/fractal
 ```
 
-to install Fractal in your project.
-
 ## Installing the Fractal CLI tool
 
-Fractal provides a globally-installable CLI tool to make running tasks such as starting the development web server quick and easy. The helper is however _completely optional_ - there are plenty of other options (including direct integration with Gulp, NPM scripts or other build tools) if you don't want to use the CLI tool.
+Fractal provides a globally-installable CLI tool to make running tasks such as starting the development web server quick and easy. This tool is completely optional - there are plenty of other options (including direct integration with Gulp, NPM scripts or other build tools) if you don't want to use it.
 
-To install the Fractal CLI, run the following command from your terminal:
+To install the Fractal CLI tool, run the following command from your terminal:
 
-```
+```shell
 npm i -g @frctl/fractal
 ```
 

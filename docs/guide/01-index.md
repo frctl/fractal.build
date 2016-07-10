@@ -6,13 +6,17 @@ Fractal is a tool to help you **build**, **document** and **integrate** componen
 
 Fractal can also help you generate 'living' documentation pages for your component library to ensure that your components and documentation never need to go out of sync again.
 
+## Requirements
+
+Fractal requires Node v4.0+ to run.
+
 ### Guide
 
 - Installation
   - Global CLI helper
   - Per-project installation
 - Getting Started
-  - Configuring your project
+  - Setting up your project
   - Viewing your component library
   - Creating components
   - Adding documentation pages
