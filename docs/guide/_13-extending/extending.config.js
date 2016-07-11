@@ -2,6 +2,5 @@
 
 module.exports = {
 
-    
-
+    'label': 'Extending Fractal',
 };

@@ -9,9 +9,9 @@ In order to be recognised, configuration files must:
 
 Available configuration options depend on the type of the item being configured. See the relevant configuration reference for details:
 
-* [Components]({{ path(linkTo('@guide-components-configuration')) }})
-* [Pages](/docs/documentation/configuration.md)
-* [Collections](/docs/collections.md)
+* {{ linkTo('@components-config', 'Components') }}
+* {{ linkTo('@pages-config', 'Pages') }}
+* {{ linkTo('@collections-config', 'Collection') }}
 
 ## Configuration file formats
 

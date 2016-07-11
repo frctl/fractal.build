@@ -1,16 +1,32 @@
 .Tree {
     .Tree-item {
         margin-bottom: 6px;
+        font-size: 15px;
     }
 }
 
 .Tree-collectionLabel {
-    margin-bottom: 4px;
-    margin-top: 8px;
+    margin-top: 20px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
 }
 
 .Tree-depth-2 {
     .Tree-item {
-        margin-left: 20px;
+        // margin-left: 20px;
+    }
+}
+
+.Tree-entityLink {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+    .Tree-entity.is-current & {
+        color: #666;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }

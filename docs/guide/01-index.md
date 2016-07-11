@@ -1,5 +1,6 @@
 ---
-Fractal docs
+title: Fractal Documentation
+handle: guide
 ---
 
 Fractal is a tool to help you **build**, **document** and **integrate** component libraries into web projects. It's focus is on providing a flexible tool that can be used for both component library development _and_ for helping integrate those components into your site, application or build pipelines.
@@ -10,46 +11,6 @@ Fractal can also help you generate 'living' documentation pages for your compone
 
 Fractal requires Node v4.0+ to run.
 
-### Guide
+## About this guide
 
-- Installation
-  - Global CLI helper
-  - Per-project installation
-- Getting Started
-  - Setting up your project
-  - Viewing your component library
-  - Creating components
-  - Adding documentation pages
-- Configuration files
-- Components & variants
-  - Configuration options
-  - Using preview layouts
-  - Providing context data
-  - Defining variants
-  - Including sub-components
-  - Statuses
-  - Tips and tricks
-- Documentation pages
-  - Configuration options
-- Assets
-- Collections
-- Template engines
-- CLI tool
-- Web UI
-- Build tool integration
-  - Gulp
-  - NPM scripts
-
-
-### API
-
-- fractal
-- fractal.components
-- fractal.docs
-- fractal.cli
-- fractal.web
-- Entity
-- Collection
-- Source
-- Server
-- Builder
+This guide will assume basic knowledge of the command line, Node JS and using NPM to install and manage dependencies on projects.

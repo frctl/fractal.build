@@ -8,13 +8,15 @@
 .Frame-header {
     width: 100%;
     border-bottom: 1px solid $color-border;
-    padding: 0 30px;
+    // padding: 0 30px;
 }
 
 .Frame-inner {
     max-width: 1400px;
     display: flex;
     flex-direction: row;
+    margin: 0 auto;
+    padding: 0 30px;
 }
 
 .Frame-body {
@@ -22,13 +24,18 @@
 }
 
 .Frame-sidebar {
-    width: 280px;
+    width: 250px;
     flex-shrink: 0;
-    padding: 20px 30px;
-    border-right: 1px solid $color-border;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-top: 15px;
+    // border-right: 1px solid $color-border;
 }
 
 .Frame-main {
     flex-grow: 1;
-    padding: 20px 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    max-width: 800px;
+    // padding: 20px 30px;
 }

@@ -1,4 +1,0 @@
----
-label: Overview
-title: Components
----

@@ -2,6 +2,6 @@
 
 module.exports = {
 
-    'prefix': 'guide-pages'
+    'label': 'Fractal CLI',
 
 };

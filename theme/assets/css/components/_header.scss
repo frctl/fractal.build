@@ -1,6 +1,7 @@
 .Header {
     display: flex;
-    padding: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .Header-brand {
@@ -22,5 +23,8 @@
 .Header-navItem {
     & + & {
         margin-left: 20px;
+    }
+    a {
+        text-decoration: none;
     }
 }

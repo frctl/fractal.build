@@ -2,6 +2,6 @@
 
 module.exports = {
 
-    
+    'label': 'Documentation Pages'
 
 };

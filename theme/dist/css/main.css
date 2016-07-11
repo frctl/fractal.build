@@ -632,26 +632,30 @@ h6 {
 
 .Frame-header {
   width: 100%;
-  border-bottom: 1px solid #ddd;
-  padding: 0 30px; }
+  border-bottom: 1px solid #ddd; }
 
 .Frame-inner {
   max-width: 1400px;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 0 30px; }
 
 .Frame-body {
   padding-top: 30px; }
 
 .Frame-sidebar {
-  width: 280px;
+  width: 250px;
   flex-shrink: 0;
-  padding: 20px 30px;
-  border-right: 1px solid #ddd; }
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-top: 15px; }
 
 .Frame-main {
   flex-grow: 1;
-  padding: 20px 30px; }
+  padding-left: 30px;
+  padding-bottom: 30px;
+  max-width: 800px; }
 
 .Code {
   background: #f7f7f7;
@@ -660,7 +664,8 @@ h6 {
 
 .Header {
   display: flex;
-  padding: 20px 0; }
+  padding-top: 20px;
+  padding-bottom: 20px; }
 
 .Header-brand {
   text-decoration: none;
@@ -677,6 +682,9 @@ h6 {
 
 .Header-navItem + .Header-navItem {
   margin-left: 20px; }
+
+.Header-navItem a {
+  text-decoration: none; }
 
 .Page-title {
   margin: 0 0 1em 0; }
@@ -725,6 +733,10 @@ h6 {
   .Prose code,
   .Prose code pre {
     background-color: #f5f5f5; }
+  .Prose .lang-tree *,
+  .Prose .lang-plain * {
+    font-weight: normal !important;
+    color: #222 !important; }
   .Prose p code,
   .Prose li code {
     padding: 0.125rem; }
@@ -759,13 +771,25 @@ h6 {
   .Prose th {
     background-color: rgba(34, 34, 34, 0.075);
     border-bottom: 1px solid rgba(34, 34, 34, 0.1); }
+  .Prose blockquote p {
+    color: rgba(34, 34, 34, 0.6);
+    font-style: italic; }
 
 .Tree .Tree-item {
-  margin-bottom: 6px; }
+  margin-bottom: 6px;
+  font-size: 15px; }
 
 .Tree-collectionLabel {
-  margin-bottom: 4px;
-  margin-top: 8px; }
+  margin-top: 20px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px; }
 
-.Tree-depth-2 .Tree-item {
-  margin-left: 20px; }
+.Tree-entityLink {
+  text-decoration: none; }
+  .Tree-entityLink:hover {
+    text-decoration: underline; }
+  .Tree-entity.is-current .Tree-entityLink {
+    color: #666; }
+    .Tree-entity.is-current .Tree-entityLink:hover {
+      text-decoration: none; }

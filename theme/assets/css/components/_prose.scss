@@ -66,6 +66,12 @@
         background-color: #f5f5f5;
     }
 
+    .lang-tree *,
+    .lang-plain * {
+        font-weight: normal !important;
+        color: $color-text !important;
+    }
+
     p code,
     li code {
         padding: 0.125rem;
@@ -110,5 +116,12 @@
     th {
         background-color: rgba($color-text, 0.075);
         border-bottom: 1px solid rgba($color-text, 0.1);
+    }
+
+    blockquote {
+        p {
+            color: rgba($color-text, 0.6);
+            font-style: italic;
+        }
     }
 }
