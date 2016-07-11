@@ -9,9 +9,9 @@ In order to be recognised, configuration files must:
 
 Available configuration options depend on the type of the item being configured. See the relevant configuration reference for details:
 
-* {{ linkTo('@components-config', 'Components') }}
-* {{ linkTo('@pages-config', 'Pages') }}
-* {{ linkTo('@collections-config', 'Collection') }}
+* {{ link('@components-config', 'Components') }}
+* {{ link('@pages-config', 'Pages') }}
+* {{ link('@collections-config', 'Collection') }}
 
 ## Configuration file formats
 
@@ -23,7 +23,7 @@ The latter is recommended as it offers a lot more flexibility, but you may want 
 
 Configuration files authored in this format must have a filename that looks like `item-name.config.js`.
 
-Using the JavaScript (CommonJS) module format for your configuration files is a little more involved than using JSON or YAML, but is a **lot more powerful** as it allows you to do things like dynamically generating component [context data](/docs/components/context.md).
+Using the JavaScript (CommonJS) module format for your configuration files is a little more involved than using JSON or YAML, but is a **lot more powerful** as it allows you to do things like dynamically generating component {{ link('@context-data', 'context data') }}
 
 The file itself should be in the format of a Node CommonJS-style module that exports a configuration object. If you don't know what that is, don't worry! Just make sure it's contents looks like this:
 
@@ -46,11 +46,11 @@ module.exports = {
 };
 ```
 
-> As this is JavaScript and not JSON, the exported object doesn't need to conform to the JSON specification's strict syntax rules to do for things like double quoting keys and so on.
+> As this is JavaScript and not JSON, the exported object doesn't need to conform to the JSON specification's strict syntax rules for things like double quoting keys and so on.
 
 Because it is just a JavaScript file, you can do things like use JavaScript to generate your context data for you, should you need to. Additionally, because it is imported as a NodeJS module, you can also `require` any third party NPM modules (or even your own module files) to help with any data-generation - including doing things like fetching data form external APIs.
 
-See the guide on [Dynamic Context Generation](/docs/guides/dynamic-context.md) for more details on ways to make use of this powerful feature.
+See the {{ link('@context-data', 'context data documentation') }} for more details on ways to make use of this powerful feature.
 
 ### JSON format
 
@@ -87,7 +87,7 @@ context:
 
 ## Configuration inheritance
 
-Some configuration items will have their values *inherited* from upstream collections or [project settings](/docs/project-settings.md) if the values are not set in the item's configuration file directly. This can also be thought of a *cascade* of configuration values from any [global settings](/docs/project-settings.md) (in your fractal.js file) down through any nested collection configurations and into the item itself.
+Some configuration items will have their values *inherited* from upstream collections or their default settings if the values are not set in the item's configuration file directly. This can also be thought of a *cascade* of configuration values from their default settings down through any nested collection configurations and into the item itself.
 
 Whilst this is a somewhat advanced concept, it can often be very useful to save having to set the same configuration values on multiple items. For example, if all components in a collection need to have their status set to `wip` then rather than having to set it on each individual component you can just set it in the collection's configuration file and it will cascade down to the components. You can then override it on selected components if necessary.
 
@@ -99,7 +99,7 @@ Properties with primitive (i.e. non-object) values, if specified on a downstream
 
 1. Check if it is set directly in the component's configuration file. If so, use that.
 2. Otherwise, recursively work upwards to check any parent collections to see if any of them have a status set in it's configuration. If one is found to have a `status` specified, stop and use that.
-3. If no value for the `status` is found, use the default value (which may or may not have been overridden in the global `fractal.js` settings file).
+3. If no value for the `status` is found, use the default value (which may or may not have been overridden in a `fractal.js` file or similar).
 
 ### Properties with object and array values
 
@@ -112,7 +112,7 @@ Similarly, context data is inherited and merged from upstream sources. For examp
 ```js
 // in the fractal.js configuration file
 
-fractal.set('components.default.context', {
+fractal.components.set('default.context', {
 	'background': 'sparkly'
 });
 

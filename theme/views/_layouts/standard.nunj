@@ -6,11 +6,12 @@
 
     <div class="Frame-header">
         <header class="Header Frame-inner">
-            <a class="Header-brand" href="{{ path('/') }}">Fractal</a>
+            <a class="Header-brand" href="{{ path('/') }}">Fractal <span class="Header-version">v{{ frctl.get('project.version') }}</span></a>
             <nav class="Header-nav">
                 <ul class="Header-navItems">
                     <li class="Header-navItem"><a href="{{ path('/guide') }}">Guide</a></li>
-                    <li class="Header-navItem"><a href="{{ path('/api') }}">API</a></li>
+                    <li class="Header-navItem"><a href="{{ path('/api') }}">API Docs</a></li>
+                    {# <li class="Header-navItem"><a href="{{ path('/development') }}">Development</a></li> #}
                 </ul>
             </nav>
         </header>

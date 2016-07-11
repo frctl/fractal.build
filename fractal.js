@@ -11,6 +11,8 @@ const fractal = module.exports = require('@frctl/fractal').create();
  */
 
 fractal.set('project.title', 'Fractal Documentation');
+fractal.set('project.version', '1.0.0-beta');
+fractal.set('project.tag', '@beta');
 
 /*
  * Configure docs.
@@ -18,12 +20,15 @@ fractal.set('project.title', 'Fractal Documentation');
 
 fractal.docs.engine(require('@frctl/nunjucks')({
     globals: {
-        linkTo: function(handle, linkText){
-            const pathify = this.env.getFilter('path');
-            const page = fractal.docs.find(handle);
-            let path   = page ? pathify.call(this, `/${page.path}`) : '#';
-            linkText   = linkText || page.label;
-            return `[${linkText}](${path})`;
+        link: function(handleAnchor, linkText){
+            const handleParts = handleAnchor.split('#');
+            const handle      = handleParts[0];
+            const anchor      = handleParts[1] ? `#${handleParts[1]}` : '';
+            const pathify     = this.env.getFilter('path');
+            const page        = fractal.docs.find(handle);
+            let path          = page ? pathify.call(this, `/${page.path}`) : '';
+            linkText          = linkText || page.label;
+            return `[${linkText}](${path}${anchor})`;
         },
         image: function(srcPath, altText){
             altText = altText || '';

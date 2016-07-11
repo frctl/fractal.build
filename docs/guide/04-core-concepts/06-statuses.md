@@ -1,7 +1,7 @@
 
-{{ linkTo('@components', 'Components') }} and {{ linkTo('@docs', 'documentation pages') }} can have statuses associated with them.
+{{ link('@components', 'Components') }} and {{ link('@docs', 'documentation pages') }} can have statuses associated with them.
 
-Each status has a colour and a label that can be displayed in the {{ linkTo('@web', 'web UI') }} (and other places) to help people quickly understand the status of each component.
+Each status has a colour and a label that can be displayed in the {{ link('@web', 'web UI') }} (and other places) to help people quickly understand the status of each component.
 
 Fractal defines some default statuses, but you are free to define your own to suit the needs of your project, or customise the colours and labels associated with these statuses.
 
@@ -15,7 +15,7 @@ A default status can be set globally for both components and documentation pages
 fractal.components.set('default.status', 'wip');
 ```
 
-By default the available options are `'ready'`, `'wip'` and `'prototype'`.
+By default the available options are `ready`, `wip` and `prototype`.
 
 
 ### Documentation pages
@@ -24,18 +24,20 @@ By default the available options are `'ready'`, `'wip'` and `'prototype'`.
 fractal.docs.set('default.status', 'draft');
 ```
 
-By default the available options are `'ready'` and `'draft'`.
+By default the available options are `ready` and `draft`.
 
 ## Setting the status of an item
 
-You can specify a status for an item in it's {{ linkTo('@configuration-files', 'configuration file') }} (or in the YAML front-matter for documentation pages). For example:
+You can specify a status for an item in it's {{ link('@configuration-files', 'configuration file') }} (or in the YAML front-matter for documentation pages). For example:
 
-```yaml
-# component.config.yml
-status: wip
+```js
+// component.config.json
+{
+	"status": "wip"
+}
 ```
 
-A status can also be defined for a {{ linkTo('@collections', 'collection' ) }}; in this case the status will automatically be applied to all children unless specifically overridden on a case-by-case basis.
+A status can also be defined for a {{ link('@collections', 'collection' ) }}; in this case the status will automatically be applied to all children unless specifically overridden on a case-by-case basis.
 
 
 ## Custom statuses

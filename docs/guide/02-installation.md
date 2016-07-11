@@ -13,18 +13,18 @@ If you have not already created a folder for your project, do so now and then ru
 
 Once this is done, run the following command to install Fractal in your project:
 
-```shell
-npm install --save @frctl/fractal
+```plain
+npm install --save @frctl/fractal{{ _config.project.tag }}
 ```
 
 ## Installing the Fractal CLI tool
 
-Fractal provides a globally-installable CLI tool to make running tasks such as starting the development web server quick and easy. This tool is completely optional - there are plenty of other options (including direct integration with {{ linkTo('@guide-build-tools', 'Gulp, NPM scripts or other build tools') }}) if you don't want to use it.
+Fractal provides a globally-installable CLI tool to make running tasks such as starting the development web server quick and easy. This tool is completely optional - there are plenty of other options (including direct integration with {{ link('@build-tools', 'Gulp, NPM scripts or other build tools') }}) if you don't want to use it.
 
 To install the Fractal CLI tool, run the following command from your terminal:
 
-```shell
-npm i -g @frctl/fractal
+```plain
+npm i -g @frctl/fractal{{ _config.project.tag }}
 ```
 
-You can then run tasks using the `fractal <task-name>` format from your terminal - see the {{ linkTo('@cli', 'CLI tool documentation') }} for full details.
+You can then run tasks using the `fractal <task-name>` format from your terminal - see the {{ link('@cli', 'CLI tool documentation') }} for full details.

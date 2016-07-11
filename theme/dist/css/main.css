@@ -665,20 +665,26 @@ h6 {
 .Header {
   display: flex;
   padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  align-items: center; }
 
 .Header-brand {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
   color: #222;
   font-weight: bold; }
+
+.Header-version {
+  font-size: 0.7em;
+  color: rgba(34, 34, 34, 0.5); }
 
 .Header-nav {
   margin-left: auto; }
 
 .Header-navItems {
   display: flex;
-  list-style: none; }
+  list-style: none;
+  align-content: center; }
 
 .Header-navItem + .Header-navItem {
   margin-left: 20px; }
@@ -736,7 +742,8 @@ h6 {
   .Prose .lang-tree *,
   .Prose .lang-plain * {
     font-weight: normal !important;
-    color: #222 !important; }
+    color: #222 !important;
+    font-style: normal !important; }
   .Prose p code,
   .Prose li code {
     padding: 0.125rem; }

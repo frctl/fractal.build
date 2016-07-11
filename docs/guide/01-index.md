@@ -1,5 +1,5 @@
 ---
-title: Fractal Documentation
+title: Fractal
 handle: guide
 ---
 
