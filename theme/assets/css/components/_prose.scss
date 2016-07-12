@@ -34,6 +34,8 @@
         @include font(heading);
         margin-bottom: 1em;
         color: $color-heading;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0.5em;
     }
 
     *:not(hr) + h2 {
@@ -98,6 +100,13 @@
         text-align: start;
         color: rgba($color-text, 0.75);
         opacity: 0.8;
+    }
+
+    .Note {
+        margin: 1.5rem 0;
+        > * {
+            margin-bottom: 0.75em;
+        }
     }
 
     td,

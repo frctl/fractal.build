@@ -1,5 +1,7 @@
 'use strict';
 
+const marked = require('marked');
+
 /*
  * Create a new Fractal instance and export it for use elsewhere if required
  */
@@ -20,6 +22,7 @@ fractal.set('project.tag', '@beta');
  */
 
 fractal.docs.engine(require('@frctl/nunjucks')({
+    paths: [`${__dirname}/helpers`],
     globals: {
         link: function(handleAnchor, linkText){
             const handleParts = handleAnchor.split('#');
@@ -39,6 +42,19 @@ fractal.docs.engine(require('@frctl/nunjucks')({
             const pathify = this.env.getFilter('path');
             const path = pathify.call(this, `/${fractal.web.get('assets.mount')}/images/${srcPath}`)
             return `![${altText}](${path})`;
+        }
+    },
+    filters: {
+        md: function(str){
+            return marked(str, {
+                gfm: true,
+                tables: true,
+                breaks: false,
+                pedantic: false,
+                sanitize: false,
+                smartLists: true,
+                smartypants: true
+            });
         }
     }
 }));

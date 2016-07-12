@@ -32,6 +32,12 @@
 .Splash-strapline {
     font-size: 19px;
     margin-bottom: 30px;
+    span {
+        color: #777;
+    }
+    strong {
+        font-weight: normal;
+    }
 }
 
 .Splash-links {

@@ -1,0 +1,17 @@
+.Note {
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+    padding: 15px 15px 17px 15px;
+    :last-child {
+        margin-bottom: 0 !important;
+    }
+    code,
+    code pre {
+        background-color: #fff !important;
+    }
+}
+
+.Note--callout {
+    background-color: #F8FBFF;
+    border-color: #C3DCF8;
+}

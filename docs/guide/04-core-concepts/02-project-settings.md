@@ -2,6 +2,8 @@
 title: Project settings and configuration
 ---
 
+{% import 'macros.nunj' as macros %}
+
 Fractal is very flexible when it comes to things like project structure and organisation, and also offers many ways to customise things like view template engines and themes for the web UI.
 
 Fractal comes with a few sensible defaults, but before you can get your project up and running you will generally need to provide some additional configuration information.
@@ -12,15 +14,17 @@ By convention, project configuration and setup information should be kept in fil
 
 If you are using the Fractal {{ link('@cli', 'CLI tool') }} this file will need to exist (and be set up correctly) before you can run commands on your project.
 
+{% call macros.wrap('<div class="Note Note--callout">', '</div>') -%}
 ### A note on paths
 
-When setting paths to directories in your Fractal configuration, it's possible to specify them relative to the root of your project directory - i.e. `src/components`. However it's recommended that you instead make use of Node's [`__dirname`](https://nodejs.org/docs/latest/api/globals.html#globals_dirname) global to generate full absolute paths that look like:
+When setting paths to directories in your Fractal configuration, it's possible to specify them relative to the root of your project directory - i.e. `src/components`. However it's recommended that you instead make use of Node's [`\__dirname`](https://nodejs.org/docs/latest/api/globals.html#globals_dirname) global to generate full absolute paths that look like:
 
 ```js
 const myPath = __dirname + '/src/components';
 ```
 
 This will make your Fractal installation more portable (and more robust for any later integrations). All examples in this documentation will use this style.
+{%- endcall %}
 
 ### Creating and exporting a new Fractal instance
 

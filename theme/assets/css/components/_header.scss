@@ -26,13 +26,12 @@
     display: flex;
     list-style: none;
     align-content: center;
-}
-
-.Header-navItem {
-    & + & {
-        margin-left: 20px;
-    }
-    a {
-        text-decoration: none;
+    li {
+        & + li {
+            margin-left: 20px;
+        }
+        a {
+            text-decoration: none;
+        }
     }
 }

@@ -47,6 +47,7 @@ gulp.task('css:process', function() {
     .pipe(sass({
         includePaths: 'node_modules'
     }))
+    .on('error', err => console.log(err.message))
     .pipe(gulp.dest('theme/dist/css'));
 });
 

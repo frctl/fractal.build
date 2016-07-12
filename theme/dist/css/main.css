@@ -686,15 +686,27 @@ h6 {
   display: flex;
   list-style: none;
   align-content: center; }
+  .Header-navItems li + li {
+    margin-left: 20px; }
+  .Header-navItems li a {
+    text-decoration: none; }
 
-.Header-navItem + .Header-navItem {
-  margin-left: 20px; }
+.Note {
+  border: 1px solid #ddd;
+  background-color: #f7f7f7;
+  padding: 15px 15px 17px 15px; }
+  .Note :last-child {
+    margin-bottom: 0 !important; }
+  .Note code,
+  .Note code pre {
+    background-color: #fff !important; }
 
-.Header-navItem a {
-  text-decoration: none; }
+.Note--callout {
+  background-color: #F8FBFF;
+  border-color: #C3DCF8; }
 
 .Page-title {
-  margin: 0 0 1em 0; }
+  margin: 0 0 0.9em 0; }
 
 .Page-placeholder {
   font-style: italic;
@@ -724,7 +736,9 @@ h6 {
     font: bold 1.3125rem/1.14286 "Open Sans", Helvetica, Arial, sans-serif;
     font-feature-settings: "dlig" 1;
     margin-bottom: 1em;
-    color: #222; }
+    color: #222;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5em; }
   .Prose *:not(hr) + h2 {
     margin-top: 2em; }
   .Prose h3 {
@@ -768,6 +782,10 @@ h6 {
     text-align: start;
     color: rgba(34, 34, 34, 0.75);
     opacity: 0.8; }
+  .Prose .Note {
+    margin: 1.5rem 0; }
+    .Prose .Note > * {
+      margin-bottom: 0.75em; }
   .Prose td,
   .Prose th {
     padding: 0.75em 0.5rem;
@@ -816,6 +834,10 @@ h6 {
 .Splash-strapline {
   font-size: 19px;
   margin-bottom: 30px; }
+  .Splash-strapline span {
+    color: #777; }
+  .Splash-strapline strong {
+    font-weight: normal; }
 
 .Splash-links {
   display: flex;
@@ -829,8 +851,6 @@ h6 {
 
 .Tree-collectionLabel {
   margin-top: 20px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #ddd;
   margin-bottom: 10px; }
 
 .Tree-entityLink {

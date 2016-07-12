@@ -9,8 +9,7 @@
             <a class="Header-brand" href="{{ path('/') }}">Fractal <span class="Header-version">v{{ frctl.get('project.version') }}</span></a>
             <nav class="Header-nav">
                 <ul class="Header-navItems">
-                    <li class="Header-navItem"><a href="{{ path('/guide') }}">Guide</a></li>
-                    <li class="Header-navItem"><a href="{{ path('/api') }}">API Docs</a></li>
+                    {% include "_partials/section-nav.nunj" %}
                 </ul>
             </nav>
         </header>
