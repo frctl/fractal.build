@@ -29,6 +29,14 @@ const logger = fractal.cli.console;
      });
  });
 
+ gulp.task('fractal:debug', function(){
+     return fractal.load().then(() => {
+         fractal.docs.flatten().each(page => {
+             logger.dump(page.toJSON());
+         });
+     });
+ });
+
 /*
  * Fonts
  */
