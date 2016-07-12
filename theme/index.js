@@ -16,14 +16,14 @@ module.exports = function(options){
     theme.setErrorView('error.nunj');
     theme.addStatic(Path.join(__dirname, 'dist'), '/theme');
 
-    // theme.addRoute('/', {
-    //     handle: 'home',
-    //     view: 'index.nunj'
-    // });
-
     theme.addRoute('/', {
-        redirect: '/guide'
+        handle: 'home',
+        view: 'index.nunj'
     });
+
+    // theme.addRoute('/', {
+    //     redirect: '/guide'
+    // });
 
     theme.addRoute('/:path(.*)', {
         handle: 'page',

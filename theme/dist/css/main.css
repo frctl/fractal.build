@@ -676,7 +676,8 @@ h6 {
 
 .Header-version {
   font-size: 0.7em;
-  color: rgba(34, 34, 34, 0.5); }
+  color: rgba(34, 34, 34, 0.5);
+  font-weight: normal; }
 
 .Header-nav {
   margin-left: auto; }
@@ -785,6 +786,42 @@ h6 {
   .Prose blockquote p {
     color: rgba(34, 34, 34, 0.6);
     font-style: italic; }
+
+.Splash {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.Splash-inner {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 460px; }
+
+.Splash-title {
+  font-size: 60px;
+  margin-bottom: 30px;
+  line-height: 1.0; }
+  .Splash-title span {
+    display: block; }
+
+.Splash-version {
+  font-size: 16px;
+  color: rgba(34, 34, 34, 0.5);
+  display: block;
+  font-weight: normal;
+  margin-bottom: 30px; }
+
+.Splash-strapline {
+  font-size: 19px;
+  margin-bottom: 30px; }
+
+.Splash-links {
+  display: flex;
+  justify-content: center; }
+  .Splash-links li {
+    margin: 0 10px; }
 
 .Tree .Tree-item {
   margin-bottom: 6px;

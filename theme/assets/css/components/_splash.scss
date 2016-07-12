@@ -1,0 +1,43 @@
+.Splash {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Splash-inner {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 460px;
+}
+
+.Splash-title {
+    font-size: 60px;
+    margin-bottom: 30px;
+    line-height: 1.0;
+    span {
+        display: block;
+    }
+}
+
+.Splash-version {
+    font-size: 16px;
+    color: rgba($color-text, 0.5);
+    display: block;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.Splash-strapline {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.Splash-links {
+    display: flex;
+    justify-content: center;
+    li {
+        margin: 0 10px;
+    }
+}

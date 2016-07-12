@@ -2,15 +2,28 @@
 
 {% block page %}
 
-<h1>Fractal</h1>
+<div class="Splash">
 
-<ul>
-    <li><a href="{{ path('/guide') }}">Guide</a></li>
-    <li><a href="{{ path('/api') }}">API</a></li>
-</ul>
+    <div class="Splash-inner">
 
-{% for doc in frctl.docs.flatten().items() %}
-    <li>{{ doc.path }}</li>
-{% endfor %}
+        <h1 class="Splash-title">Fractal</h1>
+
+        <p class="Splash-strapline">
+            <strong>Build</strong>, <strong>document</strong> and <strong>integrate</strong> component libraries into your web projects.
+        </p>
+
+        <div class="Splash-version">v{{ frctl.get('project.version') }}</div>
+
+        <ul class="Splash-links">
+            <li><a href="{{ path('/guide') }}">Guide</a></li>
+            <li><a href="{{ path('/api') }}">API Docs</a></li>
+            <li><a href="https://github.com/frctl/fractal">Github</a></li>
+        </ul>
+
+    </div>
+
+</div>
+
+
 
 {% endblock %}
