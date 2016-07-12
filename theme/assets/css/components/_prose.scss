@@ -37,17 +37,16 @@
     }
 
     *:not(hr) + h2 {
-        margin-top: 1.5em;
+        margin-top: 2em;
     }
 
     h3 {
         @include font(subHeading);
         margin-bottom: 0.75em;
-        opacity: 0.8;
     }
 
     * + h3 {
-        margin-top: 1.5em;
+        margin-top: 2em;
     }
 
     hr {
@@ -81,6 +80,7 @@
     code pre {
         padding: 0.3rem 0.5rem;
         margin: 1rem -0.5rem;
+        overflow: auto;
     }
 
     table {

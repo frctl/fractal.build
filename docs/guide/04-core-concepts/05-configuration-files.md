@@ -87,7 +87,9 @@ context:
 
 ## Configuration inheritance
 
-Some configuration items will have their values *inherited* from upstream collections or their default settings if the values are not set in the item's configuration file directly. This can also be thought of a *cascade* of configuration values from their default settings down through any nested collection configurations and into the item itself.
+Some configuration items will have their values *inherited* from upstream collections or their default settings if the values are not set in the item's configuration file directly.
+
+This can also be thought of a *cascade* of configuration values from their default settings down through any nested collection configurations and into the item itself.
 
 Whilst this is a somewhat advanced concept, it can often be very useful to save having to set the same configuration values on multiple items. For example, if all components in a collection need to have their status set to `wip` then rather than having to set it on each individual component you can just set it in the collection's configuration file and it will cascade down to the components. You can then override it on selected components if necessary.
 

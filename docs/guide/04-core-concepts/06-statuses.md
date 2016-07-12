@@ -113,6 +113,6 @@ You could then assign these new statuses to your components using the values `do
 Alternatively, if you just want to change the label or colour on one of the existing statuses, you can target it specifically by it's key:
 
 ```js
- fractal.components.set('statuses.prototype.color', 'pink');
- fractal.docs.set('statuses.ready.label', 'Good to go!');
+fractal.components.set('statuses.prototype.color', 'pink');
+fractal.docs.set('statuses.ready.label', 'Good to go!');
 ```

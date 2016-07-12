@@ -1,3 +1,3 @@
 ---
-label: Custom commands
+label: Available Commands
 ---

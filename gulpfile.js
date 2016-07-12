@@ -16,7 +16,7 @@ const logger = fractal.cli.console;
      const server = fractal.web.server();
      server.on('error', err => logger.error(err.message));
      return server.start().then(() => {
-         logger.success(`Fractal server is now running at ${server.urls.sync.local}`);
+         logger.success(`Fractal server is now running at ${server.url}`);
      });
  });
 

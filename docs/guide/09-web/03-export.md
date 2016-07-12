@@ -1,4 +1,4 @@
 ---
 label: Exporting to static HTML
-title: Dev Server
+title: Exporting to static HTML
 ---

@@ -30,6 +30,9 @@
         {% if contents | isError %}
         <p>{{ contents.message }}</p>
         {% else %}
+        {% if contents == '' %}
+        <p class="Page-placeholder">Documentation coming soon.</p>
+        {% endif %}
         {{ contents }}
         {% endif %}
     {% endif %}

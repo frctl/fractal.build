@@ -695,6 +695,10 @@ h6 {
 .Page-title {
   margin: 0 0 1em 0; }
 
+.Page-placeholder {
+  font-style: italic;
+  opacity: 0.5; }
+
 .Prose {
   font-feature-settings: "liga", "dlig", "kern", "onum";
   hanging-punctuation: first; }
@@ -721,14 +725,13 @@ h6 {
     margin-bottom: 1em;
     color: #222; }
   .Prose *:not(hr) + h2 {
-    margin-top: 1.5em; }
+    margin-top: 2em; }
   .Prose h3 {
     font: bold 1.125rem/1.33333 "Open Sans", Helvetica, Arial, sans-serif;
     font-feature-settings: "dlig" 1;
-    margin-bottom: 0.75em;
-    opacity: 0.8; }
+    margin-bottom: 0.75em; }
   .Prose * + h3 {
-    margin-top: 1.5em; }
+    margin-top: 2em; }
   .Prose hr {
     height: 0;
     border: 0;
@@ -749,7 +752,8 @@ h6 {
     padding: 0.125rem; }
   .Prose code pre {
     padding: 0.3rem 0.5rem;
-    margin: 1rem -0.5rem; }
+    margin: 1rem -0.5rem;
+    overflow: auto; }
   .Prose table {
     width: 100%;
     margin: 1rem -0.5rem;
