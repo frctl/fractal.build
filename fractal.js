@@ -5,6 +5,7 @@
  */
 
 const fractal = module.exports = require('@frctl/fractal').create();
+const logger = fractal.cli.console;
 
 /*
  * General project configuration.
@@ -28,6 +29,9 @@ fractal.docs.engine(require('@frctl/nunjucks')({
             const page        = fractal.docs.find(handle);
             let path          = page ? pathify.call(this, `/${page.path}`) : '';
             linkText          = linkText || page.label;
+            if (path === '') {
+                logger.error(`Could not create link to ${handleAnchor}`);
+            }
             return `[${linkText}](${path}${anchor})`;
         },
         image: function(srcPath, altText){
