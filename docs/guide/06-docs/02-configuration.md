@@ -1,6 +1,6 @@
 ---
 handle: pages-config
-label: Config reference
+label: Configuration reference
 title: Configuring Documentation Pages
 ---
 

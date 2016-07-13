@@ -1,5 +1,5 @@
 ---
 handle: web-config
-label: Config Reference
+label: Configuration Reference
 title: Web Configuration
 ---

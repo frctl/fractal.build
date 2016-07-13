@@ -1,6 +1,6 @@
 ---
 handle: collections-config
-label: Config Reference
+label: Configuration Reference
 title: Collection Configuration
 ---
 

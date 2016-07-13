@@ -1,5 +1,5 @@
 ---
 handle: cli-config
-label: Config Reference
+label: Configuration Reference
 title: CLI Configuration
 ---

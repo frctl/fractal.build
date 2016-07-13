@@ -1,14 +1,145 @@
 ---
 handle: components-config
-label: Config reference
+label: Configuration reference
 title: Configuring Components
 ---
 
-Components and component {{ link('@collections', 'collections') }} can have their own (optional) configuration files associated with them. {{ link('@variants', 'Component variants') }} are configured within their parent component's configuration file.
+There are a number of global configuration options you can set to determine how Fractal handles components.
 
-If you haven't already, you should read the {{ link('@configuration-files', 'configuration file documentation') }} to learn more about how configuration files need to be named and formatted.
+Additionally, components and component {{ link('@collections', 'collections') }} can also have their own (optional) {{ link('@configuration-files', 'configuration files') }}  associated with them. {{ link('@variants', 'Component variants') }} are configured within their parent component's configuration file.
+
+## Global configuration options
+
+These options can be set on your Fractal instance using the {{ link('@api-components#set', '`fractal.components.set()`') }} method. See the {{ link('@project-settings', 'project settings') }} documentation for more details.
+
+### default.collated
+
+Whether variants should default to being collated in rendered previews.
+
+```js
+fractal.components.set('default.collated', true); // default is false
+```
+
+### default.collator
+
+Default collation function, responsible for collating components.
+
+```js
+fractal.components.set('default.collator', function(markup, item) {
+    return `<!-- Start: @${item.handle} -->\n${markup}\n<!-- End: @${item.handle} -->\n`
+});
+```
+
+### default.context
+
+Global {{ link('@context-data', 'context data') }} that will be made available to all components when rendering previews, unless overridden in a collection or component configuration file.
+
+```js
+fractal.components.set('default.context', {
+    'site-name': 'FooCorp'
+});
+```
+
+### default.display
+
+Default global CSS property key/value pairs that preview UIs *may* choose to use to apply to the preview rendering area.
+
+This *does not* leak into the styling of the component itself; it is just applied to the area (typically an iframe) that the component is previewed within in plugins such as the web preview UI.
+
+```js
+fractal.components.set('default.display', {
+    'max-width': '400px'
+});
+```
+
+### default.prefix
+
+Global prefix to apply to all generated {{ link('@naming#referencing', 'handles') }} unless overridden in a collection or component configuration file.
+
+```js
+fractal.components.set('default.prefix', 'foobar'); // default is null
+```
+
+### default.preview
+
+Which layout (specified by it's {{ link('@naming#referencing', 'handle') }}) to use to when rendering previews of this layout. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details
+
+```js
+fractal.components.set('default.preview', '@my-preview-layout');
+```
+
+### default.status
+
+The status to apply to all components unless overridden in a collection or component configuration file.
+
+```js
+fractal.components.set('default.status', 'wip'); // default is 'ready'
+```
+
+### ext
+
+The file extension that will be used for all component {{ link('@views', 'view templates') }}. Note that this must include the leading `.`
+
+```js
+fractal.components.set('ext', '.handlebars'); // default is '.hbs'
+```
+
+### label
+
+How the collection of components will be referenced in any navigation or similar.
+
+```js
+fractal.components.set('label', 'Patterns'); // default is 'Components'
+```
+
+### path
+
+The path to the directory where your components live.
+
+```js
+fractal.components.set('path', __dirname + '/src/components');
+```
+
+<!-- ### resources -->
+
+### statuses
+
+The set of available statuses that can be assigned to components. See the {{ link('@statuses', 'statuses documentation') }} for details of the default values and how to override them as required.
+
+```js
+fractal.components.set('statuse', {
+    doing: {
+        label: "Doing",
+        description: "I'm doing it.",
+        color: '#F00'
+    },
+    done: {
+        label: "Done",
+        description: "I'm done with this.",
+        color: "green"
+    }
+});
+```
+
+### title
+
+How the collection of components will be referenced in any titles.
+
+```js
+fractal.components.set('title', 'Patterns'); // default is 'Components'
+```
+
+### yield
+
+The name of the variable that will be used in preview layouts as a placeholder for the rendered content. See the {{ link('@preview-layouts', 'preview layouts documentation') }} for more information.
+
+```js
+fractal.components.set('yield', 'rendered_content'); // default is 'yield'
+```
 
 ## Component properties
+
+The following properties can be specified in a component {{ link('@configuration-files', 'configuration file') }}:
 
 ### collated
 
@@ -69,7 +200,7 @@ label: 'Mega Buttons'
 
 Overrides the component name, which is otherwise extracted from the component view filename. Name values must be all lowercase, and contain only alphanumeric characters with hyphens or underscores for word seperators.
 
-Setting this will also have the affect of changing the {{ link('@naming', 'component\'s handle') }}.
+Setting this will also have the affect of changing the {{ link('@naming#referencing', 'component\'s handle') }}.
 
 ```yaml
 name: 'mega-buttons'
@@ -93,11 +224,12 @@ order: 4
 
 ### preview
 
-Which layout (specified by {{ link('@naming', 'handle') }}) to use to when rendering previews of this layout. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details
+Which layout (specified by {{ link('@naming#referencing', 'handle') }}) to use to when rendering previews of this layout. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details
 
 ```yaml
 preview: '@my-preview-layout'
 ```
+
 ### status
 
 The status of a component. See the {{ link('@statuses', 'statuses documentation') }} for information on using and customising component statuses.
@@ -145,7 +277,7 @@ variants:
 ```
 ## Variant properties
 
-Variants can be defined in the parent components configuration file. See the {{ link('@variants', 'variants documentation') }} for full details on creating and configuring variants.
+Variants can be defined in the parent component's configuration file. See the {{ link('@variants', 'variants documentation') }} for full details on creating and configuring variants.
 
 ### context
 
@@ -171,7 +303,7 @@ display:
 
 The name of the variant. This is the only **mandatory property** for variant definitions.
 
-A variant with a name of 'large' that belongs to the component named 'button' will have a {{ link('@naming', 'handle') }} of **@button--large**.
+A variant with a name of 'large' that belongs to the component named 'button' will have a {{ link('@naming#referencing', 'handle') }} of **@button--large**.
 
 ```yaml
 name: 'unicorn'
@@ -187,7 +319,7 @@ notes: "Different from the default component because this one is *funky*."
 
 ### preview
 
-Which layout (specified by it's {{ link('@naming', 'handle') }} to use to when rendering previews of this layout. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details.
+Which layout (specified by it's {{ link('@naming#referencing', 'handle') }} to use to when rendering previews of this layout. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details.
 
 This overrides any the (inherited) `preview` value of the parent component.
 
@@ -244,7 +376,7 @@ display:
 
 ### preview
 
-The default preview layout (specified by it's {{ link('@naming', 'handle') }} that child components should when being rendered as a preview. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details.
+The default preview layout (specified by it's {{ link('@naming#referencing', 'handle') }} that child components should when being rendered as a preview. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details.
 
 ```yaml
 preview: '@my-special-layout'
@@ -252,7 +384,7 @@ preview: '@my-special-layout'
 
 ### prefix
 
-A string to be prefixed on to the generated {{ link('@naming', 'handles') }} of all components (and variants) in that collection.
+A string to be prefixed on to the generated {{ link('@naming#referencing', 'handles') }} of all components (and variants) in that collection.
 
 ```yaml
 prefix: 'atoms'
