@@ -86,7 +86,7 @@ fractal.components.set('ext', '.handlebars'); // default is '.hbs'
 
 ### label
 
-How the collection of components will be referenced in any navigation or similar.
+How the collection of components will be referenced in any navigation.
 
 ```js
 fractal.components.set('label', 'Patterns'); // default is 'Components'
@@ -239,7 +239,6 @@ The status of a component. See the {{ link('@statuses', 'statuses documentation'
 ```yaml
 status: 'wip'
 ```
-* **Choices:** `prototype | wip | ready`
 
 ### title
 
@@ -334,7 +333,6 @@ The status of the variant. Overrides the default status of it's parent component
 ```yaml
 status: 'wip'
 ```
-* **Choices:** `prototype | wip | ready`
 
 ### view
 
@@ -398,7 +396,6 @@ The default status for all children of the collection.
 ```yaml
 status: 'wip'
 ```
-* **Choices:** `prototype | wip | ready`
 
 ### tags
 

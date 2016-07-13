@@ -4,13 +4,96 @@ label: Configuration reference
 title: Configuring Documentation Pages
 ---
 
-Documentation pages and doc {{ link('@collections', 'collections') }} can have their own (optional) configuration files associated with them. Alternatively, documentation pages can also specify their configuration in a {{ link('@docs#yaml-front-matter', 'YAML front-matter section') }} of the page itself. See the {{ link('@docs#yaml-front-matter', 'documentation overview') }} for more information.
+There are a number of global configuration options you can set to determine how Fractal handles documentation pages.
 
-If you are using standalone configuration files, you should read the {{ link('@configuration-files', 'configuration file documentation') }} to learn more about how configuration files need to be named and formatted.
+Additionally, documentation pages and {{ link('@collections', 'collections') }} can have their own (optional) configuration files associated with them; or if you prefer pages can specify their configuration in a {{ link('@docs#yaml-front-matter', 'YAML front-matter section') }} within the page template itself. See the {{ link('@docs#yaml-front-matter', 'documentation overview') }} for more information.
+
+## Global configuration options
+
+These options can be set on your Fractal instance using the {{ link('@api-components#set', '`fractal.docs.set()`') }} method. See the {{ link('@project-settings', 'project settings') }} documentation for more details.
+
+### default.context
+
+Global {{ link('@context-data', 'context data') }} that will be made available to all pages.
+
+```js
+fractal.docs.set('default.context', {
+    'site-name': 'FooCorp'
+});
+```
+
+### default.prefix
+
+Global prefix to apply to all generated {{ link('@naming#referencing', 'handles') }} unless overridden in a collection or page configuration file.
+
+```js
+fractal.docs.set('default.prefix', 'foobar'); // default is null
+```
+
+### default.status
+
+The status to apply to all pages unless overridden in a collection or page configuration file.
+
+```js
+fractal.docs.set('default.status', 'wip'); // default is null
+```
+
+### ext
+
+The file extension that will be used for all documentation {{ link('@views', 'view templates') }}. Note that this must include the leading `.`
+
+```js
+fractal.docs.set('ext', '.html'); // default is '.md'
+```
+
+### label
+
+How the collection of documentation pages will be referenced in any navigation.
+
+```js
+fractal.docs.set('label', 'Pages'); // default is 'Documentation'
+```
+
+### path
+
+The path to the directory where your documentation pages live.
+
+```js
+fractal.docs.set('path', __dirname + '/src/docs');
+```
+
+<!-- ### resources -->
+
+### statuses
+
+The set of available statuses that can be assigned to pages. See the {{ link('@statuses', 'statuses documentation') }} for details of the default values and how to override them as required.
+
+```js
+fractal.docs.set('statuse', {
+    doing: {
+        label: "Doing",
+        description: "I'm doing it.",
+        color: '#F00'
+    },
+    done: {
+        label: "Done",
+        description: "I'm done with this.",
+        color: "green"
+    }
+});
+```
+
+### title
+
+How the collection of documentation pages will be referenced in any titles.
+
+```js
+fractal.components.set('title', 'Pages'); // default is 'Documentation'
+```
 
 ## Page properties
 
-These are properties that can be specified in an individual page's YAML front matter section or in a configuration file for that page.
+These are properties that can be specified in an individual page's YAML front matter section _or_ in a configuration file for that page.
 
 ### context
 
@@ -69,7 +152,7 @@ Collections can specify properties that should be applied to all child pages of 
 
 ### context
 
-Context data to be made available to (and merged into) child pages in the collection.
+Context data to be made available to (and merged into) all child pages within the collection.
 
 ```yaml
 context:
@@ -84,3 +167,11 @@ A string to be prefixed on to the generated {{ link('@naming', 'handles') }} of 
 prefix: 'api'
 ```
 Given the prefix above, a page with the name of `logging` that lives within this collection will have the handle `@api-logging`.
+
+### status
+
+The default status for all pages within the collection.
+
+```yaml
+status: 'wip'
+```

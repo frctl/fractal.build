@@ -6,7 +6,7 @@
 
     <div class="Frame-header">
         <header class="Header Frame-inner">
-            <a class="Header-brand" href="{{ path('/') }}">Fractal <span class="Header-version">v{{ frctl.get('project.version') }}</span></a>
+            <a class="Header-brand" href="{{ path('/') }}">fractal <span class="Header-version">v{{ frctl.get('project.version') }}</span></a>
             <nav class="Header-nav">
                 <ul class="Header-navItems">
                     {% include "_partials/section-nav.nunj" %}

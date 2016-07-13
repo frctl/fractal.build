@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Installing Fractal
 label: Installation
 ---
 

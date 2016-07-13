@@ -1,5 +1,5 @@
 ---
-title: Fractal
+title: Welcome to the Fractal user guide!
 handle: guide
 ---
 
