@@ -46,6 +46,14 @@ The file extension that will be used for all documentation {{ link('@views', 'vi
 fractal.docs.set('ext', '.html'); // default is '.md'
 ```
 
+### indexLabel
+
+The default label to be used for index pages.
+
+```js
+fractal.docs.set('indexLabel', 'Listing'); // default is 'Overview'
+```
+
 ### label
 
 How the collection of documentation pages will be referenced in any navigation.
@@ -53,6 +61,36 @@ How the collection of documentation pages will be referenced in any navigation.
 ```js
 fractal.docs.set('label', 'Pages'); // default is 'Documentation'
 ```
+
+### markdown
+
+Whether to use Markdown to parse the contents of documentation pages.
+
+```js
+fractal.docs.set('markdown', false); // defaults to true
+```
+
+You can also toggle on or off other more fine-grained settings to customise the details of the Markdown parsing:
+
+```js
+fractal.docs.set('markdown.smartypants', false);
+```
+
+The default values are:
+
+```js
+{
+    gfm: true,
+    tables: true,
+    breaks: false,
+    pedantic: false,
+    sanitize: false,
+    smartLists: true,
+    smartypants: true
+}
+```
+
+See the [Marked markdown parser documentation](https://github.com/chjj/marked#options-1) for details on what each option does.
 
 ### path
 
