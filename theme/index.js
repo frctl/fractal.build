@@ -10,11 +10,15 @@ module.exports = function(options){
 
     const config = _.defaultsDeep(_.clone(options || {}), {
         imagePath: null,
-        includePaths: []
+        includePaths: [],
+        globals: {},
+        cachebust: {
+            css: ''
+        }
     });
 
     const theme = new Theme(Path.join(__dirname, 'views'), config);
-
+    
     theme.setErrorView('error.nunj');
     theme.addStatic(Path.join(__dirname, 'dist'), '/theme');
 
@@ -43,32 +47,34 @@ module.exports = function(options){
             });
         }
 
+        let globals = _.defaults(config.globals, {
+            link: function(handleAnchor, linkText){
+                const handleParts = handleAnchor.split('#');
+                const handle      = handleParts[0];
+                const anchor      = handleParts[1] ? `#${handleParts[1]}` : '';
+                const pathify     = this.env.getFilter('path');
+                const page        = app.docs.find(handle);
+                let path          = page ? pathify.call(this, `/${page.path}`) : '';
+                linkText          = linkText || page.label;
+                if (path === '') {
+                    logger.warn(`Could not create link to ${handleAnchor}`);
+                }
+                return `[${linkText}](${path}${anchor})`;
+            },
+            image: function(srcPath, altText){
+                if (!config.imagePath) {
+                    return '#';
+                }
+                altText = altText || '';
+                const pathify = this.env.getFilter('path');
+                const path = pathify.call(this, `/${app.web.get('assets.mount')}/images/${srcPath}`)
+                return `![${altText}](${path})`;
+            }
+        });
+
         app.docs.engine(require('@frctl/nunjucks')({
             paths: config.includePaths,
-            globals: {
-                link: function(handleAnchor, linkText){
-                    const handleParts = handleAnchor.split('#');
-                    const handle      = handleParts[0];
-                    const anchor      = handleParts[1] ? `#${handleParts[1]}` : '';
-                    const pathify     = this.env.getFilter('path');
-                    const page        = app.docs.find(handle);
-                    let path          = page ? pathify.call(this, `/${page.path}`) : '';
-                    linkText          = linkText || page.label;
-                    if (path === '') {
-                        logger.warn(`Could not create link to ${handleAnchor}`);
-                    }
-                    return `[${linkText}](${path}${anchor})`;
-                },
-                image: function(srcPath, altText){
-                    if (!config.imagePath) {
-                        return '#';
-                    }
-                    altText = altText || '';
-                    const pathify = this.env.getFilter('path');
-                    const path = pathify.call(this, `/${app.web.get('assets.mount')}/images/${srcPath}`)
-                    return `![${altText}](${path})`;
-                }
-            },
+            globals: globals,
             filters: {
                 md: function(str){
                     return marked(str, {

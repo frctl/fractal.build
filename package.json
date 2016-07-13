@@ -12,6 +12,7 @@
   "devDependencies": {
     "del": "^2.2.0",
     "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-buster": "^1.0.2",
     "gulp-sass": "^2.2.0",
     "gulp-sass-glob": "^1.0.5",
     "highlight.js": "^9.5.0",

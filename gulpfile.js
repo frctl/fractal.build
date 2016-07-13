@@ -4,6 +4,7 @@ const gulp     = require('gulp');
 const sass     = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 const del      = require('del');
+const bust     = require('gulp-buster');
 
 const fractal  = require('./fractal.js');
 const logger = fractal.cli.console;
@@ -49,7 +50,9 @@ gulp.task('css:process', function() {
         includePaths: 'node_modules'
     }))
     .on('error', err => console.log(err.message))
-    .pipe(gulp.dest('theme/dist/css'));
+    .pipe(gulp.dest('theme/dist/css'))
+    .pipe(bust('cachebust.json'))
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('css:clean', function() {

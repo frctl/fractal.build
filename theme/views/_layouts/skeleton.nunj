@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
-    <link rel="stylesheet" href="{{ path('/theme/css/main.css') }}">
+    <link rel="stylesheet" href="{{ path('/theme/css/main.css') }}?cachebust={{ frctl.theme.get('cachebust').css }}">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ frctl.get('project.title') }}</title>
 </head>
 <body>

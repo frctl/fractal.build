@@ -1,5 +1,7 @@
 'use strict';
 
+const cachebust = require('./cachebust.json');
+
 /*
  * Create a new Fractal instance and export it for use elsewhere if required
  */
@@ -29,7 +31,10 @@ fractal.web.set('builder.dest', 'dist');
 
 fractal.web.theme(require('./theme')({
     imagePath: 'assets/img',
-    includePaths: [`${__dirname}/helpers`]
+    includePaths: [`${__dirname}/helpers`],
+    cachebust: {
+        css: cachebust['theme/dist/css/main.css'] || ''
+    }
 }));
 
 fractal.web.set('builder.urls.ext', null);
