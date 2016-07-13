@@ -6,14 +6,13 @@ const sassGlob = require('gulp-sass-glob');
 const del      = require('del');
 const bust     = require('gulp-buster');
 
-const fractal  = require('./fractal.js');
-const logger = fractal.cli.console;
-
 /*
  * Fractal
  */
 
  gulp.task('fractal:start', function(){
+     const fractal  = require('./fractal.js');
+     const logger = fractal.cli.console;
      const server = fractal.web.server();
      server.on('error', err => logger.error(err.message));
      return server.start().then(() => {
@@ -22,6 +21,8 @@ const logger = fractal.cli.console;
  });
 
  gulp.task('fractal:build', function(){
+     const fractal  = require('./fractal.js');
+     const logger = fractal.cli.console;
      const builder = fractal.web.builder();
      builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
      builder.on('error', err => logger.error(err.message));
@@ -32,9 +33,10 @@ const logger = fractal.cli.console;
  });
 
  gulp.task('fractal:debug', function(){
+     const fractal  = require('./fractal.js');
      return fractal.load().then(() => {
          fractal.docs.flatten().each(page => {
-             logger.dump(page.toJSON());
+             fractal.cli.console.dump(page.toJSON());
          });
      });
  });
@@ -90,4 +92,4 @@ gulp.task('fonts', gulp.series('fonts:clean', 'fonts:copy'));
 gulp.task('default', gulp.parallel('css', 'fonts'));
 gulp.task('watch', gulp.parallel('css:watch', 'fonts:watch'));
 
-gulp.task('dev', gulp.parallel('default', 'watch', 'fractal:start'));
+gulp.task('dev', gulp.series('default', 'fractal:start', 'watch'));
