@@ -6,7 +6,7 @@ Fractal can happily be integrated into any JavaScript-based build tool by making
 
 ## Gulp
 
-The following is an example `gulpfile.js` that defines two tasks, one to start the {{ link('@server', 'dev server') }} and one to {{ link('@export', 'run a static export') }} of the web UI.
+The following is an example `gulpfile.js` that defines two tasks, one to start the {{ link('@server', 'dev server') }} and one to {{ link('@builder', 'run a static export') }} of the web UI.
 
 Once added, these can be run as `gulp fractal:start` and `gulp fractal:build`. However you can of course change them to be called whatever you like!
 

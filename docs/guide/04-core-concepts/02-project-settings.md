@@ -87,7 +87,7 @@ To serve a directory of {{ link('@static-assets', 'static assets') }} via the we
 fractal.web.set('static.path', __dirname + '/public');
 ```
 
-To set the directory within which any {{ link('@export', 'static HTML exports') }} of the web UI should be generated, use the `build.dest` setting:
+To set the directory within which any {{ link('@builder', 'static HTML exports') }} of the web UI should be generated, use the `build.dest` setting:
 
 ```
 fractal.web.set('build.dest', __dirname + '/build');
@@ -95,7 +95,7 @@ fractal.web.set('build.dest', __dirname + '/build');
 
 The {{ link('@web-config', 'web UI configuration reference') }} contains details of all the other available web configuration options.
 
-### An example fractal.js file
+## Example project settings file
 
 Tying together the examples above, we can see that a basic `fractal.js` file might look something like this:
 

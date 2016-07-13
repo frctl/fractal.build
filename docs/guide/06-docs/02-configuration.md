@@ -10,7 +10,7 @@ Additionally, documentation pages and {{ link('@collections', 'collections') }} 
 
 ## Global configuration options
 
-These options can be set on your Fractal instance using the {{ link('@api-components#set', '`fractal.docs.set()`') }} method. See the {{ link('@project-settings', 'project settings') }} documentation for more details.
+These options can be set on your Fractal instance using the {{ link('@api-docs#set', '`fractal.docs.set()`') }} method. See the {{ link('@project-settings', 'project settings') }} documentation for more details.
 
 ### default.context
 
