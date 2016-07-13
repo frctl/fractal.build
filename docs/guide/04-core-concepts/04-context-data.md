@@ -2,8 +2,8 @@ Context data is data that is made available to your {{ link('@configuration-file
 
  It is defined within a {{ link('@configuration-files', 'configuration file') }} (or optionally a YAML front-matter section instead for documentation pages).
 
- ## Defining context data
+ <!-- ## Defining context data
 
  ## Data references
 
- ## Dynamic data
+ ## Dynamic data -->

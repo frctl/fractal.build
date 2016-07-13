@@ -93,6 +93,7 @@ You **will not** be able to access the layout's context data from within the com
 Preview layouts, when rendered as a layout and not as a component on their own, will have access to a special context property called `_target`. This is a JSON representation of whichever component or variant is being rendered within the layout.
 
 Having access to this means that you can do things like dynamically set the page title of your layout based on the component being rendered. For instance, in your layout template you could do:
+
 {% raw %}
 ```handlebars
 <head>
@@ -100,6 +101,7 @@ Having access to this means that you can do things like dynamically set the page
 </head>
 ```
 {% endraw %}
+
 Your page title would then match the component being rendered.
 
 ## Preview rendering details

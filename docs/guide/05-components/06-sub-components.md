@@ -54,6 +54,7 @@ Unlike the standard 'include' syntax, the `render` helper renders a sub-componen
 > If you are planning on consuming your template files outside of Fractal, you may **not** want to use a custom helper if it is will not be supported in your target environment.
 
 An example might look like this:
+
 {% raw %}
 ```handlebars
 <!-- button.hbs -->
@@ -82,7 +83,6 @@ context:
   label: Search
 ```
 
-
 You can see in this case, we don't need to specify any context data for the `button` sub-component in the `search-box.config.yml` - instead the `{{ render }}` helper will automatically render the `button` using the context data defined in it's own `button.config.yml`.
 
 {% endraw %}
@@ -98,6 +98,7 @@ For example, you may want to render a 'prose' component on it's own with a set o
 Using this method, our example would look like this:
 
 {% raw %}
+
 ```handlebars
 <!-- button.hbs -->
 <button type="button" name="submit">{{ button.text }}</button>
@@ -141,9 +142,10 @@ You can see that in this case, the parent (`search-box`) component is providing 
     <button type="button" name="submit">Go!</button>
 </div>
 ```
-So in this case the parent component is responsible for defining the context data used by both itself *and* and data needed by any sub-components.
 
 {% endraw %}
+
+So in this case the parent component is responsible for defining the context data used by both itself *and* and data needed by any sub-components.
 
 ### C) Use context data '@handle' references
 
@@ -152,6 +154,7 @@ If you *don't* want to specify new data for all the sub-components in the parent
 If we re-work the example above to use this technique it would look like this:
 
 {% raw %}
+
 ```handlebars
 <!-- button.hbs -->
 <button type="button" name="submit">{{ button.text }}</button>
@@ -179,6 +182,7 @@ context:
   label: Search    
   button: "@button"
 ```
+
 {% endraw %}
 
 The last line in the `search-box.config.yml` file (`button: "@button"`) ensures that the `button` context data property will be set to the value of the context data object defined in the button component; this is a reference that is resolved when the parent component is rendered.
@@ -186,6 +190,7 @@ The last line in the `search-box.config.yml` file (`button: "@button"`) ensures 
 In this case, when rendered the components will look like:
 
 {% raw %}
+
 ```html
 <!-- @button -->
 <button type="button" name="submit">A Button</button>
@@ -199,6 +204,7 @@ In this case, when rendered the components will look like:
     <button type="button" name="submit">A Button</button>
 </div>
 ```
+
 {% endraw %}
 
 You can see that in the `@search-box` component the button text is now the same as the text defined in the `button.config.yml` file.

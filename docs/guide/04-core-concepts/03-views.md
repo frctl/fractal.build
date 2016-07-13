@@ -20,11 +20,30 @@ You can also use one template engine for your components and another different e
     **It's important to understand** that the syntax, capabilities and even behaviour of your view templates will all depend on the template engine you have chosen to use. **The contents of this documentation will assume the use of the default Handlebars engine**.</p>
 </div>
 
+## Using Handlebars
+
+{% raw %}
+
+[Handlebars](http://handlebarsjs.com) is the default template engine used by Fractal. Handlebars templates look like regular HTML but with some additional embedded handlebars expressions. A handlebars expression is a `{{`, some contents, followed by a `}}`
+
+```
+<div class="entry">
+    <h1>{{ title }}</h1>
+    <div class="body">
+    {{ body }}
+    </div>
+</div>
+```
+
+{% endraw %}
+
+It's worth familiarising yourself with Handlebars using it's [documentation](http://handlebarsjs.com) if you want to get the most out of Fractal.
+
 ### Handlebars helpers
 
 On top of the standard set of [Handlebars helpers](http://handlebarsjs.com#helpers), Fractal makes a small set of additional helpers available to your component templates and documentation pages.
 
-Using these helpers is not required in any way, although they are often helpful. If you are need to integrate your templates directly into your production site or application build you _may_ find that using them ties your templates too tightly into Fractal, in which case you might be better off {{ link('@template-engines#pristine', 'disabling them') }} or rolling your own.
+Using these helpers is not required in any way, although they are often helpful. If you are need to integrate your templates directly into your production site or application build you _may_ find that using them ties your templates too tightly into Fractal, in which case you might be better off {{ link('@template-engines#pristine', 'disabling them') }} or {{ link('@template-engines', 'adding your own') }}.
 
 The available helpers are:
 
