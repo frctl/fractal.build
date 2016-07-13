@@ -5,9 +5,9 @@ In order to be recognised, configuration files must:
 * Reside in the same directory as the item that they are configuring
 * Have a file name in the format `item-name.config.{js|json|yml}` - for example `button.config.json`, `patterns.config.js` or `changelog.config.yml`
 
-### Available configuration options
+## Available configuration options
 
-Available configuration options depend on the type of the item being configured. See the relevant configuration reference for details:
+The available configuration options depend on the type of the item being configured. See the relevant configuration reference for details:
 
 * {{ link('@components-config', 'Components') }}
 * {{ link('@pages-config', 'Pages') }}
@@ -25,7 +25,7 @@ Configuration files authored in this format must have a filename that looks like
 
 Using the JavaScript (CommonJS) module format for your configuration files is a little more involved than using JSON or YAML, but is a **lot more powerful** as it allows you to do things like dynamically generating component {{ link('@context-data', 'context data') }}
 
-The file itself should be in the format of a Node CommonJS-style module that exports a configuration object. If you don't know what that is, don't worry! Just make sure it's contents looks like this:
+The file itself should be in the format of a Node CommonJS-style module that exports a configuration object. If you don't know what that is, don't worry! Just make sure it's contents look like this:
 
 ```js
 module.exports = {

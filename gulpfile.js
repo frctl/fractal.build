@@ -26,6 +26,7 @@ const logger = fractal.cli.console;
      builder.on('error', err => logger.error(err.message));
      return builder.build().then(() => {
          logger.success('Fractal build completed!');
+         return gulp.src('./.htaccess').pipe(gulp.dest('dist'));
      });
  });
 

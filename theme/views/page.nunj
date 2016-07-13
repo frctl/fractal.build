@@ -11,7 +11,13 @@
 } %}
 
 {% block navigation %}
-{{ nav.tree(frctl.docs.findCollection('name', request.segments[0]), doc, request) }}
+{% if request.segments | length == 1 %}
+{% set toc = [] %}
+{% else %}
+{% set toc = doc.toc(2) | async %}
+{% endif %}
+
+{{ nav.tree(frctl.docs.findCollection('name', request.segments[0]), doc, request, toc) }}
 {% endblock %}
 
 {% block page %}

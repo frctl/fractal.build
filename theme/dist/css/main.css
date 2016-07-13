@@ -848,6 +848,8 @@ h6 {
 .Tree .Tree-item {
   margin-bottom: 6px;
   font-size: 15px; }
+  .Tree .Tree-item a {
+    display: block; }
 
 .Tree-collectionLabel {
   margin-top: 20px;
@@ -858,6 +860,29 @@ h6 {
   .Tree-entityLink:hover {
     text-decoration: underline; }
   .Tree-entity.is-current .Tree-entityLink {
-    color: #666; }
+    color: #003d73; }
     .Tree-entity.is-current .Tree-entityLink:hover {
       text-decoration: none; }
+
+.Tree-toc {
+  margin-top: 5px; }
+
+.Tree-tocItem {
+  font-size: 14px;
+  margin: 5px 0 5px 15px; }
+  .Tree-tocItem a {
+    text-decoration: none;
+    display: block;
+    padding-left: 10px;
+    position: relative;
+    color: #777; }
+    .Tree-tocItem a:hover span {
+      text-decoration: underline; }
+    .Tree-tocItem a:before {
+      content: '-';
+      margin-right: 5px;
+      color: #666;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block; }

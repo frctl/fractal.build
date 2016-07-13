@@ -1,12 +1,12 @@
-{% macro tree(root, current, request) %}
+{% macro tree(root, current, request, toc) %}
 <div class="Tree" data-behaviour="tree" id="tree-{{ root.name }}">
     <ul class="Tree-items Tree-depth-1">
-        {{ leaves(root.filter('isHidden', false).items(), root, current, 2, request) }}
+        {{ leaves(root.filter('isHidden', false).items(), root, current, 2, request, toc) }}
     </ul>
 </div>
 {% endmacro %}
 
-{% macro leaves(items, root, current, depth, request) %}
+{% macro leaves(items, root, current, depth, request, toc) %}
     {% for item in items %}
         {% set children = item.filter('isHidden', false).items() if item.isCollection else null %}
         {% if children and (children | length > 1 or children[0].isIndex != true) %}
@@ -15,7 +15,7 @@
                 <span>{{ item.label }}</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
-            {{ leaves(children, root, current, (depth + 1), request) }}
+            {{ leaves(children, root, current, (depth + 1), request, toc) }}
             </ul>
         </li>
         {% else %}
@@ -24,6 +24,13 @@
             <a class="Tree-entityLink" href="{{ path( (item | url), request) }}" data-pjax>
                 <span>{{ item.label }}</span>
             </a>
+            {% if isCurrent %}
+                <ul class="Tree-toc">
+                    {% for heading in toc %}
+                    <li class="Tree-tocItem"><a href="{{ path( (item | url), request) }}#{{ heading.id }}"><span>{{ heading.text }}</span></a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </li>
         {% endif %}
     {% endfor %}

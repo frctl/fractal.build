@@ -2,6 +2,9 @@
     .Tree-item {
         margin-bottom: 6px;
         font-size: 15px;
+        a {
+            display: block;
+        }
     }
 }
 
@@ -24,9 +27,38 @@
         text-decoration: underline;
     }
     .Tree-entity.is-current & {
-        color: #666;
+        // font-weight: bold;
+        color: darken($color-link, 20%);
         &:hover {
             text-decoration: none;
+        }
+    }
+}
+
+.Tree-toc {
+    margin-top: 5px;
+}
+
+.Tree-tocItem {
+    font-size: 14px;
+    margin: 5px 0 5px 15px;
+    a {
+        text-decoration: none;
+        display: block;
+        padding-left: 10px;
+        position: relative;
+        color: #777;
+        &:hover span {
+            text-decoration: underline;
+        }
+        &:before {
+            content: '-';
+            margin-right: 5px;
+            color: #666;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
         }
     }
 }
