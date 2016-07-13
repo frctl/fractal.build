@@ -4,7 +4,7 @@
 
 Collections are just groups of related components or documentation pages. When you create a directory that contains one or more components or pages inside it, you have created a collection.
 
-However beyond just grouping items, collections are useful because they can have their own {{ link('@configuration-files') }} within which you can specify properties (such as [status](/docs/components/statuses.md) or [preview layout](/docs/components/layouts.md) for components) that will then be **applied to all child items** within that collection, saving you from having to specify them on each item. Of course, individual components, pages (or indeed sub-collections) can still [override these defaults](/docs/configuration-files.md#configuration-inheritance) on a case-by-case basis if needed.
+However beyond just grouping items, collections are useful because they can have their own {{ link('@configuration-files') }} within which you can specify properties that will then be **applied to all child items** within that collection, saving you from having to specify them on each item. Of course, individual components, pages (or indeed sub-collections) can still {{ link('@configuration-files#configuration-inheritance', 'override these defaults') }} on a case-by-case basis if needed.
 
 ## Configuration files
 
@@ -31,49 +31,11 @@ context:
 
 ### Available config properties
 
-The majority of properties set in a collection configuration file apply not to the collection itself, but rather cascade down to the items within it. The exception to this is the `label` and `title` properties.
-
-For details on the available cascading configuration properties that will apply to  child items, see the relevant configuration reference sections:
-
-* [Component configuration](/docs/components/configuration.md)
-* [Docs configuration](/docs/documentation/configuration.md)
-
-
-#### hidden
-
-Whether or not the collection (and all it's children) should be hidden from listings and navigation.
-
-```yaml
-hidden: false
-```
-
-#### label
-
-The label is typically displayed in any UI navigation items that refer to the collection. Defaults to a title-cased version of the collection directory name if not specified.
-
-```yaml
-label: 'Website Layouts'
-```
-
-An integer order value, used when sorting collections. Overrides any order value set as a property of the directory name if set.
-
-#### order
-
-```yaml
-order: 4
-```
-
-#### title
-
-The string that is used when a UI needs a title for the collection. Defaults to the value of `label` if not set.
-
-```yaml
-title: 'My Favourite Website Layouts'
-```
+The {{ link('@collections-config', 'collection configuration reference') }} contains full details of all the collection properties available for use.
 
 ## Hiding collections
 
-A collection can be hidden from navigation and listings by using the `hidden` property in the it's configuration file (as described above). Alternatively, the collection directory name can be prefixed by an underscore like this:
+A collection can be hidden from navigation and listings by using the `hidden` property in the it's configuration file or by prefixing the collection directory name with an underscore like this:
 
 ```
 ├── components

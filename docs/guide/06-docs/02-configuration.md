@@ -1,5 +1,5 @@
 ---
-handle: pages-config
+handle: docs-config
 label: Configuration reference
 title: Configuring Documentation Pages
 ---
@@ -187,6 +187,8 @@ title: 'Amazing Mega Buttons'
 ## Collection properties
 
 Collections can specify properties that should be applied to all child pages of that collection via {{ link('@configuration-files#configuration-inheritance', 'configuration inheritance') }}. See the {{ link('@collections', 'documentation on collections') }} for more details on how to work with collections, and for details on available non-inheritable properties like `label` and `title`.
+
+The following properties can be set on page collections and will affect the pages within them:
 
 ### context
 

@@ -4,12 +4,13 @@ label: Configuration Reference
 title: Collection Configuration
 ---
 
-The majority of properties set in a collection configuration file apply not to the collection itself, but rather cascade down to the items within it. The exception to this is the `label` and `title` properties.
+Collection configuration files can specify a number of properties. Some of these apply to the collection itself, while other 'heritable' properties act instead as 'default' values for items contained within the collection.
 
-**For details on the available cascading configuration properties** that will apply to  child items, see the relevant configuration reference sections:
+See the {{ link('@configuration-files#configuration-inheritance', 'configuration inheritance') }} documentation for more details on this process works in practice.
 
-* {{ link('@components-config', 'Component configuration') }}
-* {{ link('@docs-config', 'Docs configuration') }}
+## Collection properties
+
+The following properties apply directly to the collection itself, and will not be inherited by children of the collection.
 
 #### hidden
 
@@ -42,3 +43,12 @@ The string that is used when a UI needs a title for the collection. Defaults to 
 ```yaml
 title: 'My Favourite Website Layouts'
 ```
+
+## Heritable properties
+
+The majority of properties set in a collection configuration file apply not to the collection itself, but instead act as defaults which cascade down to the items within it.
+
+**For details on the available cascading configuration properties** that will apply to  child items, see the relevant configuration reference sections:
+
+* {{ link('@components-config#collection-properties', 'Component collections') }}
+* {{ link('@docs-config#collection-properties', 'Documentation collections') }}

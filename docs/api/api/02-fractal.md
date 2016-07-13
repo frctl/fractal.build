@@ -1,0 +1,4 @@
+---
+label: fractal
+title: fractal
+---

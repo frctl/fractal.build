@@ -346,6 +346,8 @@ view: 'component--funky.hbs'
 
 Collections can specify properties that should be applied to all child components of that collection via {{ link('@configuration-files#configuration-inheritance', 'configuration cascade') }}. See the {{ link('@collections', 'documentation on collections') }} for more details on how to work with collections, and for details on available non-inheritable properties like `label` and `title`.
 
+The following properties can be set on page collections and will affect the pages within them:
+
 ### collated
 
 Whether or not child components of this collection [should be collated](#collated) or not.

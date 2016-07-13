@@ -6,8 +6,6 @@ title: Web Configuration
 
 There are a number of global configuration options available to customise the behaviour of both the {{ link('@server', 'development web server') }} and the {{ link('@builder', 'static HTML builder') }}.
 
-## Global configuration options
-
 These options can be set on your Fractal instance using the {{ link('@api-web#set', '`fractal.web.set()`') }} method. See the {{ link('@project-settings', 'project settings') }} documentation for more details.
 
 ### builder.concurrency

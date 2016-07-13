@@ -1,4 +1,4 @@
 ---
-title: Fractal API
+title: Fractal API documentation
 handle: api
 ---

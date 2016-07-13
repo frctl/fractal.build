@@ -10,7 +10,7 @@ In order to be recognised, configuration files must:
 The available configuration options depend on the type of the item being configured. See the relevant configuration reference for details:
 
 * {{ link('@components-config', 'Components') }}
-* {{ link('@pages-config', 'Pages') }}
+* {{ link('@docs-config', 'Pages') }}
 * {{ link('@collections-config', 'Collection') }}
 
 ## Configuration file formats

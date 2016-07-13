@@ -95,7 +95,7 @@ fractal.web.set('build.dest', __dirname + '/build');
 
 The {{ link('@web-config', 'web UI configuration reference') }} contains details of all the other available web configuration options.
 
-## Example project settings file
+## Example project setup file
 
 Tying together the examples above, we can see that a basic `fractal.js` file might look something like this:
 
