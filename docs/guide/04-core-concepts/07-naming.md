@@ -1,4 +1,4 @@
 ---
-label: Naming Conventions
-title: Naming Conventions
+label: Naming & Referencing
+title: Naming & Referencing
 ---
