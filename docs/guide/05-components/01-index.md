@@ -29,13 +29,11 @@ The markup for a component can either be written as 'vanilla' HTML or using a te
 The {{ link('@views', 'view templates') }} documentation contains more details on the default Handlebars instance and the {{ link('@template-engines', 'template engine customisation') }} documentation has full details how to use and configure alternative template engines with Fractal.
 </div>
 
-## Component structure
-
 Components can be created in two ways. The simplest component is just as a single file containing your markup, whilst more complex, 'compound' components can be created as a directory of associated files.
 
-### Simple components
+## Simple components
 
-The simplest component consists of just a single {{ link('@views', 'view template') }}. The name of the component will be taken to be the name of that file, minus the file extension.
+The simplest possible component consists of just a single {{ link('@views', 'view template') }}. The name of the component will be taken to be the name of that file, minus the file extension.
 
 So a `button.hbs` file in the components directory will be identified as a component with the name of 'button'.
 
@@ -54,7 +52,7 @@ Simple components can have {{ link('@configuration-files', 'configuration files'
 
 The one caveat regarding naming simple components is that they **must not have the same name as the parent folder** that contains them. This is to prevent them being identified as 'compound' components.
 
-### Compound components
+## Compound components
 
 Compound components allow you to group associated files (such as asset files, tests, READMEs etc) along with your primary component files.
 
