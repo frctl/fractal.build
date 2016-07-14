@@ -17,7 +17,7 @@ By default, Fractal uses [Handlebars](http://handlebarsjs.com) to render view te
 You can also use one template engine for your components and another different engine for your documentation pages, should you so wish.
 
 <div class="Note Note--callout">
-    **It's important to understand** that the syntax, capabilities and even behaviour of your view templates will all depend on the template engine you have chosen to use. **The contents of this documentation will assume the use of the default Handlebars engine**.</p>
+**It's important to understand** that the syntax, capabilities and even behaviour of your view templates will all depend on the template engine you have chosen to use. **The contents of this documentation will assume the use of the default Handlebars engine**.
 </div>
 
 ## Using Handlebars
