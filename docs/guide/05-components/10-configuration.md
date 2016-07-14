@@ -1,7 +1,7 @@
 ---
 handle: components-config
 label: Configuration reference
-title: Configuring Components
+title: Configuring components
 ---
 
 There are a number of global configuration options you can set to determine how Fractal handles components.

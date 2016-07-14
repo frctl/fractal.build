@@ -1,3 +1,8 @@
+---
+label: Preview layouts
+title: Preview layouts
+---
+
 By default, when Fractal renders a component, it does so without wrapping it in any 'page' structure markup.
 
 That means that it is effectively an HTML *fragment*, as opposed to an HTML *page*. As a result, your components will appear unstyled; Fractal **does not** automatically insert any styles or behaviour into the rendered markup.

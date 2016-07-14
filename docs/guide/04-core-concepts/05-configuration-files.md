@@ -1,3 +1,8 @@
+---
+label: Configuration files
+title: Configuration files
+---
+
 Components, documentation pages and collections can all have their own (optional) configuration files associated with them.
 
 In order to be recognised, configuration files must:

@@ -1,6 +1,6 @@
 ---
-label: Naming & Referencing
-title: Naming & Referencing
+label: Naming & referencing
+title: Naming & referencing
 ---
 
 Fractal is a flat-file system, and makes use of some simple file and folder naming conventions to help it parse the file system and generate the underlying data model.
@@ -119,7 +119,7 @@ You can use an item's handle to reference it throughout your project, using the 
 
 This syntax can be used in a number of places, including:
 
-* {{ link('@static-data-references', 'Static data references') }} in context data
+* {{ link('@context-data#static-data-references', 'Static data references') }} in context data
 * Including {{ link('@sub-components', 'sub-component view templates') }} within parent templates
 * Specifying {{ link('@preview-layouts', 'preview layouts') }} in configuration data
 

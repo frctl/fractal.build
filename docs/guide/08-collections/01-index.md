@@ -1,5 +1,5 @@
 ---
-
+title: Collections
 ---
 
 Collections are just groups of related components or documentation pages. When you create a directory that contains one or more components or pages inside it, you have created a collection.
@@ -12,7 +12,7 @@ A collection configuration file follows the same rules as component and document
 
 So a component collection called 'layouts' could have a YAML configuration file called `layouts.config.yml`:
 
-```
+```tree
 ├── components
 │   ├── layouts
 │   │   ├── layouts.config.yml
@@ -37,7 +37,7 @@ The {{ link('@collections-config', 'collection configuration reference') }} cont
 
 A collection can be given an order by which to sort it with regards to it's siblings. This can be done by using the `order` property in the collection's configuration file, or it can be done by prefixing the collection directory name with a **two-digit number** (with leading zero, if required) **followed by a hyphen**. For example:
 
-```
+```tree
 ├── components
 │   ├── 01-patterns
 │   │   └── article.hbs
@@ -49,7 +49,7 @@ A collection can be given an order by which to sort it with regards to it's sibl
 
 A collection can be hidden from navigation and listings by using the `hidden` property in the it's configuration file or by prefixing the collection directory name with an underscore like this:
 
-```
+```tree
 ├── components
 │   ├── _layouts
 │   │   └── sidebar.hbs

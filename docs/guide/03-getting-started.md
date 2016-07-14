@@ -1,6 +1,6 @@
 ---
-title: Getting Started
-label: Getting Started
+title: Getting started
+label: Getting started
 ---
 
 This guide outlines two ways of creating a new Fractal project. The end result is similar but the first one uses the Fractal CLI `new` command to generate the project structure for you, whilst the second goes through in a little more detail some of the steps involved.

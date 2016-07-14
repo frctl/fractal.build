@@ -1,3 +1,8 @@
+---
+label: Context data
+title: Context data
+---
+
 Context data is data that is made available to your {{ link('@configuration-files', 'view templates') }} when they are rendered.
 
 It is typically defined within a {{ link('@configuration-files', 'configuration file') }}, although documentation pages can opt to define it in in a {{ link('@docs#yaml-front-matter', 'YAML front-matter section') }} instead if desired.

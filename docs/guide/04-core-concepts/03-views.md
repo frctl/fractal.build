@@ -1,5 +1,5 @@
 ---
-label: View Templates
+label: View templates
 ---
 
 {{ link('@components', 'Components') }} and {{ link('@docs', 'documentation pages') }} both make use of **view templates**.

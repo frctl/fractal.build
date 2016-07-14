@@ -1,4 +1,5 @@
 ---
+label: Project settings
 title: Project settings and configuration
 ---
 

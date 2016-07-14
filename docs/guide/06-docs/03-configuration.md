@@ -1,7 +1,7 @@
 ---
 handle: docs-config
 label: Configuration reference
-title: Configuring Documentation Pages
+title: Configuring documentation pages
 ---
 
 There are a number of global configuration options you can set to determine how Fractal handles documentation pages.

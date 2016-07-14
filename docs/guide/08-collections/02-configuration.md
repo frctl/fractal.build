@@ -1,7 +1,7 @@
 ---
 handle: collections-config
-label: Configuration Reference
-title: Collection Configuration
+label: Configuration reference
+title: Collection configuration
 ---
 
 Collection configuration files can specify a number of properties. Some of these apply to the collection itself, while other 'heritable' properties act instead as 'default' values for items contained within the collection.
