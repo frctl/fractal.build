@@ -82,7 +82,7 @@ The {{ link('@docs-config', 'documentation pages configuration reference') }} co
 
 Web UI configuration is done using the {{ link('@api-web#set', '`fractal.web.set()`') }} method.
 
-To serve a directory of {{ link('@static-assets', 'static assets') }} via the web UI (so that you can link to stylesheets from your preview layouts, for example), you can specify the path to the directory using the `static.path` setting:
+To serve a directory of {{ link('@web#static-assets', 'static assets') }} via the web UI (so that you can link to stylesheets from your preview layouts, for example), you can specify the path to the directory using the `static.path` setting:
 
 ```
 fractal.web.set('static.path', __dirname + '/public');

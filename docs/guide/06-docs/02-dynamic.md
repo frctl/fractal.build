@@ -1,5 +1,5 @@
 ---
 handle: dynamic-docs
-label: Dynamic documentation
+label: Dynamic docs
 title: Dynamic Documentation
 ---

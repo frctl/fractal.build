@@ -1,4 +1,4 @@
 ---
-label: Dev Server
-title: Dev Server
+label: Local server
+title: Local server
 ---

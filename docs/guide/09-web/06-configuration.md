@@ -1,7 +1,7 @@
 ---
 handle: web-config
-label: Configuration Reference
-title: Web Configuration
+label: Configuration reference
+title: Web UI configuration
 ---
 
 There are a number of global configuration options available to customise the behaviour of both the {{ link('@server', 'development web server') }} and the {{ link('@builder', 'static HTML builder') }}.
@@ -84,7 +84,7 @@ fractal.web.set('server.watch', true); // default is false
 
 ### static.path
 
-The path to the directory where your static assets live. Any assets within this directory will be made available to your components and preview layouts at a URL path relative to this directory. See the {{ link('@static-assets', 'static assets') }} documentation for more details.
+The path to the directory where your static assets live. Any assets within this directory will be made available to your components and preview layouts at a URL path relative to this directory. See the {{ link('@web#static-assets', 'static assets') }} documentation for more details.
 
 ```js
 fractal.web.set('static.path', __dirname + '/public');
@@ -93,7 +93,7 @@ fractal.web.set('static.path', __dirname + '/public');
 
 ### static.mount
 
-Virtual path prefix for the files that are served from the static asset directory specified in the `static.path` option. See the {{ link('@static-assets', 'static assets') }} documentation for more details.
+Virtual path prefix for the files that are served from the static asset directory specified in the `static.path` option. See the {{ link('@web#static-assets', 'static assets') }} documentation for more details.
 
 ```js
 fractal.web.set('static.path', 'project-assets');

@@ -1,3 +1,4 @@
 ---
-label: Web UI Themes
+handle: customisation-web
+label: Web UI themes
 ---
