@@ -54,7 +54,7 @@ fractal.components.set('default.display', {
 
 ### default.prefix
 
-Global prefix to apply to all generated {{ link('@naming#referencing', 'handles') }} unless overridden in a collection or component configuration file.
+Global prefix to apply to all generated {{ link('@naming#referencing-other-items', 'handles') }} unless overridden in a collection or component configuration file.
 
 ```js
 fractal.components.set('default.prefix', 'foobar'); // default is null
@@ -62,7 +62,7 @@ fractal.components.set('default.prefix', 'foobar'); // default is null
 
 ### default.preview
 
-Which layout (specified by it's {{ link('@naming#referencing', 'handle') }}) to use to when rendering previews of this layout. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details
+Which layout (specified by it's {{ link('@naming#referencing-other-items', 'handle') }}) to use to when rendering previews of this layout. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details
 
 ```js
 fractal.components.set('default.preview', '@my-preview-layout');
@@ -200,7 +200,7 @@ label: 'Mega Buttons'
 
 Overrides the component name, which is otherwise extracted from the component view filename. Name values must be all lowercase, and contain only alphanumeric characters with hyphens or underscores for word seperators.
 
-Setting this will also have the affect of changing the {{ link('@naming#referencing', 'component\'s handle') }}.
+Setting this will also have the affect of changing the {{ link('@naming#referencing-other-items', 'component\'s handle') }}.
 
 ```yaml
 name: 'mega-buttons'
@@ -224,7 +224,7 @@ order: 4
 
 ### preview
 
-Which layout (specified by {{ link('@naming#referencing', 'handle') }}) to use to when rendering previews of this layout. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details
+Which layout (specified by {{ link('@naming#referencing-other-items', 'handle') }}) to use to when rendering previews of this layout. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details
 
 ```yaml
 preview: '@my-preview-layout'
@@ -302,7 +302,7 @@ display:
 
 The name of the variant. This is the only **mandatory property** for variant definitions.
 
-A variant with a name of 'large' that belongs to the component named 'button' will have a {{ link('@naming#referencing', 'handle') }} of **@button--large**.
+A variant with a name of 'large' that belongs to the component named 'button' will have a {{ link('@naming#referencing-other-items', 'handle') }} of **@button--large**.
 
 ```yaml
 name: 'unicorn'
@@ -318,7 +318,7 @@ notes: "Different from the default component because this one is *funky*."
 
 ### preview
 
-Which layout (specified by it's {{ link('@naming#referencing', 'handle') }} to use to when rendering previews of this layout. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details.
+Which layout (specified by it's {{ link('@naming#referencing-other-items', 'handle') }} to use to when rendering previews of this layout. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details.
 
 This overrides any the (inherited) `preview` value of the parent component.
 
@@ -376,7 +376,7 @@ display:
 
 ### preview
 
-The default preview layout (specified by it's {{ link('@naming#referencing', 'handle') }} that child components should when being rendered as a preview. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details.
+The default preview layout (specified by it's {{ link('@naming#referencing-other-items', 'handle') }} that child components should when being rendered as a preview. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details.
 
 ```yaml
 preview: '@my-special-layout'
@@ -384,7 +384,7 @@ preview: '@my-special-layout'
 
 ### prefix
 
-A string to be prefixed on to the generated {{ link('@naming#referencing', 'handles') }} of all components (and variants) in that collection.
+A string to be prefixed on to the generated {{ link('@naming#referencing-other-items', 'handles') }} of all components (and variants) in that collection.
 
 ```yaml
 prefix: 'atoms'

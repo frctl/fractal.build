@@ -22,7 +22,7 @@ Using the default Handlebars template engine, that might look something like thi
 ```
 {% endraw %}
 
-As you can see, the `search-box.hbs` component view file uses the standard [Handlebars partial include](http://handlebarsjs.com/#partials) syntax to include the button template, with one difference - instead of using a *path* to the template, it uses the {{ link('@naming#referencing', '`@handle` syntax') }} to refer to the button component by it's handle.
+As you can see, the `search-box.hbs` component view file uses the standard [Handlebars partial include](http://handlebarsjs.com/#partials) syntax to include the button template, with one difference - instead of using a *path* to the template, it uses the {{ link('@naming#referencing-other-items', '`@handle` syntax') }} to refer to the button component by it's handle.
 
 It's important to note that the syntax for including one component's view template within another **will depend on which {{ link('@template-engines', 'template engine') }} you are using**. For instance, if you were using the [Nunjucks engine](https://github.com/frctl/nunjucks) you would instead use Nunjuck's `include` tag to include sub components. For example:
 {% raw %}
@@ -41,7 +41,7 @@ To handle passing context data for your included sub-components, you have a numb
 
 * A) Use the {{ link('@views#handlebars-helpers', 'render helper') }} to render the sub-component in-place, using it's own context data.
 * B) Define a complete set of context data in the parent component's config file
-* C) Reference context data for sub-components using the '@handle' {{ link('@naming#referencing', 'static data reference syntax') }}  from within the parent component's context data.
+* C) Reference context data for sub-components using the '@handle' {{ link('@naming#referencing-other-items', 'static data reference syntax') }}  from within the parent component's context data.
 
 Let's look at how each of these might work in turn.
 
@@ -149,7 +149,7 @@ So in this case the parent component is responsible for defining the context dat
 
 ### C) Use context data '@handle' references
 
-If you *don't* want to specify new data for all the sub-components in the parent's configuration file (and you don't want to use the `render` helper) you can use the  '@handle' {{ link('@naming#referencing', 'static data reference syntax') }} to dynamically pull context from the sub-component's configuration in to the parent component's context.
+If you *don't* want to specify new data for all the sub-components in the parent's configuration file (and you don't want to use the `render` helper) you can use the  '@handle' {{ link('@naming#referencing-other-items', 'static data reference syntax') }} to dynamically pull context from the sub-component's configuration in to the parent component's context.
 
 If we re-work the example above to use this technique it would look like this:
 

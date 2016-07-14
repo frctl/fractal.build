@@ -24,7 +24,7 @@ fractal.docs.set('default.context', {
 
 ### default.prefix
 
-Global prefix to apply to all generated {{ link('@naming#referencing', 'handles') }} unless overridden in a collection or page configuration file.
+Global prefix to apply to all generated {{ link('@naming#referencing-other-items', 'handles') }} unless overridden in a collection or page configuration file.
 
 ```js
 fractal.docs.set('default.prefix', 'foobar'); // default is null

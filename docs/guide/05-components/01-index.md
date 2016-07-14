@@ -37,14 +37,14 @@ The simplest possible component consists of just a single {{ link('@views', 'vie
 
 So a `button.hbs` file in the components directory will be identified as a component with the name of 'button'.
 
-```
+```tree
 ├── components
 │   └── button.hbs
 ```
 
 Simple components can have {{ link('@configuration-files', 'configuration files') }} associated with them. These must must reside in the same directory and have the same name as the component but have a `.config.{js|json|yml}` file extension. So a JSON configuration file for the button component would be called `button.config.json`.
 
-```
+```tree
 ├── components
 │   ├── button.config.json
 │   └── button.hbs
@@ -58,7 +58,7 @@ Compound components allow you to group associated files (such as asset files, te
 
 The simplest compound component consists of a directory containing a single {{ link('@views', 'view template') }}. The name of this view file **must** match the name of the directory. A 'block quote' component might therefore look like this:
 
-```
+```tree
 ├── components
 │   └── blockquote
 │       └── blockquote.hbs
@@ -66,7 +66,7 @@ The simplest compound component consists of a directory containing a single {{ l
 
 {{ link('@configuration-files', 'Configuration files') }} can of course be added, again following the same naming convention (`[component-name].config.{js|json|yml}`). Other files added to the directory will then be associated with the component. These files do not have to adhere to any particular naming convention. So a full example may look like:
 
-```
+```tree
 ├── components
 │   └── blockquote
 │   │   ├── blockquote.config.yml
@@ -106,11 +106,22 @@ Other places that handles are used include when specifying a {{ link('@preview-l
 See the documentation on {{ link('@naming', 'naming & referencing') }} for more details on working with handles in Fractal.
 </div>
 
+## Ordering components
+
+A component can be given an order by which to sort it with regards to it's siblings. This can be done by using the `order` property in the components's configuration file, or it can be done by prefixing the component file name (or the parent folder name for compound components) with a **two-digit number** (with leading zero, if required) **followed by a hyphen**. For example:
+
+```tree
+├── components
+│   ├── 01-blockquote.hbs
+│   ├── 01-link-list
+│   │   └──link-list.hbs
+```
+
 ## Hiding components
 
 A components can be hidden from navigation and listings by using the `hidden` property in the it's configuration file or by prefixing it's file name (or the parent folder name for compound components) with an underscore like this:
 
-```
+```tree
 ├── components
 │   ├── _blockquote.hbs
 │   ├── _link-list
@@ -120,18 +131,7 @@ A components can be hidden from navigation and listings by using the `hidden` pr
 
 In this case the `blockquote` and `link-list` components would **not** show up in any navigation, but the `article` component would.
 
-> Note that any components or variants *within* hidden collections can still be referenced by other components, included in templates etc.
-
-## Ordering components
-
-A component can be given an order by which to sort it with regards to it's siblings. This can be done by using the `order` property in the components's configuration file, or it can be done by prefixing the component file name (or the parent folder name for compound components) with a **two-digit number** (with leading zero, if required) **followed by a hyphen**. For example:
-
-```
-├── components
-│   ├── 01-blockquote.hbs
-│   ├── 01-link-list
-│   │   └──link-list.hbs
-```
+> Note that any hidden components or variants can still be referenced by other components, included in templates etc, but will not be included in any navigation or similar.
 
 <div class="Note Note--callout">
 You can also combine *ordering* and *hiding* by constructing a file name such as `_01-article.hbs`.

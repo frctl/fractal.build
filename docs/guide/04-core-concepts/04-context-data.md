@@ -55,7 +55,7 @@ Any data set within this context object will then be made available to that item
 
 Context data object also support the use of _data references_. These are special references, resolved at runtime, that allow you to 'point' to other item's context data.
 
-This is made possible using the `@handle` {{ link('@naming#referencing', 'reference syntax') }} in your context data definitions. For example, if we create a configuration file for a component called `list-items` that looks like this:
+This is made possible using the `@handle` {{ link('@naming#referencing-other-items', 'reference syntax') }} in your context data definitions. For example, if we create a configuration file for a component called `list-items` that looks like this:
 
 ```yaml
 context:

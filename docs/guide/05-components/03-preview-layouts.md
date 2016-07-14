@@ -55,7 +55,7 @@ In all cases, the preview layout must be referenced by the **handle** of the lay
 
 ### Global (default) preview layout
 
-You can set the default preview layout on your Fractal instance using the @handle reference for the chosen layout.
+You can set the default preview layout on your Fractal instance using the {{ link('@naming#referencing-other-items', '@handle reference') }} for the chosen layout.
 
 ```js
 fractal.components.set('default.preview', '@preview');

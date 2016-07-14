@@ -33,6 +33,18 @@ context:
 
 The {{ link('@collections-config', 'collection configuration reference') }} contains full details of all the collection properties available for use.
 
+## Ordering collections
+
+A collection can be given an order by which to sort it with regards to it's siblings. This can be done by using the `order` property in the collection's configuration file, or it can be done by prefixing the collection directory name with a **two-digit number** (with leading zero, if required) **followed by a hyphen**. For example:
+
+```
+├── components
+│   ├── 01-patterns
+│   │   └── article.hbs
+│   └── 02-layouts
+│       └── sidebar.hbs
+```
+
 ## Hiding collections
 
 A collection can be hidden from navigation and listings by using the `hidden` property in the it's configuration file or by prefixing the collection directory name with an underscore like this:
@@ -49,16 +61,6 @@ In this case the `layouts` collection would not show up in any navigation, but t
 
 > Note that any components or variants *within* hidden collections can still be referenced by other components, included in templates etc.
 
-## Ordering collections
-
-A collection can be given an order by which to sort it with regards to it's siblings. This can be done by using the `order` property in the collection's configuration file, or it can be done by prefixing the collection directory name with a **two-digit number** (with leading zero, if required) **followed by a hyphen**. For example:
-
-```
-├── components
-│   ├── 01-patterns
-│   │   └── article.hbs
-│   └── 02-layouts
-│       └── sidebar.hbs
-```
-
-> You can also combine *ordering* and *hiding* by constructing a directory name such as `_01-patterns`.
+<div class="Note Note--callout">
+You can also combine *ordering* and *hiding* by constructing a directory name such as `_01-patterns`.
+</div>
