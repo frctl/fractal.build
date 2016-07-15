@@ -13,7 +13,6 @@ const buffer     = require('vinyl-buffer');
 const bust       = require('gulp-buster');
 const sourcemaps        = require('gulp-sourcemaps');
 
-
 /*
  * Fractal
  */
