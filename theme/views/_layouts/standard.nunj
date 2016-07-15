@@ -28,7 +28,7 @@
 
             </div>
 
-            <div class="Frame-main">
+            <div class="Frame-main" data-pjax>
             {% block page %}{% endblock %}
             </div>
 

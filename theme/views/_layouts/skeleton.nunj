@@ -11,5 +11,8 @@
 
 {% block frame %}{% endblock %}
 
+<script src="{{ path('/theme/js/main.js') }}?cachebust={{ frctl.theme.get('cachebust').js }}">
+
+</script>
 </body>
 </html>

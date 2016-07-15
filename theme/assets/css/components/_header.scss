@@ -1,7 +1,6 @@
 .Header {
     display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    height: 4em;
     align-items: center;
 }
 
@@ -10,6 +9,9 @@
     font-size: 22px;
     color: $color-text;
     font-weight: bold;
+    &:hover {
+        color: $color-text;
+    }
 }
 
 .Header-version {

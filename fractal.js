@@ -33,7 +33,8 @@ fractal.web.theme(require('./theme')({
     imagePath: 'assets/img',
     includePaths: [`${__dirname}/helpers`],
     cachebust: {
-        css: cachebust['theme/dist/css/main.css'] || ''
+        css: cachebust['theme/dist/css/main.css'] || '',
+        js: cachebust['theme/dist/js/main.js'] || ''
     }
 }));
 

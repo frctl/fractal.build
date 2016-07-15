@@ -503,7 +503,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 *,
 *:after,
 *:before {
-  box-sizing: inherit; }
+  box-sizing: border-box; }
 
 ::selection {
   background-color: rgba(0, 116, 217, 0.075); }
@@ -591,6 +591,7 @@ svg {
   width: 0; }
 
 ::-webkit-scrollbar-thumb {
+  transition: background 1000ms ease;
   background: rgba(34, 34, 34, 0.1);
   border: 0 none transparent;
   border-radius: 0; }
@@ -641,21 +642,40 @@ h6 {
   margin: 0 auto;
   padding: 0 30px; }
 
-.Frame-body {
-  padding-top: 30px; }
+.Frame-body > .Frame-inner {
+  height: calc(100vh - 4em);
+  position: relative; }
 
 .Frame-sidebar {
   width: 250px;
   flex-shrink: 0;
   padding-right: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-top: 20px;
   padding-bottom: 30px;
-  padding-top: 15px; }
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden; }
+  .Frame-sidebar:hover {
+    overflow: auto; }
 
 .Frame-main {
   flex-grow: 1;
   padding-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
   padding-bottom: 30px;
-  max-width: 800px; }
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+  .Frame-main .Frame-inner {
+    max-width: 800px; }
+
+.Frame-main::-webkit-scrollbar-thumb {
+  background: #fff; }
+
+.Frame-main:hover::-webkit-scrollbar-thumb {
+  background: rgba(34, 34, 34, 0.1); }
 
 .Code {
   background: #f7f7f7;
@@ -663,8 +683,7 @@ h6 {
 
 .Header {
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  height: 4em;
   align-items: center; }
 
 .Header-brand {
@@ -672,6 +691,8 @@ h6 {
   font-size: 22px;
   color: #222;
   font-weight: bold; }
+  .Header-brand:hover {
+    color: #222; }
 
 .Header-version {
   font-size: 0.7em;
@@ -706,6 +727,9 @@ h6 {
 
 .Page-title {
   margin: 0 0 0.9em 0; }
+
+.Page-content {
+  max-width: 800px; }
 
 .Page-placeholder {
   font-style: italic;

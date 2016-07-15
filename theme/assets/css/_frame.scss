@@ -20,22 +20,44 @@
 }
 
 .Frame-body {
-    padding-top: 30px;
+    > .Frame-inner {
+        height: calc(100vh - 4em);
+        position: relative;
+    }
 }
 
 .Frame-sidebar {
     width: 250px;
     flex-shrink: 0;
     padding-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-top: 20px;
     padding-bottom: 30px;
-    padding-top: 15px;
-    // border-right: 1px solid $color-border;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+    &:hover {
+        overflow: auto;
+    }
 }
 
 .Frame-main {
     flex-grow: 1;
     padding-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
     padding-bottom: 30px;
-    max-width: 800px;
-    // padding: 20px 30px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    .Frame-inner {
+        max-width: 800px;
+    }
+}
+
+.Frame-main::-webkit-scrollbar-thumb {
+    background: #fff;
+}
+.Frame-main:hover::-webkit-scrollbar-thumb {
+    background: rgba($color-text, 0.1);
 }

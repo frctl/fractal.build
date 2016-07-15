@@ -20,7 +20,7 @@ $color-border: #ddd;
 *,
 *:after,
 *:before {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 ::selection {
@@ -128,6 +128,7 @@ svg {
 }
 
 ::-webkit-scrollbar-thumb {
+    transition: background 1000ms ease;
     background: rgba($color-text, 0.1);
     border: 0 none transparent;
     border-radius: 0;
