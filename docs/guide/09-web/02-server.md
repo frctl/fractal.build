@@ -54,12 +54,22 @@ BrowserSync can be enabled as a global option, when starting the server via the 
 You can {{ link('@project-settings', 'configure') }} your Fractal instance to use BrowserSync integration whenever the server is started as follows:
 
 ```js
-fractal.web.set('sync', true);
+fractal.web.set('server.sync', true);
+```
+
+You can also pass [options](https://www.browsersync.io/docs/options) to the underlying BrowserSync instance using the `server.syncOptions` property:
+
+```js
+fractal.web.set('server.syncOptions', {
+    open: true,
+    browser: ['google chrome', 'firefox'],
+    notify: true
+});
 ```
 
 ### Using the CLI tool
 
-From the root directory of your project use the following command:
+You can use the `--sync` option to enable BrowserSync when starting the server:
 
 ```plain
 fractal start --sync
