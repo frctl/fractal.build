@@ -134,4 +134,15 @@
             font-style: italic;
         }
     }
+
+    img {
+        max-width: 100%;
+    }
+
+    .Screenshot {
+        margin-left: -30px;
+        img {
+            max-width: 100%;
+        }
+    }
 }

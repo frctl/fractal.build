@@ -41,4 +41,4 @@ builder.build().then(function(){
 });
 ```
 
-The {{ link('@api-builder', '`Builder`') }} object returned by the call to `fractal.web.server()` is a Node EventEmitter and will emit error events (and others) that you can bind to. See the {{ link('@api-web', '`fractal.web`') }} API docs for full details.
+The {{ link('@api-builder', '`Builder`') }} object returned by the call to `fractal.web.builder()` is a Node EventEmitter and will emit error events (and others) that you can bind to. See the {{ link('@api-web', '`fractal.web`') }} API docs for full details.
