@@ -5,14 +5,17 @@ handle: guide
 
 Fractal is a tool to help you **build** and **document** web component libraries and then **integrate** them into your projects.
 
-<!-- It's focus is on providing a flexible tool that can be used for both component library development _and_ for helping integrate those components into your site, application or build pipelines.
+Component (or pattern) libraries are a way of designing and building websites in a modular fashion, breaking up the UI into small, reusable chunks that can then later be assembled in a variety of ways to build anything from larger components right up to whole pages.
 
-Fractal can also help you generate 'living' documentation pages for your component library to ensure that your components and documentation never need to go out of sync again. -->
+Fractal helps you assemble, preview and document website component libraries, and then integrate them into your web sites, apps and build processes to create joined up, 'living' projects.
+
+Fractal can be run from the command line or integrated into your project via it's API.
+
 
 ## Requirements
 
-Fractal requires Node v4.0+ to run.
+Fractal requires [Node.js](https://nodejs.org) v4.0+ to run.
 
 ## About this guide
 
-This guide will assume basic knowledge of the command line, Node JS and using NPM to install and manage dependencies on projects.
+This guide will assume basic knowledge of the command line, Node.js and how to use NPM to install and manage project dependencies.

@@ -7,7 +7,7 @@ Fractal comes with a local development server for running the web UI while you a
 
 ## Starting the server
 
-You can either start the server using the Fractal CLI tool (if you are using it), or you can start it programmatically using Fractal's API.
+You can either start the server using the Fractal CLI tool (if you are using it) or programmatically using Fractal's API.
 
 ### Using the CLI tool
 
