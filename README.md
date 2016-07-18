@@ -1,8 +1,8 @@
-# Fractal Docs
+# Fractal site and docs
 
-Source code for the Fractal documentation site at http://fractal.build
+http://fractal.build
 
-The site is built using Fractal's own documentation engine.
+Built using Fractal's own documentation engine with a custom theme, exported to a static HTML build for deployment.
 
 ## Running locally
 

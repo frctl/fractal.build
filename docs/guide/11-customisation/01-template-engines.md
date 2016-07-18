@@ -62,3 +62,10 @@ fractal.components.set('ext', '.nunj'); // look for files with a .nunj file exte
 ## Available adapters
 
 Currently there are specific 'official' adapters implemented for [Handlebars](https://github.com/frctl/nunjucks), [Mustache](https://github.com/frctl/mustache) and [Nunjucks](https://github.com/frctl/nunjucks). However, if you want to use something else, there is also a [generic adapter](https://github.com/frctl/consolidate) that uses the Consolidate.js library to provide compatibility with 30+ other template engines.
+
+For full information on installing, using and customising individual template engine adapters, see the appropriate READMEs:
+
+* Handlebars adapter - see the {{ link('@views', 'view templates') }} documentation
+* [Mustache adapter](https://github.com/frctl/mustache)
+* [Nunjucks adapter](https://github.com/frctl/nunjucks)
+* [Generic/consolidate adapter](https://github.com/frctl/consolidate)
