@@ -1,5 +1,5 @@
 ---
-label: Mandelbrot
+label: Default theme
 title: Mandelbrot
 ---
 
@@ -10,9 +10,9 @@ title: Mandelbrot
 </div>
 
 
-## Customisation
+## Configuration
 
-Mandelbrot offers some theme-specific configuration options. To set these, you must first create a new instance of the theme and pass in the configuration values as follows:
+Mandelbrot offers some theme-specific configuration options. Configuration properties can be set when initialising a new instance of the theme:
 
 ```js
 const mandelbrot = require('@frctl/mandelbrot'); // require the Mandelbrot theme module
@@ -26,9 +26,6 @@ const myCustomisedTheme = mandelbrot({
 fractal.web.theme(myCustomisedTheme); // tell Fractal to use the configured theme by default
 ```
 
-## Configuration options
-
-The available configuration options are detailed below:
 
 ### skin
 

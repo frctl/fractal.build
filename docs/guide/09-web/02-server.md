@@ -14,10 +14,23 @@ You can either start the server using the Fractal CLI tool (if you are using it)
 You can use the `start` command from within the root of your project to get the server up and running:
 
 ```plain
-fractal start --watch
+fractal start
 ```
 
-The (optional) `--watch` flag here tells Fractal to watch the filesystem for changes and to rebuild the data structure as you make updates to your pages and components. For an alternative, more advanced 'watcher' see the [BrowserSync integration](#browsersync-integration) section below.
+You can provide the following (optional) command line options to override the default configuration:
+
+* `-p, --port <port-number>` - the port number to use, for example `5000`.
+* `-t, --theme <theme-name>` - the custom theme to use.
+* `-s, --sync` - whether to use the integrate [BrowserSync](#browsersync-integration) instance to provide auto-refresh and syncing capabilities
+* `-w, --watch` - whether to watch components and documentation pages for changes
+
+As an example, the command:
+
+```plain
+fractal start --watch --port 4000
+```
+
+Would start the preview server at the URL `http://localhost:4000` and start watching the filesystem for changes.
 
 ### Programmatically
 

@@ -20,6 +20,19 @@ You can also use one template engine for your components and another different e
 **It's important to understand** that the syntax, capabilities and even behaviour of your view templates will all depend on the template engine you have chosen to use. **The contents of this documentation will assume the use of the default Handlebars engine**.
 </div>
 
+## File extensions
+
+By default, Fractal will look for **component** view templates with a `.hbs` file extension, and **documentation** view templates with a `.md` file extension.
+
+You can customise this to your liking using the `ext` configuration setting for components and/or docs as follows:
+
+```js
+fractal.components.set('ext', '.handlebars');
+fractal.docs.set('ext', '.html');
+```
+
+Note that the extension should contain the `.` character before the extension itself.
+
 ## Using Handlebars
 
 {% raw %}
@@ -70,6 +83,21 @@ You can also pass in a *partial* data object (i.e. containing only some of the p
 ```handlebars
 {{render '@example' partialData merge=true}}
 ```
+{% endraw %}
+
+#### `path`
+
+Takes a root-relative path and re-writes it if required to make it work in static HTML exports.
+
+**It is strongly recommended to use this helper whenever you need to link to any {{ link('@web#static-assets', 'static assets') }} from your templates.**
+
+{% raw %}
+
+```handlebars
+{{path '/css/my-stylesheet.css'}}
+```
+
+The path argument should begin with a slash and be relative to the web root. During a static HTML export this path will then be re-written to be relative to the current page.  
 
 #### `context`
 
@@ -120,6 +148,82 @@ This variable is only set in {{ link('@preview-layouts', 'component preview layo
 
 ```handlebars
 {{ _target.title }} <!-- outputs 'Button' -->
+```
+
+## Customising Handlebars
+
+If you wish to customise the default Handlebars instance for components and/or documentation pages, you can do so by requiring the adapter and configuring it as follows:
+
+```js
+const hbs = require('@frctl/handlebars')({
+    helpers: {
+        uppercase: function(str) {
+            return str.toUpperCase();
+        }
+    }
+    /* other configuration options here */
+});
+
+fractal.components.engine(hbs); /* set as the default template engine for components */
+fractal.docs.engine(hbs); /* you can also use the same instance for documentation, if you like! */
+```
+
+### Configuration options
+
+#### helpers
+
+A set of [Handlebars helpers](http://handlebarsjs.com/#helpers) to make available to your templates.
+
+```js
+{
+    helpers: {
+        uppercase: function(str) {
+            return str.toUpperCase();
+        },
+        lowercase: function(str) {
+            return str.toLowerCase();
+        }
+    }
+}
+```
+
+#### partials
+
+A set of [Handlebars partials](http://handlebarsjs.com/#partials) to make available to your templates. The contents of these can then be included using the standard Handlebars `{{> myPartialName}}` syntax.
+
+```js
+{
+    partials: {
+        foobar: 'This is a partial!',
+    }
+};
+```
+
+#### pristine
+
+Defaults to `false`. Set to `true` if you **do not wish** to automatically load any of the {{ link('@views#using-handlebars', 'bundled helpers') }} into your Handlebars instance.
+
+```js
+{
+    pristine: true
+}
+```
+
+### Accessing the underlying Handlebars instance
+
+If you need to access the underlying Handlebars instance to customise it further, you can do so by using the `engine` property of a configured adapter instance:
+
+```js
+const hbs = require('@frctl/handlebars')({
+    /* config */
+});
+
+const engine = hbs.engine; /* The underlying Handlebars instance */
+
+engine.registerHelper('foo', function(str){
+    /* handlebars helper code */
+});
+
 ```
 
 {% endraw %}

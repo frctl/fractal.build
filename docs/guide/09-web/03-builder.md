@@ -29,6 +29,10 @@ You can use the `build` command from within the root of your project to get the 
 fractal build
 ```
 
+You can provide the following optional command line options to override the default configuration:
+
+* `-t, --theme <theme-name>` - a custom theme to use.
+
 ### Programmatically
 
 If you wish to start the export process programmatically, (often useful for {{ link('@build-tools', 'build tool') }} integrations), you can create a new builder instance using the {{ link('@api-web#builder', '`fractal.web.builder()`') }} method and then start it as required:
