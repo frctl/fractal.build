@@ -736,6 +736,9 @@ h6 {
   font-style: italic;
   opacity: 0.5; }
 
+.Page-badges {
+  margin: 25px 0; }
+
 .Prose {
   font-feature-settings: "liga", "dlig", "kern", "onum";
   hanging-punctuation: first; }

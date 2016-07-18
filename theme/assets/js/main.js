@@ -3,8 +3,9 @@ if (window.location.protocol.indexOf('file') !== 0) {
     const Pjax = require('pjax');
     new Pjax({
         elements:'.Frame-body a',
-        selectors: ['title', '.Frame-main', '.Tree']
+        selectors: ['title', '.Frame-main', '.Tree', '.Header']
     });
+    console.log('asd');
 }
 
 function toArray(nodeList) {

@@ -117,6 +117,7 @@ gulp.task('default', gulp.parallel('css', 'fonts', 'js'));
 gulp.task('watch', gulp.parallel('css:watch', 'fonts:watch', 'js:watch'));
 
 gulp.task('dev', gulp.series('default', 'fractal:start', 'watch'));
+gulp.task('build', gulp.series('default', 'fractal:build'));
 
 
 function compileJS(watch, done) {
