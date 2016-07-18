@@ -1,8 +1,8 @@
-# Fractal site and docs
+# Fractal website
 
-http://fractal.build
+Site and docs for [Fractal](https://github.com/frctl/fractal), a tool for building website component libraries. http://fractal.build
 
-Built using Fractal's own documentation engine with a custom theme, exported to a static HTML build for deployment.
+Built using Fractal's own documentation engine with a custom theme, exported to a static HTML build for deployment. 
 
 ## Running locally
 
