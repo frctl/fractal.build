@@ -201,7 +201,11 @@ A set of [Handlebars partials](http://handlebarsjs.com/#partials) to make availa
 
 #### pristine
 
+{% endraw %}
+
 Defaults to `false`. Set to `true` if you **do not wish** to automatically load any of the {{ link('@views#using-handlebars', 'bundled helpers') }} into your Handlebars instance.
+
+{% raw %}
 
 ```js
 {
@@ -223,7 +227,6 @@ const engine = hbs.engine; /* The underlying Handlebars instance */
 engine.registerHelper('foo', function(str){
     /* handlebars helper code */
 });
-
 ```
 
 {% endraw %}

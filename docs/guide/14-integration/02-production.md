@@ -1,3 +1,4 @@
 ---
-label: Production Apps
+label: Using Fractal in production
+title: Using Fractal in production
 ---
