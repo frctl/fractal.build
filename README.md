@@ -12,8 +12,6 @@ Built using Fractal's own documentation engine with a custom theme, exported to 
 
 ## Exporting static build (for hosting)
 
-The static build includes an `.htaccess` file to generate 'pretty' URLs.
+To export a static build, use the `gulp build` command.
 
-```
-gulp dev
-```
+The static build includes an `.htaccess` file to generate 'pretty' URLs.
