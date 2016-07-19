@@ -19,7 +19,9 @@ Fractal can be run from the command line or integrated into your project via it'
 
 ## Requirements
 
-Fractal requires [Node.js](https://nodejs.org) v4.0+ to run.
+Fractal requires [Node.js](https://nodejs.org) v4.4.7+ to run.
+
+It is the intention that Fractal's Node.js version support will track the latest Node LTS release version.
 
 ## Why Fractal?
 
