@@ -4,14 +4,16 @@ label: fractal.cli
 title: fractal.cli
 ---
 
-## .command()
+> Documentation coming soon.
 
-## .exec()
+### .command()
 
-## .log()
+### .exec()
 
-## .set()
+### .log()
 
-## .get()
+### .set()
 
-## .config()
+### .get()
+
+### .config()

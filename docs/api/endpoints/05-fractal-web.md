@@ -4,12 +4,14 @@ label: fractal.web
 title: fractal.web
 ---
 
-## .server()
+> Documentation coming soon.
 
-## .builder()
+### .server()
 
-## .set()
+### .builder()
 
-## .get()
+### .set()
 
-## .config()
+### .get()
+
+### .config()

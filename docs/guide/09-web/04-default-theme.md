@@ -1,6 +1,6 @@
 ---
 label: Default theme
-title: Mandelbrot
+title: Default theme - Mandelbrot
 ---
 
 [Mandelbrot](https://github.com/frctl/mandelbrot) is the name of the default web UI theme that ships with Fractal. A standard installation will look something like this:
@@ -26,6 +26,9 @@ const myCustomisedTheme = mandelbrot({
 fractal.web.theme(myCustomisedTheme); // tell Fractal to use the configured theme by default
 ```
 
+<div class="Note Note--standout">
+<p>You will need to run `npm install --save @frctl/mandelbrot` within your project directory before you can `require()` it in your project settings file.</p>
+</div>
 
 ### skin
 
@@ -171,3 +174,26 @@ Virtual path prefix for the theme's static assets. The value of this is prepende
 ```
 
 * **Default:** `_theme`
+
+## Template customisation
+
+Mandelbrot (as with all themes) uses [Nunjucks](http://mozilla.github.io/nunjucks/) templates to generate it's HTML. The source code for these templates can be seen in the `views` directory of the [Mandelbrot repository](https://github.com/frctl/mandelbrot/tree/master/views).
+
+To override the contents of any of Mandelbrot's templates you can specify a custom `views` directory within your own Fractal project using the `theme.addLoadPath()` method:
+
+```js
+const myCustomisedTheme = require('@frctl/mandelbrot')({
+    // theme config here
+});
+
+// specify a directory to hold the theme override templates
+myCustomisedTheme.addLoadPath(__dirname + '/theme-overrides');  
+
+fractal.web.theme(myCustomisedTheme);
+```
+
+Any templates within this directory **will be used in preference** to those of the same name within the Mandelbrot `views` directory. This allows you to copy a template from the Mandelbrot repo into your own project and adjust it to your liking. The next time you start up the web UI it will use your custom template instead of the default one.
+
+<div class="Note Note--standout">
+<p>You do not need to copy _all_ of Mandelbrot's templates into your own theme templates directory - you should only create templates to override the specific parts of the UI that you want to adjust.</p>
+</div>
