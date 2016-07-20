@@ -2,7 +2,7 @@
     color: #777;
     display: flex;
     a {
-        color: #555;
+        color: #444;
         text-decoration: none;
     }
     @media all and (max-width: 500px) {
@@ -13,10 +13,16 @@
 .Coda-credit {
     font-weight: bold;
     font-size: 15px;
+    margin-bottom: 3px;
 }
 
 .Coda-copyright {
-    font-size: 13px;
+    font-size: 12px;
+    color: #888;
+    a {
+        color: #888;
+        text-decoration: underline;
+    }
 }
 
 .Coda-logo {

@@ -15,10 +15,10 @@
 
         <div class="Panel-screenshot">
             <a href="/guide">
-                <picture>
-                 <source srcset="{{ image('screenshot-demo-cl.png') }}" media="(min-width: 940px)">
+                <picture class="Browser Browser--with-url">
+                 <source srcset="{{ image('screenshot-demo-cl-large.png') }}" media="(min-width: 900px)">
                  <source srcset="{{ image('screenshot-demo-cl-medium.png') }}" media="(min-width: 700px)">
-                 <source srcset="{{ image('screenshot-demo-cl-small.png') }}" media="(min-width: 400px)">
+                 <source srcset="{{ image('screenshot-demo-cl-small.png') }}" media="(min-width: 500px)">
                  <img src="{{ image('screenshot-demo-cl-extra-small.png') }}">
                 </picture>
             </a>

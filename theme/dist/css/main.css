@@ -692,6 +692,60 @@ h6 {
 .Frame--full .Frame-body .Frame-inner {
   padding: 0; }
 
+.Browser {
+  border: 1px solid #aaa;
+  border-top: 2.5em solid #f6f6f6;
+  box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-radius: 6px 6px 0 0; }
+
+.Browser:before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: -1.5em;
+  left: 1em;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: #f44;
+  background-color: linear-gradient(to bottom, #f6f6f6 0%, #ededed 100%);
+  box-shadow: 0 0 0 2px #f44, 1.3em 0 0 2px #9b3, 2.6em 0 0 2px #fb5; }
+
+.Browser--with-tab:after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: -2.5em;
+  left: 5.5em;
+  width: 20%;
+  height: 0em;
+  border-bottom: 2em solid white;
+  border-left: 0.8em solid transparent;
+  border-right: 0.8em solid transparent; }
+
+.Browser--with-url:after {
+  display: block;
+  position: absolute;
+  content: 'http://localhost:3000';
+  font-family: monospace;
+  font-size: 11px;
+  color: #888;
+  text-align: left;
+  top: -2.8em;
+  left: 8em;
+  width: calc(100% - 9.6em);
+  padding: 2px 10px;
+  height: 1.9em;
+  border-radius: 2px;
+  background-color: white;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: 1px solid #e8e8e8; }
+
+.Browser > * {
+  display: block; }
+
 .Button {
   display: inline-block;
   padding: 0.5em 1em;
@@ -710,7 +764,7 @@ h6 {
   color: #777;
   display: flex; }
   .Coda a {
-    color: #555;
+    color: #444;
     text-decoration: none; }
   @media all and (max-width: 500px) {
     .Coda {
@@ -718,10 +772,15 @@ h6 {
 
 .Coda-credit {
   font-weight: bold;
-  font-size: 15px; }
+  font-size: 15px;
+  margin-bottom: 3px; }
 
 .Coda-copyright {
-  font-size: 13px; }
+  font-size: 12px;
+  color: #888; }
+  .Coda-copyright a {
+    color: #888;
+    text-decoration: underline; }
 
 .Coda-logo {
   position: relative;
@@ -852,16 +911,19 @@ h6 {
     width: 100%;
     flex-grow: 1;
     justify-content: center; }
-  .Panel--intro .Panel-screenshot img {
-    width: 100%; }
+  .Panel--intro .Browser {
+    margin: 20px 30px 40px 30px; }
     @media all and (max-width: 400px) {
-      .Panel--intro .Panel-screenshot img {
-        width: calc(100% + 50px);
-        margin-left: -25px; } }
+      .Panel--intro .Browser {
+        margin-left: 15px;
+        margin-right: 15px; } }
+  .Panel--intro .Panel-screenshot img {
+    width: 100%;
+    display: block; }
   .Panel--intro .Panel-screenshot picture {
     display: block; }
   .Panel--intro .Panel-text {
-    padding: 6vh 20px 5vh 20px; }
+    padding: 12vh 20px 6vh 20px; }
   .Panel--intro .Panel-title {
     font-weight: normal;
     font-size: 50px;

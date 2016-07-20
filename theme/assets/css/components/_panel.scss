@@ -20,13 +20,18 @@
         justify-content: center;
     }
 
+    .Browser {
+        margin: 20px 30px 40px 30px;
+        @media all and (max-width: 400px) {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+
     .Panel-screenshot {
         img {
             width: 100%;
-            @media all and (max-width: 400px) {
-                width: calc(100% + 50px);
-                margin-left: -25px;
-            }
+            display: block;
         }
         picture {
             display: block;
@@ -34,7 +39,7 @@
     }
 
     .Panel-text {
-        padding: 6vh 20px 5vh 20px;
+        padding: 12vh 20px 6vh 20px;
     }
 
     .Panel-title {

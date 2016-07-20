@@ -38,7 +38,7 @@
     <footer class="Frame-footer">
         <div class="Coda Frame-inner">
             <div class="Coda-section">
-                <p class="Coda-credit">Built at <a href="http://clearleft.com">Clearleft</a>.</p>
+                <p class="Coda-credit">A <a href="http://clearleft.com">Clearleft</a> project.</p>
                 <p class="Coda-copyright">&copy; 2016 <a href="http://allmarkedup.com">Mark Perkins</a>. Released under an <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
             </div>
             <div class="Coda-section">
