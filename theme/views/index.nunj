@@ -1,27 +1,30 @@
 {% extends "_layouts/full.nunj" %}
 
-{% block page %}
+{% set isHome = true %}
 
-<div class="Splash">
+{% block main %}
 
-    <div class="Splash-inner">
+<div class="Panel Panel--intro">
+    <div class="Panel-content">
 
-        <h1 class="Splash-title">fractal</h1>
+        <div class="Panel-text">
+            <h1 class="Panel-title">Build. Document. Integrate.</h1>
+            <p class="Panel-strapline">Create component libraries & styleguides that fit the way <em>you</em> work.</p>
+            <a class="Button" href="/guide">Get started &rarr;</a>
+        </div>
 
-        <p class="Splash-strapline">
-            <strong>build</strong> <span>::</span> <strong>document</strong> <span>::</span> <strong>integrate</strong>
-        </p>
-
-        <div class="Splash-version">v{{ frctl.get('project.version') }}</div>
-
-        <ul class="Splash-links">
-            {% include "_partials/section-nav.nunj" %}
-        </ul>
+        <div class="Panel-screenshot">
+            <a href="/guide">
+                <picture>
+                 <source srcset="{{ image('screenshot-demo-cl.png') }}" media="(min-width: 940px)">
+                 <source srcset="{{ image('screenshot-demo-cl-medium.png') }}" media="(min-width: 700px)">
+                 <source srcset="{{ image('screenshot-demo-cl-small.png') }}" media="(min-width: 400px)">
+                 <img src="{{ image('screenshot-demo-cl-extra-small.png') }}">
+                </picture>
+            </a>
+        </div>
 
     </div>
-
 </div>
-
-
 
 {% endblock %}

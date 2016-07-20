@@ -1,3 +1,0 @@
-<li><a href="{{ path('/guide') }}">Guide</a></li>
-<li><a href="{{ path('/api') }}">API Docs</a></li>
-<li><a href="https://github.com/frctl/fractal">Github</a></li>

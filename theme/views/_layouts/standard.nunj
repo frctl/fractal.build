@@ -1,41 +1,19 @@
 {% extends "_layouts/skeleton.nunj" %}
 
-{% block frame %}
+{% set frameType = 'sidebar' %}
 
-<div class="Frame Frame--sidebar">
+{% block body %}
 
-    <div class="Frame-header">
-        <header class="Header Frame-inner">
-            <a class="Header-brand" href="{{ path('/') }}">fractal <span class="Header-version">v{{ frctl.get('project.version') }}</span></a>
-            <nav class="Header-nav">
-                <ul class="Header-navItems">
-                    {% include "_partials/section-nav.nunj" %}
-                </ul>
-            </nav>
-        </header>
-    </div>
+<div class="Frame-sidebar">
 
-
-    <div class="Frame-body">
-
-        <div class="Frame-inner">
-
-            <div class="Frame-sidebar">
-
-                <nav class="SectionNav">
-                {% block navigation %}{% endblock %}
-                </nav>
-
-            </div>
-
-            <div class="Frame-main" data-pjax>
-            {% block page %}{% endblock %}
-            </div>
-
-        </div>
-
-    </div>
+    <nav class="SectionNav">
+    {% block navigation %}{% endblock %}
+    </nav>
 
 </div>
+
+<main class="Frame-main" data-pjax>
+{% block main %}{% endblock %}
+</main>
 
 {% endblock %}

@@ -35,3 +35,10 @@
         {% endif %}
     {% endfor %}
 {% endmacro %}
+
+{% macro svg(name, width, height, fill) %}
+{% set svgWidth = width %}
+{% set svgHeight = height %}
+{% set svgFill = fill %}
+{% include "_svg/" + name + ".svg" %}
+{% endmacro %}

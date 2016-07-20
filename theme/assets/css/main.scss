@@ -31,12 +31,19 @@ html {
     position: relative;
     height: 100%;
     width: 100%;
-    background: #fff;
     box-sizing: border-box;
     font: 16px/#{(24/16)} $font-family-sans-serif;
     color: $color-text;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    background-color: #fafafa;
+    &.is-home {
+        background-color: #efefef;
+        background-image: url("/assets/images/koch-3.svg");
+        background-size: 60%;
+        background-position: 50% 50%;
+        background-repeat: repeat;
+    }
 }
 
 body {

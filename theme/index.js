@@ -18,7 +18,7 @@ module.exports = function(options){
     });
 
     const theme = new Theme(Path.join(__dirname, 'views'), config);
-    
+
     theme.setErrorView('error.nunj');
     theme.addStatic(Path.join(__dirname, 'dist'), '/theme');
 
@@ -39,6 +39,8 @@ module.exports = function(options){
         const logger = app.cli.console;
 
         env.engine.addFilter('url', (item) => theme.urlFromRoute('page', {path: item.path}) );
+
+        env.engine.addGlobal('image', srcPath => `/${app.web.get('assets.mount')}/images/${srcPath}`);
 
         if (config.imagePath) {
             app.assets.add('images', {
@@ -61,14 +63,14 @@ module.exports = function(options){
                 }
                 return `[${linkText}](${path}${anchor})`;
             },
-            image: function(srcPath, altText){
+            image: function(srcPath, altText, html){
                 if (!config.imagePath) {
                     return '#';
                 }
                 altText = altText || '';
                 const pathify = this.env.getFilter('path');
                 const path = pathify.call(this, `/${app.web.get('assets.mount')}/images/${srcPath}`)
-                return `![${altText}](${path})`;
+                return html ? `<img src="${path}" alt="${altText}">` : `![${altText}](${path})`;
             }
         });
 

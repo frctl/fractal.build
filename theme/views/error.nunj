@@ -1,3 +1,21 @@
-<h1>Error</h1>
 
-{{ error.message }}
+{% extends "_layouts/full.nunj" %}
+{% import "_macros.nunj" as nav %}
+
+{% set page = {
+    title: 'An error has occurred'
+} %}
+
+{% block navigation %}
+
+
+{% endblock %}
+
+{% block main %}
+
+<div class="Error">
+    <h1>Error</h1>
+    <p>{{ error.message }}</p>
+</div>
+
+{% endblock %}

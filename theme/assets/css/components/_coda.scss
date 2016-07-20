@@ -1,0 +1,39 @@
+.Coda {
+    color: #777;
+    display: flex;
+    flex-wrap: wrap;
+    a {
+        color: #555;
+        text-decoration: none;
+    }
+}
+
+.Coda-credit {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.Coda-copyright {
+    font-size: 13px;
+}
+
+.Coda-logo {
+    position: relative;
+    top: 3px;
+}
+
+.Coda-section {
+    width: 100%;
+    @media all and (max-width: 499px) {
+        text-align: center;
+        & + .Coda-section {
+            margin-top: 10px;
+        }
+    }
+    @media all and (min-width: 500px) {
+        width: 50%;
+        &:last-child {
+            text-align: right;
+        }
+    }
+}

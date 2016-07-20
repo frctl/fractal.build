@@ -1,11 +1,9 @@
 {% extends "_layouts/skeleton.nunj" %}
 
-{% block frame %}
+{% set frameType = 'full' %}
 
-<div class="Frame Frame--full">
+{% block body %}
 
-{% block page %}{% endblock %}
-
-</div>
+{% block main %}{% endblock %}
 
 {% endblock %}

@@ -20,7 +20,7 @@
 {{ nav.tree(frctl.docs.findCollection('name', request.segments[0]), doc, request, toc) }}
 {% endblock %}
 
-{% block page %}
+{% block main %}
 
 <div class="Page">
 

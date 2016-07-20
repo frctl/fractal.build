@@ -1,0 +1,76 @@
+.Panel {
+    @media all and (min-width: 1100px) {
+        margin-left: -50px;
+        margin-right: -50px;
+    }
+}
+
+.Panel--intro {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 1;
+    flex-grow: 1;
+
+    .Panel-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    .Panel-screenshot {
+        img {
+            width: 100%;
+            @media all and (max-width: 400px) {
+                width: calc(100% + 50px);
+                margin-left: -25px;
+            }
+        }
+        picture {
+            display: block;
+        }
+    }
+
+    .Panel-text {
+        padding: 6vh 20px 5vh 20px;
+    }
+
+    .Panel-title {
+        font-weight: normal;
+        font-size: 50px;
+        margin-bottom: 6px;
+    }
+
+    .Panel-strapline {
+        font-weight: normal;
+        color: #777;
+        font-size: 20px;
+        margin-bottom: 3vh;
+        padding: 0 20px;
+    }
+
+    @media all and (max-width: 940px) {
+        .Panel-title {
+            font-size: 5.5vw;
+        }
+        .Panel-strapline {
+            font-size: 18px;
+        }
+    }
+
+    @media all and (max-width: 800px) {
+        .Panel-strapline{
+            font-size: 16px;
+        }
+    }
+
+    @media all and (max-width: 600px) {
+        .Panel-title {
+            font-size: 22px;
+            font-weight: bold;
+        }
+    }
+
+}

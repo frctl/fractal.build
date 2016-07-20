@@ -2,22 +2,11 @@
     display: flex;
     height: 4em;
     align-items: center;
-}
-
-.Header-brand {
-    text-decoration: none;
-    font-size: 22px;
-    color: $color-text;
-    font-weight: bold;
-    &:hover {
-        color: $color-text;
+    @media all and (min-width: 1100px) {
+        .Logo {
+            // margin-left: -50px;
+        }
     }
-}
-
-.Header-version {
-    font-size: 0.7em;
-    color: rgba($color-text, 0.5);
-    font-weight: normal;
 }
 
 .Header-nav {
@@ -30,10 +19,29 @@
     align-content: center;
     li {
         & + li {
-            margin-left: 20px;
+            margin-left: 30px;
         }
         a {
             text-decoration: none;
+        }
+    }
+    .Header-navItem--github {
+        margin-left: 32px;
+    }
+    svg {
+        width: 24px;
+        height: 24px;
+        fill: #888;
+    }
+    @media all and (max-width: 400px) {
+        li {
+            & + li {
+                margin-left: 15px;
+            }
+            font-size: 15px;
+        }
+        .Header-navItem--github {
+            display: none;
         }
     }
 }

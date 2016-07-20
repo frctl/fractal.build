@@ -1,0 +1,17 @@
+.Button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #C23582;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 2px;
+    &:active {
+        color: #fff;
+    }
+
+    &:hover {
+        color: #fff;
+        background-color: darken(#C23582, 5%);
+    }
+}

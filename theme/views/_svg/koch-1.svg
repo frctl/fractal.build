@@ -1,0 +1,4 @@
+{% set calcHeight = 150/130 * svgWidth | default('130') %}
+<svg  width="{{ svgWidth | default('130') }}" height="{{ calcHeight | default('150') }}" viewBox="319 177 130 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <polygon id="koch" stroke="{{ svgFill | default('#C23582') }}" stroke-width="14" fill="#FFFFFF" fill-rule="evenodd" points="334 222.86671 367.333333 222.86671 384 194 400.666667 222.86671 434 222.86671 417.333333 251.73342 434 280.600129 400.666667 280.600129 384 309.466839 367.333333 280.600129 334 280.600129 350.666667 251.73342"></polygon>
+</svg>
