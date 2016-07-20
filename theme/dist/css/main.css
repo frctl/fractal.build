@@ -708,11 +708,13 @@ h6 {
 
 .Coda {
   color: #777;
-  display: flex;
-  flex-wrap: wrap; }
+  display: flex; }
   .Coda a {
     color: #555;
     text-decoration: none; }
+  @media all and (max-width: 500px) {
+    .Coda {
+      flex-wrap: wrap; } }
 
 .Coda-credit {
   font-weight: bold;
@@ -734,8 +736,11 @@ h6 {
         margin-top: 10px; } }
   @media all and (min-width: 500px) {
     .Coda-section {
-      width: 50%; }
+      width: auto;
+      flex-shrink: 1; }
       .Coda-section:last-child {
+        padding-left: 30px;
+        margin-left: auto;
         text-align: right; } }
 
 .Code {

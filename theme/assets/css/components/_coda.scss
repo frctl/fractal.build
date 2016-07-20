@@ -1,10 +1,12 @@
 .Coda {
     color: #777;
     display: flex;
-    flex-wrap: wrap;
     a {
         color: #555;
         text-decoration: none;
+    }
+    @media all and (max-width: 500px) {
+        flex-wrap: wrap;
     }
 }
 
@@ -31,8 +33,11 @@
         }
     }
     @media all and (min-width: 500px) {
-        width: 50%;
+        width: auto;
+        flex-shrink: 1;
         &:last-child {
+            padding-left: 30px;
+            margin-left: auto;
             text-align: right;
         }
     }
