@@ -26,7 +26,7 @@ const myCustomisedTheme = mandelbrot({
 fractal.web.theme(myCustomisedTheme); // tell Fractal to use the configured theme by default
 ```
 
-<div class="Note Note--standout">
+<div class="Note Note--callout">
 <p>You will need to run `npm install --save @frctl/mandelbrot` within your project directory before you can `require()` it in your project settings file.</p>
 </div>
 
@@ -107,7 +107,7 @@ This option can also take an **array** of stylesheets URLs to use. If you do not
 
 In this case the default Mandelbrot stylesheet link will be output between the two other custom styleheets.
 
-<div class="Note Note--standout">
+<div class="Note Note--callout">
 This option **is not used** for applying styles to your _components_ - for information on how to include component stylesheets see the docs on linking to {{ link('@web#static-assets', 'static assets') }}.
 </div>
 
@@ -136,7 +136,7 @@ This option can also take an **array** of JavaScript file URLs to use. If you do
 
 In this case the default Mandelbrot script tag link will be output between the two other custom script sources.
 
-<div class="Note Note--standout">
+<div class="Note Note--callout">
 This option **is not used** for applying JavaScript to your _components_ - for information on how to include component JS files see the docs on linking to {{ link('@web#static-assets', 'static assets') }}.
 </div>
 
@@ -194,6 +194,6 @@ fractal.web.theme(myCustomisedTheme);
 
 Any templates within this directory **will be used in preference** to those of the same name within the Mandelbrot `views` directory. This allows you to copy a template from the Mandelbrot repo into your own project and adjust it to your liking. The next time you start up the web UI it will use your custom template instead of the default one.
 
-<div class="Note Note--standout">
+<div class="Note Note--callout">
 <p>You do not need to copy _all_ of Mandelbrot's templates into your own theme templates directory - you should only create templates to override the specific parts of the UI that you want to adjust.</p>
 </div>

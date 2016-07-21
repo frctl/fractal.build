@@ -1,3 +1,6 @@
+$max-page-width: 1000px;
+$sidebar-width: 250px;
+
 .Frame {
     display: flex;
     width: 100%;
@@ -16,7 +19,7 @@
 }
 
 .Frame-inner {
-    max-width: 1000px;
+    max-width: $max-page-width;
     position: relative;
     width: 100%;
     display: flex;
@@ -26,6 +29,10 @@
     @media all and (max-width: 400px) {
         padding: 0 15px;
     }
+}
+
+.Frame-inner--body {
+    padding: 0;
 }
 
 .Frame-body {
@@ -39,6 +46,20 @@
     padding-top: 40px;
     padding-bottom: 30px;
     -webkit-overflow-scrolling: touch;
+    padding-left: 30px;
+    float: left;
+    overflow: auto;
+    height: 100%;
+    margin-left: -1 * $sidebar-width;
+    @media all and (max-width: 400px) {
+        padding-left: 15px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #fafafa;;
+    }
+    &:hover::-webkit-scrollbar-thumb {
+        background-color: rgba($color-text, 0.1);
+    }
 }
 
 .Frame-main {
@@ -48,6 +69,11 @@
     padding-bottom: 30px;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+    padding-right: 30px;
+    height: 100%;
+    @media all and (max-width: 400px) {
+        padding-right: 15px;
+    }
 }
 
 .Frame-footer {
@@ -64,10 +90,47 @@
     background: rgba($color-text, 0.1);
 }
 
-.Frame--full {
+
+.Frame--sidebar {
     .Frame-body {
-        .Frame-inner {
-            padding: 0;
+        height: calc(100vh - 4em);
+        overflow: hidden;
+        position: relative;
+    }
+    .Frame-inner--body {
+        display: block;
+        max-width: none;
+        height: 100%;
+        padding-left: $sidebar-width;
+
+        @media all and (min-width: $max-page-width) {
+            padding-left: calc((100% - #{$sidebar-width * 2}) / 2);
         }
+
+        &:before,
+        &:after {
+            border: 0;
+            content:'';
+            height: 50px;
+            border-color: #fafafa;
+            border-style: solid;
+            background: linear-gradient(to bottom, #fafafa 0%, rgba(#fafafa, 0) 100%);
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            z-index: 9;
+        }
+        &:before {
+            border-top-width: 20px;
+            background: linear-gradient(to bottom, #fafafa 0%, rgba(#fafafa, 0) 100%);
+            top: 0;
+        }
+        &:after {
+            border-bottom-width: 20px;
+            background: linear-gradient(to top, #fafafa 0%, rgba(#fafafa, 0) 100%);
+            bottom: 0;
+        }
+
     }
 }

@@ -40,7 +40,7 @@ fractal start --sync
 
 When running commands in this format, the command will run and then immediately exit (unless it is watching or running a server in the background).
 
-<div class="Note Note--standout">
+<div class="Note Note--callout">
     <p>Fractal also provides a more immersive {{ link('@interactive', 'interactive mode') }} that makes running multiple commands easier and faster.</p>
 </div>
 

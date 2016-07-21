@@ -27,7 +27,7 @@
             {% if isCurrent %}
                 <ul class="Tree-toc">
                     {% for heading in toc %}
-                    <li class="Tree-tocItem"><a href="{{ path( (item | url), request) }}#{{ heading.id }}"><span>{{ heading.text }}</span></a></li>
+                    <li class="Tree-tocItem"><a  class="Tree-tocLink" href="{{ path( (item | url), request) }}#{{ heading.id }}" data-toclink><span>{{ heading.text }}</span></a></li>
                     {% endfor %}
                 </ul>
             {% endif %}

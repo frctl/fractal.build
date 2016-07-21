@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <script>
+        document.createElement( "picture" );
+        var cl = document.querySelector('html').classList;
+        cl.remove('no-js');
+        cl.add('has-js');
+    </script>
     <link rel="stylesheet" href="{{ path('/theme/css/main.css') }}?cachebust={{ frctl.theme.get('cachebust').css }}">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ frctl.get('project.title') }}</title>
 </head>
@@ -30,7 +35,7 @@
     </div>
 
     <section class="Frame-body">
-        <div class="Frame-inner">
+        <div class="Frame-inner Frame-inner--body">
         {% block body %}{% endblock %}
         </div>
     </section>

@@ -64,25 +64,27 @@
 
     code,
     code pre {
-        background-color: #f5f5f5;
+        // background-color: #f5f5f5;
+        background-color: #fff;
+    }
+
+    code pre {
+        border: 1px solid #ddd;
+        padding: 0.7rem 0.8rem;
+        margin: 1rem -0.5rem;
+        overflow: auto;
     }
 
     .lang-tree *,
     .lang-plain * {
         font-weight: normal !important;
-        color: $color-text !important;
+        color: #555 !important;
         font-style: normal !important;
     }
 
     p code,
     li code {
         padding: 0.125rem;
-    }
-
-    code pre {
-        padding: 0.3rem 0.5rem;
-        margin: 1rem -0.5rem;
-        overflow: auto;
     }
 
     table {
@@ -104,6 +106,7 @@
 
     .Note {
         margin: 1.5rem 0;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.2);
         > * {
             margin-bottom: 0.75em;
         }

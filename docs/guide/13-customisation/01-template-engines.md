@@ -31,7 +31,7 @@ fractal.components.set('ext', '.nunj');
 fractal.docs.set('ext', '.html');
 ```
 
-<div class="Note Note--standout">
+<div class="Note Note--callout">
     <p>You must **install your chosen template adapter** package via `npm install` before you can use it with Fractal.</p>
 </div>
 
@@ -55,7 +55,7 @@ fractal.components.engine(nunjucks); // use the configured Nunjucks instance for
 fractal.components.set('ext', '.nunj'); // look for files with a .nunj file extension
 ```
 
-<div class="Note Note--standout">
+<div class="Note Note--callout">
     <p>Configuration details can vary between adapters, so you should refer to your chosen adapter's documentation for full configuration and setup details. </p>
 </div>
 

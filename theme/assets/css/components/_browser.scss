@@ -4,6 +4,17 @@
     box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.3);
     position: relative;
     border-radius: 6px 6px 0 0;
+    background-color: #fff;
+    iframe {
+        height: 60vw;
+        max-height: 800px;
+        min-height: 500px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
 }
 
 .Browser:before {
@@ -18,7 +29,7 @@
     background-color: #f44;
     background-color: linear-gradient(to bottom,  #f6f6f6 0%,#ededed 100%);
     box-shadow: 0 0 0 2px #f44, 1.3em 0 0 2px #9b3, 2.6em 0 0 2px #fb5;
-    // border-bottom: 1px solid #333;
+    border-bottom: 1px solid #333;
 }
 
 .Browser--with-tab:after {
@@ -54,6 +65,8 @@
     border: 1px solid #e8e8e8;
 }
 
-.Browser > * {
+.Browser > *,
+.Browser img {
     display: block;
+    width: 100%;
 }

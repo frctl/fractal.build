@@ -1,5 +1,6 @@
 .Page {
-
+    padding-bottom: 30px;
+    max-width: calc(#{$max-page-width} - #{$sidebar-width});
 }
 
 .Page-header {
@@ -8,12 +9,14 @@
 }
 
 .Page-title {
+    border-bottom: 1px solid #ddd;
     margin: 0 0 0.9em 0;
+    padding-bottom: 0.4em;
 }
 
 .Page-content {
     // max-width: 800px;
-    padding-right: 20px;
+    position: relative;
 }
 
 .Page-placeholder {

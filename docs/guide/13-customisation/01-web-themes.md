@@ -26,7 +26,7 @@ fractal.web.theme(myCustomisedTheme);
 
 See the Mandelbrot {{ link('@default-theme#configuration', 'configuration docs') }} for full details on available options, or the appropriate theme documentation/README for other themes.
 
-<div class="Note Note--standout">
+<div class="Note Note--callout">
 <p>You will need to `npm install` any theme that you want to customise before you can `require()` it in your project settings file.</p>
 </div>
 

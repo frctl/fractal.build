@@ -6,7 +6,7 @@
 
 <div class="Frame-sidebar">
 
-    <nav class="SectionNav">
+    <nav class="SectionNav is-sticky">
     {% block navigation %}{% endblock %}
     </nav>
 

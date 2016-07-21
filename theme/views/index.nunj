@@ -9,20 +9,21 @@
 
         <div class="Panel-text">
             <h1 class="Panel-title">Build. Document. Integrate.</h1>
-            <p class="Panel-strapline">Create component libraries & styleguides that fit the way <em>you</em> work.</p>
-            <a class="Button" href="/guide">Get started &rarr;</a>
+            <p class="Panel-strapline">Powerful component libraries & styleguides that fit the way <em>you</em> work.</p>
+            <a class="Button" href="{{ path('/guide') }}">Get started &rarr;</a>
         </div>
 
-        <div class="Panel-screenshot">
-            <a href="/guide">
-                <picture class="Browser Browser--with-url">
-                 <source srcset="{{ image('screenshot-demo-cl-large.png') }}" media="(min-width: 900px)">
-                 <source srcset="{{ image('screenshot-demo-cl-medium.png') }}" media="(min-width: 700px)">
-                 <source srcset="{{ image('screenshot-demo-cl-small.png') }}" media="(min-width: 500px)">
-                 <img src="{{ image('screenshot-demo-cl-extra-small.png') }}">
-                </picture>
-            </a>
-        </div>
+        <a href="{{ path('/guide') }}" class="Browser Browser--with-url">
+            {# <div class="Browser Browser--with-url">
+                <iframe src="http://localhost:3003/components/detail/story-grid" frameborder="0"></iframe>
+            </div> #}
+            <picture>
+                <source srcset="{{ image('screenshot-demo-cl-large.png') }}" media="(min-width: 900px)">
+                <source srcset="{{ image('screenshot-demo-cl-medium.png') }}" media="(min-width: 700px)">
+                <source srcset="{{ image('screenshot-demo-cl-small.png') }}" media="(min-width: 500px)">
+                <img src="{{ image('screenshot-demo-cl-extra-small.png') }}">
+            </picture>
+        </a>
 
     </div>
 </div>

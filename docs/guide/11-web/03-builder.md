@@ -5,7 +5,7 @@ title: Exporting to static HTML
 
 Fractal provides the option to export the web UI view into static HTML files, which can quickly and easily be shared with clients or hosted using a simple static file server.
 
-<div class="Note Note--standout">
+<div class="Note Note--callout">
 <p>When developing locally you'll want to use the {{ link('@server', 'local development server') }} to preview your project while you work on it, rather than running repeated exports after changes have been made.</p>
 </div>
 
