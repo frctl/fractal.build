@@ -5,10 +5,14 @@ title: Default theme - Mandelbrot
 
 [Mandelbrot](https://github.com/frctl/mandelbrot) is the name of the default web UI theme that ships with Fractal. A standard installation will look something like this:
 
-<div class="Screenshot">
-{{ image('mandelbrot-demo-component.png') }}
+<div class="Browser Browser--with-url">
+    <picture>
+        <source srcset="{{ image('screenshot-demo-cl-large.png', null, true) }}" media="(min-width: 900px)">
+        <source srcset="{{ image('screenshot-demo-cl-medium.png', null, true) }}" media="(min-width: 700px)">
+        <source srcset="{{ image('screenshot-demo-cl-small.png', null, true) }}" media="(min-width: 500px)">
+        <img src="{{ image('screenshot-demo-cl-extra-small.png', null, true) }}">
+    </picture>
 </div>
-
 
 ## Configuration
 

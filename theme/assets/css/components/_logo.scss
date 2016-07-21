@@ -8,13 +8,19 @@
     &:hover {
         color: $color-text;
     }
-    @media all and (max-width: 400px) {
-        .Logo-version, svg {
-            display: none;
-        }
-    }
     svg {
         margin-right: 7px;
+    }
+    &:hover svg {
+        transform: rotate(2deg);
+    }
+    @media all and (max-width: 400px) {
+        .Logo-text {
+            font-size: 20px;
+        }
+        svg {
+            width: 28px;
+        }
     }
 }
 

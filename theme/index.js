@@ -63,14 +63,14 @@ module.exports = function(options){
                 }
                 return `[${linkText}](${path}${anchor})`;
             },
-            image: function(srcPath, altText, html){
+            image: function(srcPath, altText, pathOnly){
                 if (!config.imagePath) {
                     return '#';
                 }
                 altText = altText || '';
                 const pathify = this.env.getFilter('path');
                 const path = pathify.call(this, `/${app.web.get('assets.mount')}/images/${srcPath}`)
-                return html ? `<img src="${path}" alt="${altText}">` : `![${altText}](${path})`;
+                return pathOnly ? path : `![${altText}](${path})`;
             }
         });
 

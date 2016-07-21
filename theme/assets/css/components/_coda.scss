@@ -21,7 +21,7 @@
     color: #888;
     a {
         color: #888;
-        text-decoration: underline;
+        // text-decoration: underline;
     }
 }
 
@@ -41,10 +41,19 @@
     @media all and (min-width: 500px) {
         width: auto;
         flex-shrink: 1;
-        &:last-child {
-            padding-left: 30px;
-            margin-left: auto;
-            text-align: right;
+        & + .Coda-section {
+            margin-left: 16px;
         }
+        // &:last-child {
+        //     padding-left: 30px;
+        //     margin-left: auto;
+        //     text-align: right;
+        // }
     }
 }
+
+// .Coda-section--badges {
+//     a {
+//         display: block;
+//     }
+// }

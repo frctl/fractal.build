@@ -3,7 +3,7 @@ title: Fractal user guide
 handle: guide
 ---
 
-<p class="lede">Fractal is a tool to help you **build** and **document** web component libraries and then **integrate** them into your projects.</p>
+<p class="lede">Fractal is a tool to help you **build** and **document** web component libraries, and then **integrate** them into your projects.</p>
 
 Component (or pattern) libraries are a way of designing and building websites in a modular fashion, breaking up the <abbr title="User Interface">UI</abbr> into small, reusable chunks that can then later be assembled in a variety of ways to build anything from larger components right up to whole pages.
 
@@ -12,8 +12,8 @@ Fractal helps you assemble, preview and document website component libraries, an
 Fractal can be run from the command line or integrated into your project via its API.
 
 <div class="Page-badges">
-[![Build Status](https://img.shields.io/travis/frctl/fractal/master.svg?style=flat-square)](https://travis-ci.org/frctl/fractal)
 [![NPM Version](https://img.shields.io/npm/v/@frctl/fractal.svg?style=flat-square)](https://www.npmjs.com/package/@frctl/fractal)
+[![Build Status](https://img.shields.io/travis/frctl/fractal/master.svg?style=flat-square)](https://travis-ci.org/frctl/fractal)
 [![Github](https://img.shields.io/github/stars/frctl/fractal.svg?style=social&label=Star)](http://github.com/frctl/fractal)
 </div>
 

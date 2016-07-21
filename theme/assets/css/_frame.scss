@@ -39,39 +39,132 @@ $sidebar-width: 250px;
     flex-grow: 1;
 }
 
-.Frame-sidebar {
-    width: 250px;
-    flex-shrink: 0;
-    padding-right: 30px;
-    padding-top: 40px;
-    padding-bottom: 30px;
-    -webkit-overflow-scrolling: touch;
-    padding-left: 30px;
-    float: left;
-    overflow: auto;
-    height: 100%;
-    margin-left: -1 * $sidebar-width;
-    @media all and (max-width: 400px) {
-        padding-left: 15px;
+@media all and (max-width: 699px) {
+    .Frame-inner--body {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
     }
-    &::-webkit-scrollbar-thumb {
-        background-color: #fafafa;;
+    .Frame-sidebar {
+        background-color: $color-bg-dark;
+        border-top: 1px solid #ddd;
+        width: 100%;
+        padding: 20px 15px 20px 15px;
+        position: relative;
+        @media all and (max-width: 400px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
-    &:hover::-webkit-scrollbar-thumb {
-        background-color: rgba($color-text, 0.1);
+    .Frame-main {
+        width: 100%;
+        padding: 45px 30px 20px 30px;
+        min-height: 80vh;
+        @media all and (max-width: 400px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
 }
 
-.Frame-main {
-    flex-grow: 1;
-    padding-left: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-right: 30px;
-    height: 100%;
+@media all and (min-width: 700px) {
+
+    .Frame-sidebar {
+        width: 250px;
+        flex-shrink: 0;
+        padding: 40px 10px 30px 30px;
+        -webkit-overflow-scrolling: touch;
+        float: left;
+        overflow: auto;
+        height: 100%;
+        margin-left: -1 * $sidebar-width;
+        @media all and (max-width: 400px) {
+            padding-left: 15px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #fafafa;;
+        }
+        &:hover::-webkit-scrollbar-thumb {
+            background-color: rgba($color-text, 0.1);
+        }
+    }
+
+    .Frame-main {
+        position: relative;
+        flex-grow: 1;
+        padding: 30px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        height: 100%;
+        @media all and (max-width: 400px) {
+            padding-right: 15px;
+        }
+    }
+
+    .Frame--sidebar {
+        .Frame-body {
+            height: calc(100vh - 4em);
+            overflow: hidden;
+            position: relative;
+        }
+        .Frame-inner--body {
+            display: block;
+            max-width: none;
+            height: 100%;
+            padding-left: $sidebar-width;
+
+            @media all and (min-width: $max-page-width) {
+                padding-left: calc((100% - #{$sidebar-width * 2}) / 2);
+            }
+
+            &:before,
+            &:after {
+                border: 0;
+                content:'';
+                height: 50px;
+                border-color: #fafafa;
+                border-style: solid;
+                background: linear-gradient(to bottom, #fafafa 0%, rgba(#fafafa, 0) 100%);
+                position: absolute;
+                width: 100%;
+                left: 0;
+                right: 0;
+                z-index: 9;
+            }
+            &:before {
+                border-top-width: 20px;
+                background: linear-gradient(to bottom, #fafafa 0%, rgba(#fafafa, 0) 100%);
+                top: 0;
+            }
+            &:after {
+                border-bottom-width: 20px;
+                background: linear-gradient(to top, #fafafa 0%, rgba(#fafafa, 0) 100%);
+                bottom: 0;
+            }
+
+        }
+    }
+
+}
+
+.Frame-navJump {
+    display: block;
+    background-color: #e8e8e8;
+    border-bottom: 1px solid #ddd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 30px;
+    text-align: center;
+    display: none;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    @media all and (max-width: 700px) {
+        display: block;
+    }
     @media all and (max-width: 400px) {
+        padding-left: 15px;
         padding-right: 15px;
     }
 }
@@ -88,49 +181,4 @@ $sidebar-width: 250px;
 }
 .Frame-main:hover::-webkit-scrollbar-thumb {
     background: rgba($color-text, 0.1);
-}
-
-
-.Frame--sidebar {
-    .Frame-body {
-        height: calc(100vh - 4em);
-        overflow: hidden;
-        position: relative;
-    }
-    .Frame-inner--body {
-        display: block;
-        max-width: none;
-        height: 100%;
-        padding-left: $sidebar-width;
-
-        @media all and (min-width: $max-page-width) {
-            padding-left: calc((100% - #{$sidebar-width * 2}) / 2);
-        }
-
-        &:before,
-        &:after {
-            border: 0;
-            content:'';
-            height: 50px;
-            border-color: #fafafa;
-            border-style: solid;
-            background: linear-gradient(to bottom, #fafafa 0%, rgba(#fafafa, 0) 100%);
-            position: absolute;
-            width: 100%;
-            left: 0;
-            right: 0;
-            z-index: 9;
-        }
-        &:before {
-            border-top-width: 20px;
-            background: linear-gradient(to bottom, #fafafa 0%, rgba(#fafafa, 0) 100%);
-            top: 0;
-        }
-        &:after {
-            border-bottom-width: 20px;
-            background: linear-gradient(to top, #fafafa 0%, rgba(#fafafa, 0) 100%);
-            bottom: 0;
-        }
-
-    }
 }

@@ -1,0 +1,45 @@
+{% set calcHeight = 118/144 * svgWidth | default('130') %}
+<svg width="{{ svgWidth | default('144') }}" height="{{ calcHeight | default('118') }}" viewBox="-34 926 144 118" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="58.6805556%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#CCEE77" offset="0%"></stop>
+            <stop stop-color="#BBDD66" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="31.0650888%" x2="0%" y2="68.9349112%" id="linearGradient-2">
+            <stop stop-color="#AACC33" offset="0%"></stop>
+            <stop stop-color="#BBDD55" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="18.6631944%" y1="5%" x2="43.7326389%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#AADD44" offset="0%"></stop>
+            <stop stop-color="#99CC33" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="40%" y1="43.1510107%" x2="100%" y2="84.2449465%" id="linearGradient-4">
+            <stop stop-color="#90C030" offset="0%"></stop>
+            <stop stop-color="#77AA11" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="81.3368056%" y1="5%" x2="106.40625%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#EDF3D5" offset="0%"></stop>
+            <stop stop-color="#F5F9E7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="20%" x2="100%" y2="80%" id="linearGradient-6">
+            <stop stop-color="#E7F1CB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="84.7222222%" y1="5%" x2="112.5%" y2="100%" id="linearGradient-7">
+            <stop stop-color="#EDF3D5" offset="0%"></stop>
+            <stop stop-color="#F5F9E7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="clearleft" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-34.000000, 926.000000)">
+        <g id="logo">
+            <polygon id="Shape" fill="url(#linearGradient-1)" points="144 20 96 0 48 20 96 40"></polygon>
+            <polygon id="Shape" fill="url(#linearGradient-2)" points="144 20 144 78.7 96 98 96 40"></polygon>
+            <polygon id="Shape" fill="url(#linearGradient-3)" points="48 20 48 58 96 40"></polygon>
+            <polygon id="Shape" fill="url(#linearGradient-4)" points="48 58 48 78 96 98 96 40"></polygon>
+            <polygon id="Shape" fill="#E6ECCC" points="48 78 48 118 96 98"></polygon>
+            <polygon id="Shape" fill="url(#linearGradient-5)" points="48 20 48 58 0 40"></polygon>
+            <polygon id="Shape" fill="url(#linearGradient-6)" points="0 40 0 98 48 118 48 58"></polygon>
+            <polygon id="Shape" fill="url(#linearGradient-7)" points="48 118 48 78 0 98"></polygon>
+        </g>
+    </g>
+</svg>

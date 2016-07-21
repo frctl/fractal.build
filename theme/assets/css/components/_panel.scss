@@ -29,7 +29,19 @@
     }
 
     .Panel-text {
-        padding: 12vh 20px 6vh 20px;
+        padding: 0 20px 0 20px;
+        &:before {
+            content: '';
+            display: block;
+            height: 12vh;
+            max-height: 120px;
+        }
+        &:after {
+            content: '';
+            display: block;
+            height: 6vh;
+            max-height: 100px;
+        }
     }
 
     .Panel-title {
@@ -42,8 +54,13 @@
         font-weight: normal;
         color: #777;
         font-size: 20px;
-        margin-bottom: 3vh;
         padding: 0 20px;
+        &:after {
+            content: '';
+            display: block;
+            height: 3vh;
+            max-height: 30px;
+        }
     }
 
     @media all and (max-width: 940px) {

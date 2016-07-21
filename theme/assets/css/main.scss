@@ -7,6 +7,8 @@ $color-text: #222;
 $color-heading: #222;
 $color-link: #0074D9;
 $color-border: #ddd;
+$color-bg-light: #fafafa;
+$color-bg-dark: #efefef;
 
 // --------------------------
 
@@ -36,9 +38,9 @@ html {
     color: $color-text;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: #fafafa;
+    background-color: $color-bg-light;
     &.is-home {
-        background-color: #efefef;
+        background-color: $color-bg-dark;
         background-image: url("/assets/images/koch-3.svg");
         background-size: 60%;
         background-position: 50% 50%;

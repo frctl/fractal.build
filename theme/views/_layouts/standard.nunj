@@ -6,14 +6,16 @@
 
 <div class="Frame-sidebar">
 
-    <nav class="SectionNav is-sticky">
+    <nav class="SectionNav is-sticky" id="menu">
+        <h2 class="SectionNav-heading">Navigation</h2>
     {% block navigation %}{% endblock %}
     </nav>
 
 </div>
 
 <main class="Frame-main" data-pjax>
-{% block main %}{% endblock %}
+    <a href="#menu" class="Frame-navJump">Jump to navigation</a>
+    {% block main %}{% endblock %}
 </main>
 
 {% endblock %}

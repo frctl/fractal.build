@@ -62,16 +62,19 @@
         font-feature-settings: "c2sc";
     }
 
+    .lede {
+        font-size: 1.2em;
+    }
+
     code,
     code pre {
-        // background-color: #f5f5f5;
         background-color: #fff;
     }
 
     code pre {
         border: 1px solid #ddd;
         padding: 0.7rem 0.8rem;
-        margin: 1rem -0.5rem;
+        margin: 1rem 0;
         overflow: auto;
     }
 
@@ -142,10 +145,7 @@
         max-width: 100%;
     }
 
-    .Screenshot {
-        margin-left: -30px;
-        img {
-            max-width: 100%;
-        }
+    .Browser {
+        margin: 30px 0;
     }
 }

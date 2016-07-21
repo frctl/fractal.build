@@ -2,10 +2,8 @@
     display: flex;
     height: 4em;
     align-items: center;
-    @media all and (min-width: 1100px) {
-        .Logo {
-            // margin-left: -50px;
-        }
+    @media all and (max-width: 460px) {
+        height: 3.1em;
     }
 }
 
@@ -17,31 +15,43 @@
     display: flex;
     list-style: none;
     align-content: center;
-    li {
-        & + li {
-            margin-left: 30px;
-        }
-        a {
-            text-decoration: none;
-        }
+}
+
+.Header-navItem {
+    & + li {
+        margin-left: 30px;
     }
-    .Header-navItem--github {
-        margin-left: 32px;
+    a {
+        font-size: 17px;
+        text-decoration: none;
     }
+    &.is-current a {
+        font-weight: bold;
+        // text-decoration: underline;
+    }
+}
+
+.Header-navItem--github {
+    margin-left: 32px;
     svg {
         width: 24px;
         height: 24px;
-        fill: #888;
+        fill: #999;
+        transition: fill 0.2s ease;
+        &:hover {
+            fill: #555;
+        }
     }
-    @media all and (max-width: 400px) {
-        li {
-            & + li {
-                margin-left: 15px;
-            }
-            font-size: 15px;
+}
+
+@media all and (max-width: 400px) {
+    .Header-navItem {
+        & + li {
+            margin-left: 15px;
         }
-        .Header-navItem--github {
-            display: none;
-        }
+        font-size: 15px;
+    }
+    .Header-navItem--github {
+        display: none;
     }
 }
