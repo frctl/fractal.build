@@ -11,6 +11,15 @@
     justify-content: center;
     flex-shrink: 1;
     flex-grow: 1;
+    flex-wrap: wrap;
+    
+    &:after {
+        content: '';
+        display: block;
+        height: 3vh;
+        max-height: 50px;
+        width: 100%;
+    }
 
     .Panel-content {
         display: flex;

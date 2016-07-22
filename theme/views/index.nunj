@@ -14,9 +14,6 @@
         </div>
 
         <a href="{{ path('/guide') }}" class="Browser Browser--with-url">
-            {# <div class="Browser Browser--with-url">
-                <iframe src="http://localhost:3003/components/detail/story-grid" frameborder="0"></iframe>
-            </div> #}
             <picture>
                 <source srcset="{{ image('screenshot-demo-cl-large.png') }}" media="(min-width: 900px)">
                 <source srcset="{{ image('screenshot-demo-cl-medium.png') }}" media="(min-width: 700px)">

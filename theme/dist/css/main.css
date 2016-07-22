@@ -1039,7 +1039,14 @@ h6 {
   display: flex;
   justify-content: center;
   flex-shrink: 1;
-  flex-grow: 1; }
+  flex-grow: 1;
+  flex-wrap: wrap; }
+  .Panel--intro:after {
+    content: '';
+    display: block;
+    height: 3vh;
+    max-height: 50px;
+    width: 100%; }
   .Panel--intro .Panel-content {
     display: flex;
     flex-direction: column;
