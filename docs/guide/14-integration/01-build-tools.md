@@ -88,7 +88,7 @@ An example `package.json` file may therefore look like this:
   "description": "FooCorp Component Library.",
   "devDependencies": {
     "@frctl/fractal": "^{{ _config.project.version }}",
-  }
+  },
   "scripts": {
     "start": "fractal start --sync",
     "build": "fractal build"
