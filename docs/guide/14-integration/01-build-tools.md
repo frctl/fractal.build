@@ -26,7 +26,7 @@ const gulp = require('gulp');
 const fractal = require('@frctl/fractal').create();
 
 fractal.set('project.title', 'FooCorp Component Library'); // title for the project
-fractal.web.set('build.dest', 'build'); // destination for the static export
+fractal.web.set('builder.dest', 'build'); // destination for the static export
 fractal.docs.set('path', `${__dirname}/docs`); // location of the documentation directory.
 fractal.components.set('path', `${__dirname}/components`); // location of the component directory.
 
@@ -60,7 +60,7 @@ gulp.task('fractal:start', function(){
  * This task will report on progress using the 'progress' event emitted by the
  * builder instance, and log any errors to the terminal.
  *
- * The build destination will be the directory specified in the 'build.dest'
+ * The build destination will be the directory specified in the 'builder.dest'
  * configuration option set above.
  */
 
