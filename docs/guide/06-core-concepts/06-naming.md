@@ -11,7 +11,7 @@ One of the main _disadvantages_ of flat-file systems is that when one item refer
 
 ## Generated names & handles
 
-Unless told otherwise, Fractal will infer the **name** of a component or documentation page from it's {{ link('@views', 'view template') }} **file name** (or the parent directory for {{ link('@components#compound-components', "'compound' components") }}).
+Unless told otherwise, Fractal will infer the **name** of a component or documentation page from its {{ link('@views', 'view template') }} **file name** (or the parent directory for {{ link('@components#compound-components', "'compound' components") }}).
 
 It will then use this name (plus some other information) to generate a **handle** for the item. Handles are what will be used to reference that item elsewhere around your project.
 
@@ -111,7 +111,7 @@ See the configuration reference documentation for {{ link('@components-config', 
 There are a few things to note when specifying bespoke names or handles for items:
 
 * **Handles** are generated from **names**, so customising a name **will also change** the item's generated handle (unless that too is overridden).
-* Changing the **name** of an item will _not_ prevent it's **handle** from having any [prefix](#prefix) applied to it when it is generated. However if you specify a custom **handle** any parent collection prefixes **will be ignored** for that item.
+* Changing the **name** of an item will _not_ prevent its **handle** from having any [prefix](#prefix) applied to it when it is generated. However if you specify a custom **handle** any parent collection prefixes **will be ignored** for that item.
 
 ## Referencing other items
 

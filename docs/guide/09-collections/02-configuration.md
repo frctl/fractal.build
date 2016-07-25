@@ -14,7 +14,7 @@ The following properties apply directly to the collection itself, and will not b
 
 #### hidden
 
-Whether or not the collection (and all it's children) should be hidden from listings and navigation.
+Whether or not the collection (and all its children) should be hidden from listings and navigation.
 
 ```yaml
 hidden: false

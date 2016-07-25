@@ -17,7 +17,7 @@ See the {{ link('@views#using-handlebars', 'view templates documentation') }} fo
 
 Template engines for components and documentation pages are loaded separately, using the `fractal.components.engine()` and `fractal.docs.engine()` methods respectively.
 
-If you don't need to customise the template engine adapter, you can just pass it's package name into the `.engine()` method directly:
+If you don't need to customise the template engine adapter, you can just pass its package name into the `.engine()` method directly:
 
 ```js
 fractal.components.engine('@frctl/nunjucks'); // use Nunjucks for components

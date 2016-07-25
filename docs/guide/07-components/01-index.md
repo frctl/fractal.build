@@ -108,7 +108,7 @@ See the documentation on {{ link('@naming', 'naming & referencing') }} for more 
 
 ## Ordering components
 
-A component can be given an order by which to sort it with regards to it's siblings. This can be done by using the `order` property in the components's configuration file, or it can be done by prefixing the component file name (or the parent folder name for compound components) with a **two-digit number** (with leading zero, if required) **followed by a hyphen**. For example:
+A component can be given an order by which to sort it with regards to its siblings. This can be done by using the `order` property in the components's configuration file, or it can be done by prefixing the component file name (or the parent folder name for compound components) with a **two-digit number** (with leading zero, if required) **followed by a hyphen**. For example:
 
 ```tree
 ├── components
@@ -119,7 +119,7 @@ A component can be given an order by which to sort it with regards to it's sibli
 
 ## Hiding components
 
-A components can be hidden from navigation and listings by using the `hidden` property in the it's configuration file or by prefixing it's file name (or the parent folder name for compound components) with an underscore like this:
+A component can be hidden from navigation and listings by using the `hidden` property in its configuration file or by prefixing its file name (or the parent folder name for compound components) with an underscore like this:
 
 ```tree
 ├── components

@@ -35,7 +35,7 @@ The {{ link('@collections-config', 'collection configuration reference') }} cont
 
 ## Ordering collections
 
-A collection can be given an order by which to sort it with regards to it's siblings. This can be done by using the `order` property in the collection's configuration file, or it can be done by prefixing the collection directory name with a **two-digit number** (with leading zero, if required) **followed by a hyphen**. For example:
+A collection can be given an order by which to sort it with regards to its siblings. This can be done by using the `order` property in the collection's configuration file, or it can be done by prefixing the collection directory name with a **two-digit number** (with leading zero, if required) **followed by a hyphen**. For example:
 
 ```tree
 ├── components
@@ -47,7 +47,7 @@ A collection can be given an order by which to sort it with regards to it's sibl
 
 ## Hiding collections
 
-A collection can be hidden from navigation and listings by using the `hidden` property in the it's configuration file or by prefixing the collection directory name with an underscore like this:
+A collection can be hidden from navigation and listings by using the `hidden` property in its configuration file or by prefixing the collection directory name with an underscore like this:
 
 ```tree
 ├── components

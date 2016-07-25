@@ -22,7 +22,7 @@ Using the default Handlebars template engine, that might look something like thi
 ```
 {% endraw %}
 
-As you can see, the `search-box.hbs` component view file uses the standard [Handlebars partial include](http://handlebarsjs.com/#partials) syntax to include the button template, with one difference - instead of using a *path* to the template, it uses the {{ link('@naming#referencing-other-items', '`@handle` syntax') }} to refer to the button component by it's handle.
+As you can see, the `search-box.hbs` component view file uses the standard [Handlebars partial include](http://handlebarsjs.com/#partials) syntax to include the button template, with one difference - instead of using a *path* to the template, it uses the {{ link('@naming#referencing-other-items', '`@handle` syntax') }} to refer to the button component by its handle.
 
 It's important to note that the syntax for including one component's view template within another **will depend on which {{ link('@template-engines', 'template engine') }} you are using**. For instance, if you were using the [Nunjucks engine](https://github.com/frctl/nunjucks) you would instead use Nunjuck's `include` tag to include sub components. For example:
 {% raw %}
@@ -39,7 +39,7 @@ When you include a sub-component in the manner described above, it's important t
 
 To handle passing context data for your included sub-components, you have a number of options:
 
-* A) Use the {{ link('@views#handlebars-helpers', 'render helper') }} to render the sub-component in-place, using it's own context data.
+* A) Use the {{ link('@views#handlebars-helpers', 'render helper') }} to render the sub-component in-place, using its own context data.
 * B) Define a complete set of context data in the parent component's config file
 * C) Reference context data for sub-components using the '@handle' {{ link('@naming#referencing-other-items', 'static data reference syntax') }}  from within the parent component's context data.
 
@@ -49,7 +49,7 @@ Let's look at how each of these might work in turn.
 
 Both the default {{ link('@views#template-rendering', 'Handlebars template engine') }} and the [Nunjucks engine](https://github.com/frctl/nunjucks#helpers) come with a `render` helper to use in your templates, instead of the standard partial/include syntax.
 
-Unlike the standard 'include' syntax, the `render` helper renders a sub-component in-place, using it's own context data (unless overridden by data passed into it). This is a good solution if you want to **render a sub-component with it's own context data**, AND you don't mind using a custom helper function to handle the rendering.
+Unlike the standard 'include' syntax, the `render` helper renders a sub-component in-place, using its own context data (unless overridden by data passed into it). This is a good solution if you want to **render a sub-component with its own context data**, AND you don't mind using a custom helper function to handle the rendering.
 
 > If you are planning on consuming your template files outside of Fractal, you may **not** want to use a custom helper if it is will not be supported in your target environment.
 
@@ -83,7 +83,7 @@ context:
   label: Search
 ```
 
-You can see in this case, we don't need to specify any context data for the `button` sub-component in the `search-box.config.yml` - instead the `{{ render }}` helper will automatically render the `button` using the context data defined in it's own `button.config.yml`.
+You can see in this case, we don't need to specify any context data for the `button` sub-component in the `search-box.config.yml` - instead the `{{ render }}` helper will automatically render the `button` using the context data defined in its own `button.config.yml`.
 
 {% endraw %}
 
@@ -93,7 +93,7 @@ You can also override all or a just a sub-set of the sub-component's default con
 
 This is a good approach for when you want to render an instance of the sub-component that should use a **different set of context data** to that which is provided in the sub-component's config file.
 
-For example, you may want to render a 'prose' component on it's own with a set of Lorem Ipsum default content, but when pulled into a 'homepage' component you may want to override that with page-specific content.
+For example, you may want to render a 'prose' component on its own with a set of Lorem Ipsum default content, but when pulled into a 'homepage' component you may want to override that with page-specific content.
 
 Using this method, our example would look like this:
 
@@ -127,7 +127,7 @@ context:
   button:
     text: Go!
 ```
-You can see that in this case, the parent (`search-box`) component is providing a whole new set of context data, including the `button` object with it's `text` property. The rendered output of both of these components would look like:
+You can see that in this case, the parent (`search-box`) component is providing a whole new set of context data, including the `button` object with its `text` property. The rendered output of both of these components would look like:
 
 ```html
 <!-- @button -->

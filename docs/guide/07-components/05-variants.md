@@ -1,7 +1,7 @@
 
 Variants are useful when you have one component that has a **multiple different possible implementations**. For instance, you may have a 'notification banner' component. This might have a default style but also a number of variations - for example a 'warning' banner and 'success' banner. These could be implemented as separate components but often it's easier and more semantic to create them as variants of the default banner component.
 
-A component can have as many variants as you like. Behind the scenes, *every* component has at least one variant - when you are previewing or rendering a component you are actually seeing it's 'default' variant, even if you have not explicitly defined one.
+A component can have as many variants as you like. Behind the scenes, *every* component has at least one variant - when you are previewing or rendering a component you are actually seeing its 'default' variant, even if you have not explicitly defined one.
 
 Variants will typically use the default view template for the component they belong to; the variation comes from the ability to define a different set of {{ link('@context-data', 'context data') }} that will be used when rendering previews. However it is also possible to use a completely different view template if desired (which itself can include the main view template as a partial should you so wish).
 
@@ -80,13 +80,13 @@ We can define the required variants in the component config file like this:
 ```
 This will give **three** variants; the default component variant, plus a `warning` and a `success` variant.
 
-In this example all of the variants will use the same view template, but will pass it different data when rendered as a preview. Because the default component configuration specifies a `closeButtonText` value in it's context data, the variants do not need to - they only need to override the properties that need to be different for that particular variant.
+In this example all of the variants will use the same view template, but will pass it different data when rendered as a preview. Because the default component configuration specifies a `closeButtonText` value in its context data, the variants do not need to - they only need to override the properties that need to be different for that particular variant.
 
 Similarly, by specifying a top-level `status` value, all variants will *inherit* that status unless explicitly specified, as the `success` variant does.
 
 #### The default variant
 
-The 'default' variant is created implicitly from the component configuration data. However if you want to manually override anything for the default variant you can also explicitly create a variant with the name `default` and set it's properties there. For example, to change the navigation label from 'Default' to 'Base' you could do this:
+The 'default' variant is created implicitly from the component configuration data. However if you want to manually override anything for the default variant you can also explicitly create a variant with the name `default` and set its properties there. For example, to change the navigation label from 'Default' to 'Base' you could do this:
 
 ```js
 // notifications.config.json
@@ -116,11 +116,11 @@ For instance, we could recreate the example above using files by creating the fo
 │   │   └── notification.hbs
 ```
 
-Each variant can then have it's own markup, and by default will be rendered with whatever context data is defined in the parent component's configuration file (if any).
+Each variant can then have its own markup, and by default will be rendered with whatever context data is defined in the parent component's configuration file (if any).
 
 ### Mixing configuration and file based variants
 
-It is also possible to mix the two approaches described above, which is useful when you want to define a variant with it's own view file but which also has some additional configuration data associated with it.
+It is also possible to mix the two approaches described above, which is useful when you want to define a variant with its own view file but which also has some additional configuration data associated with it.
 
 By defining a variant view file called `notification--success.hbs` you are actually defining the view template to be used for the `success` variant. If that variant is **not** defined in the components' config file then it is rendered with the default component context data and information. However if a variant with that name *is* defined in the component configuration, then that view will be used when rendering that component, and any configuration data (such as `label` etc) will be applied to that view.
 
@@ -130,7 +130,7 @@ So by combining both examples above, each of the notification banner variants wo
 
 Variants can be referenced using the component `@handle` syntax, suffixed with a double hyphen and the variant's name. So using the example above, you could reference the success variant via the handle `@notification--success`.
 
-> It's worth noting that if you include a variant as a partial within another component, and that variant *does not* have it's own view template, the effect will be identical to including the component itself, as they will share the same template.
+> It's worth noting that if you include a variant as a partial within another component, and that variant *does not* have its own view template, the effect will be identical to including the component itself, as they will share the same template.
 
 ## Collated components
 

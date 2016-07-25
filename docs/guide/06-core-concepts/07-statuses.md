@@ -28,7 +28,7 @@ By default the available options are `ready` and `draft`.
 
 ## Setting the status of an item
 
-You can specify a status for an item in it's {{ link('@configuration-files', 'configuration file') }} (or in the YAML front-matter for documentation pages). For example:
+You can specify a status for an item in its {{ link('@configuration-files', 'configuration file') }} (or in the YAML front-matter for documentation pages). For example:
 
 ```js
 // component.config.json
@@ -110,7 +110,7 @@ fractal.components.set('statuses', {
 ```
 You could then assign these new statuses to your components using the values `doing` and `done`.
 
-Alternatively, if you just want to change the label or colour on one of the existing statuses, you can target it specifically by it's key:
+Alternatively, if you just want to change the label or colour on one of the existing statuses, you can target it specifically by its key:
 
 ```js
 fractal.components.set('statuses.prototype.color', 'pink');
