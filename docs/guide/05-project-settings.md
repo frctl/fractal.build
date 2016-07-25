@@ -88,10 +88,10 @@ To serve a directory of {{ link('@web#static-assets', 'static assets') }} via th
 fractal.web.set('static.path', __dirname + '/public');
 ```
 
-To set the directory within which any {{ link('@builder', 'static HTML exports') }} of the web UI should be generated, use the `build.dest` setting:
+To set the directory within which any {{ link('@builder', 'static HTML exports') }} of the web UI should be generated, use the `builder.dest` setting:
 
 ```
-fractal.web.set('build.dest', __dirname + '/build');
+fractal.web.set('builder.dest', __dirname + '/build');
 ```
 
 The {{ link('@web-config', 'web UI configuration reference') }} contains details of all the other available web configuration options.
