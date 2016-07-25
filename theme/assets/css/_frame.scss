@@ -71,7 +71,7 @@ $sidebar-width: 250px;
     .Frame-sidebar {
         width: 250px;
         flex-shrink: 0;
-        padding: 40px 10px 30px 30px;
+        padding: 40px 10px 50px 30px;
         -webkit-overflow-scrolling: touch;
         float: left;
         overflow: auto;
@@ -91,7 +91,7 @@ $sidebar-width: 250px;
     .Frame-main {
         position: relative;
         flex-grow: 1;
-        padding: 30px;
+        padding: 30px 30px 50px 30px;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
         height: 100%;
@@ -129,6 +129,7 @@ $sidebar-width: 250px;
                 left: 0;
                 right: 0;
                 z-index: 9;
+                pointer-events: none;
             }
             &:before {
                 border-top-width: 20px;
