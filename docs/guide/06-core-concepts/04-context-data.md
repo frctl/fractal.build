@@ -189,4 +189,4 @@ The reference syntax only applies to items of **the same type** - a component ca
  };
  ```
 
- Now when the component is rendered, it will first make an API request to the endpoint and wait for the Promise (and it's associated `then()` step) to be resolved before using the output to pass as context data to the template.
+ Now when the component is rendered, it will first make an API request to the endpoint and wait for the Promise (and its associated `then()` step) to be resolved before using the output to pass as context data to the template.

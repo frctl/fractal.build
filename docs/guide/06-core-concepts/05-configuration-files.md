@@ -30,7 +30,7 @@ Configuration files authored in this format must have a filename that looks like
 
 Using the JavaScript (CommonJS) module format for your configuration files is a little more involved than using JSON or YAML, but is a **lot more powerful** as it allows you to do things like dynamically generating component {{ link('@context-data', 'context data') }}
 
-The file itself should be in the format of a Node CommonJS-style module that exports a configuration object. If you don't know what that is, don't worry! Just make sure it's contents look like this:
+The file itself should be in the format of a Node CommonJS-style module that exports a configuration object. If you don't know what that is, don't worry! Just make sure its contents look like this:
 
 ```js
 module.exports = {
@@ -105,14 +105,14 @@ Pages and components each have different properties that can be inherited - see 
 Properties with primitive (i.e. non-object) values, if specified on a downstream entity, will **override** upstream values. For instance, to figure out the value of the `status` property for a component, Fractal will do the following:
 
 1. Check if it is set directly in the component's configuration file. If so, use that.
-2. Otherwise, recursively work upwards to check any parent collections to see if any of them have a status set in it's configuration. If one is found to have a `status` specified, stop and use that.
+2. Otherwise, recursively work upwards to check any parent collections to see if any of them have a status set in its configuration. If one is found to have a `status` specified, stop and use that.
 3. If no value for the `status` is found, use the default value (which may or may not have been overridden in a `fractal.js` file or similar).
 
 ### Properties with object and array values
 
 Properties with object or array values are treated slightly differently. Instead of overriding upstream values, they are **merged with them**.
 
-For example, if a collection has been assigned the tags `['sprint-1', 'dashboard']` and one of it's child components has the tags `['dashboard', 'needs-review']` specified in it's component configuration, then the resolved, **aggregate** tag list for the component will be `['dashboard', 'needs-review', 'sprint-1']`.
+For example, if a collection has been assigned the tags `['sprint-1', 'dashboard']` and one of its child components has the tags `['dashboard', 'needs-review']` specified in its component configuration, then the resolved, **aggregate** tag list for the component will be `['dashboard', 'needs-review', 'sprint-1']`.
 
 Similarly, context data is inherited and merged from upstream sources. For example, the following example set of configuration data:
 

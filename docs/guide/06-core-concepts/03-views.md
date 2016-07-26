@@ -64,7 +64,7 @@ The available helpers are:
 
 #### `render`
 
-The `render` helper renders a component (referenced by it's handle) using the context data provided to it. If no data is provided, it will use the context data defined within the component's configuration file, if it has one.
+The `render` helper renders a component (referenced by its handle) using the context data provided to it. If no data is provided, it will use the context data defined within the component's configuration file, if it has one.
 
 **This can be very useful as an alternative to using the regular partial `{{> @name }}` helper to import sub-components.** Partials do not pull in their own context so using the `render` helper instead can help prevent repetition of context data in the configuration files of components that include sub-components.
 

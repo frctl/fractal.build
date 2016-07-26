@@ -62,7 +62,7 @@ fractal.components.set('default.prefix', 'foobar'); // default is null
 
 ### default.preview
 
-Which layout (specified by it's {{ link('@naming#referencing-other-items', 'handle') }}) to use to when rendering previews of this layout. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details
+Which layout (specified by its {{ link('@naming#referencing-other-items', 'handle') }}) to use to when rendering previews of this layout. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details
 
 ```js
 fractal.components.set('default.preview', '@my-preview-layout');
@@ -282,7 +282,7 @@ Variants can be defined in the parent component's configuration file. See the {{
 
 The {{ link('@context-data', 'context data') }} to pass to the variant view template when rendering previews.
 
-Any context set on a variant will be merged with it's parent component's (inherited and merged) context data.
+Any context set on a variant will be merged with its parent component's (inherited and merged) context data.
 
 ```yaml
 context:
@@ -318,7 +318,7 @@ notes: "Different from the default component because this one is *funky*."
 
 ### preview
 
-Which layout (specified by it's {{ link('@naming#referencing-other-items', 'handle') }} to use to when rendering previews of this layout. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details.
+Which layout (specified by its {{ link('@naming#referencing-other-items', 'handle') }} to use to when rendering previews of this layout. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details.
 
 This overrides any the (inherited) `preview` value of the parent component.
 
@@ -328,7 +328,7 @@ preview: '@my-special-layout'
 
 ### status
 
-The status of the variant. Overrides the default status of it's parent component.
+The status of the variant. Overrides the default status of its parent component.
 
 ```yaml
 status: 'wip'
@@ -358,7 +358,7 @@ collated: false
 
 ### context
 
-{{ link('@context-data', 'context data') }} to be applied to children of the collection. Any context set on a collection will be merged into any contexts set by it's children.
+{{ link('@context-data', 'context data') }} to be applied to children of the collection. Any context set on a collection will be merged into any contexts set by its children.
 
 ```yaml
 context:
@@ -376,7 +376,7 @@ display:
 
 ### preview
 
-The default preview layout (specified by it's {{ link('@naming#referencing-other-items', 'handle') }} that child components should when being rendered as a preview. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details.
+The default preview layout (specified by its {{ link('@naming#referencing-other-items', 'handle') }} that child components should when being rendered as a preview. See the {{ link('@preview-layouts', 'preview layouts') }} documentation for more details.
 
 ```yaml
 preview: '@my-special-layout'

@@ -113,7 +113,7 @@ Your page title would then match the component being rendered.
 
 It may be useful to understand the exact rendering order when a preview layout is used. The rendering works as follows:
 
-1. The component view is rendered, using it's own set of context data.
+1. The component view is rendered, using its own set of context data.
 2. The rendered output is assigned to a special property, `yield`, which is attached to the preview layout's context data.
 3. A JSON representation of the component being rendered is assigned to the `_target` property of the layout's context data.
-4. The layout view file is rendered using it's own preview context data, complete with the additional `yield` and `_target` properties.
+4. The layout view file is rendered using its own preview context data, complete with the additional `yield` and `_target` properties.
