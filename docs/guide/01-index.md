@@ -15,6 +15,7 @@ Fractal can be run from the command line or integrated into your project via its
 [![NPM Version](https://img.shields.io/npm/v/@frctl/fractal.svg?style=flat-square)](https://www.npmjs.com/package/@frctl/fractal)
 [![Build Status](https://img.shields.io/travis/frctl/fractal/master.svg?style=flat-square)](https://travis-ci.org/frctl/fractal)
 [![Github](https://img.shields.io/github/stars/frctl/fractal.svg?style=social&label=Star)](http://github.com/frctl/fractal)
+<script async defer src="http://slack.fractal.build/slackin.js"></script>
 </div>
 
 ## Requirements
