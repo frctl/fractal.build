@@ -1,6 +1,7 @@
 'use strict';
 
 const Path        = require('path');
+const fs          = require('fs');
 const _           = require('lodash');
 const Theme       = require('@frctl/fractal').WebTheme;
 const packageJSON = require('../package.json');
@@ -27,6 +28,15 @@ module.exports = function(options){
         view: 'index.nunj'
     });
 
+    theme.addRoute('/assets/images/:path(.*)', {
+        handle: 'image',
+        static: function(params, app){
+            return Path.join(Path.resolve(config.imagePath), params.path);
+        }
+    }, function(){
+        return fs.readdirSync(Path.resolve(config.imagePath)).map(filePath => ({ path: filePath }));
+    });
+
     theme.addRoute('/:path(.*)', {
         handle: 'page',
         view: 'page.nunj'
@@ -34,20 +44,15 @@ module.exports = function(options){
         return app.docs.filter(d => (!d.isHidden)).flatten().map(page => ({path: page.path}));
     });
 
+
+
     theme.on('init', function(env, app){
 
         const logger = app.cli.console;
 
         env.engine.addFilter('url', (item) => theme.urlFromRoute('page', {path: item.path}) );
 
-        env.engine.addGlobal('image', srcPath => `/${app.web.get('assets.mount')}/images/${srcPath}`);
-
-        if (config.imagePath) {
-            app.assets.add('images', {
-                path: 'assets/img',
-                match: ['**/*']
-            });
-        }
+        env.engine.addGlobal('image', srcPath => `/assets/images/${srcPath}`);
 
         let globals = _.defaults(config.globals, {
             link: function(handleAnchor, linkText){
