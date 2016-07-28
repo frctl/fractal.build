@@ -105,7 +105,7 @@ There are **plenty more configuration options** for components - check out the {
 
 Variants are useful for when you have a need for a slightly modified version of your component, but when the change is small enough that it doesn't really warrant creating a whole separate component.
 
-> Variants can be thought of as roughly analogous to the concept of 'modifiers' in [BEM](http://getbem.com/). If you are would use a BEM modifier class to describe your (sub)component, it's probably a good fit to be a variant.
+> Variants can be thought of as roughly analogous to the concept of 'modifiers' in [BEM](http://getbem.com/). If you would use a BEM modifier class to describe your (sub)component, it's probably a good fit to be a variant.
 
 There are a number of ways to create variants, each with their own pros and cons, but probably the simplest way is to create a separate variant view file. (For full details on creating and using variants see the full {{ link('@variants', 'variants documentation') }}).
 

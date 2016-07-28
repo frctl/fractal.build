@@ -2,7 +2,7 @@
 title: Integrating Fractal into build tools
 ---
 
-Fractal can happily be integrated into any JavaScript-based build tool by making use of {{ link('@api', 'it\'s API') }}, and can reduce or replace the need to use Fractal's own {{ link('@cli', 'CLI tool') }} for running tasks such as starting the dev server.
+Fractal can happily be integrated into any JavaScript-based build tool by making use of {{ link('@api', 'its API') }}, and can reduce or replace the need to use Fractal's own {{ link('@cli', 'CLI tool') }} for running tasks such as starting the dev server.
 
 ## Gulp
 

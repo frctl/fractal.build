@@ -69,7 +69,7 @@ If you want to link to any of your static assets from your components or preview
 {{path '/foobar/css/example.css'}}
 ```
 {% endraw %}
-This helper let's you specify the static asset path as a root-relative URL such as `/foobar/css/example.css` and will then automatically take care of any path-rewriting necessary to support the {{ link('@builder', 'static HTML export process') }}.
+This helper lets you specify the static asset path as a root-relative URL such as `/foobar/css/example.css` and will then automatically take care of any path-rewriting necessary to support the {{ link('@builder', 'static HTML export process') }}.
 
 <!-- ### Exporting to static HTML
 
