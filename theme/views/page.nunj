@@ -32,7 +32,7 @@
 
     {% block pageContent %}
     {% if doc %}
-        {% set contents = doc.renderWithGlobals(null, { _request: request, _env: frctl.env }) | async(true) %}
+        {% set contents = doc.render(null, renderEnv) | async(true) %}
         {% if contents | isError %}
         <p>{{ contents.message }}</p>
         {% else %}
