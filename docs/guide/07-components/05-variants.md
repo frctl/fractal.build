@@ -16,7 +16,7 @@ Component {{ link('@configuration-files', 'configuration files') }} let you spec
 ```js
 // notifications.config.json
 {
-	"title": "Notification Banner"
+	"title": "Notification Banner",
 	"variants": [
 		{
 			"name": "warning"
