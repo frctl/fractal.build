@@ -20,9 +20,9 @@ const sourcemaps = require('gulp-sourcemaps');
  gulp.task('fractal:start', function(){
      const fractal  = require('./fractal.js');
      const logger = fractal.cli.console;
-     const server = fractal.web.server();
-
-     fractal.web.set('server.sync', true);
+     const server = fractal.web.server({
+         sync: true
+     });
 
      server.on('error', err => logger.error(err.message));
      return server.start().then(() => {
