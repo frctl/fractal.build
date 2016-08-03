@@ -7,6 +7,10 @@ Fractal provides a programmatic API that allows you to {{ link('@custom-commands
 
 If you've created a {{ link('@project-settings', 'project settings file') }} for your project then you have already interacted with the Fractal API.
 
+<div class="Note Note--callout">
+<p>The Fractal API docs are currently very much a <strong>work in progress</strong>. Keep checking back regularly for updates!</p>
+</div>
+
 ## Obtaining a Fractal instance
 
 All API methods are called on an instance of Fractal or one of the objects it exposes. To get a new instance of Fractal, first `require` the `@frctl/fractal` module and then call the `.create()` method on it. In one line that looks like this:
