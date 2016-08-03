@@ -7,7 +7,9 @@ Fractal provides a programmatic API that allows you to {{ link('@custom-commands
 
 If you've created a {{ link('@project-settings', 'project settings file') }} for your project then you have already interacted with the Fractal API.
 
-All API methods are called on an instance of Fractal or one of the objects it exposes. To get a new instance of Fractal, first `require` the `@frctl/fractal` module and then call the .create() method on it. In one line that looks like this:
+## Obtaining a Fractal instance
+
+All API methods are called on an instance of Fractal or one of the objects it exposes. To get a new instance of Fractal, first `require` the `@frctl/fractal` module and then call the `.create()` method on it. In one line that looks like this:
 
 ```js
 const fractal = require('@frctl/fractal').create();
@@ -18,7 +20,15 @@ You can then call API methods on this fractal instance (or on the objects it exp
 ```js
 // set the project title
 fractal.set('project.title', 'My New Project');
+```
 
+See the individual API documentation pages for full details of available properties and methods.
+
+## Initial load & parse
+
+Before you can access data about any components or documentation pages via the API, you need to first call the `fractal.load()` method to tell Fractal to perform an initial parse of the relevant filesystem directories. This method is asynchronous and returns a `Promise`:
+
+```js
 fractal.load().then(() => {
 
     // render a component with a custom set of context data
@@ -30,7 +40,6 @@ fractal.load().then(() => {
     });
 
 });
-
 ```
 
-See the individual API documentation pages for full details of available properties and methods.
+This method is called behind the scenes when creating new development server instances or running CLI commands.

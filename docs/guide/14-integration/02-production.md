@@ -1,6 +1,6 @@
 ---
-label: Moving into production
-title: Moving into production
+label: Integrating into production
+title: Integrating into production
 ---
 
 It is often desirable to have some form of integration between your component library and your production site or application.
