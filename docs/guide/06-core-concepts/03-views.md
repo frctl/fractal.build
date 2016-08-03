@@ -50,7 +50,7 @@ Note that the extension should contain the `.` character before the extension it
 
 {% endraw %}
 
-It's worth familiarising yourself with Handlebars using it's [documentation](http://handlebarsjs.com) if you want to get the most out of Fractal.
+It's worth familiarising yourself with Handlebars using its [documentation](http://handlebarsjs.com) if you want to get the most out of Fractal.
 
 ### Handlebars helpers
 
