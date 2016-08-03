@@ -42,9 +42,3 @@ A companion CLI tool helps make running tasks and adding your own CLI commands b
 ## About this guide
 
 This guide will assume basic knowledge of the command line, Node.js and how to use NPM to install and manage project dependencies.
-
-<!-- ## Credits
-
-Fractal is developed and maintained by [Mark Perkins](http://github.com/allmarkedup) and the team at [Clearleft](http://clearleft.com).
-
-[{{ image('clearleft-logo.png', 'Clearleft') }}](http://clearleft.com) -->
