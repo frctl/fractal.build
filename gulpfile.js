@@ -11,7 +11,7 @@ const babel      = require('babelify');
 const source     = require('vinyl-source-stream');
 const buffer     = require('vinyl-buffer');
 const bust       = require('gulp-buster');
-const sourcemaps        = require('gulp-sourcemaps');
+const sourcemaps = require('gulp-sourcemaps');
 
 /*
  * Fractal
@@ -21,6 +21,9 @@ const sourcemaps        = require('gulp-sourcemaps');
      const fractal  = require('./fractal.js');
      const logger = fractal.cli.console;
      const server = fractal.web.server();
+
+     fractal.web.set('server.sync', true);
+
      server.on('error', err => logger.error(err.message));
      return server.start().then(() => {
          logger.success(`Fractal server is now running at ${server.url}`);
@@ -56,7 +59,7 @@ gulp.task('css:process', function() {
   return gulp.src('theme/assets/css/main.scss')
     .pipe(sassGlob())
     .pipe(sass({
-        includePaths: 'node_modules'
+        includePaths: './node_modules'
     }))
     .on('error', err => console.log(err.message))
     .pipe(gulp.dest('theme/dist/css'))

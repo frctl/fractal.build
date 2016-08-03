@@ -26,7 +26,6 @@ fractal.docs.set('path', `${__dirname}/docs`);
  * Configure the web interface.
  */
 
-fractal.web.set('server.sync', true);
 fractal.web.set('builder.dest', 'dist');
 
 fractal.web.theme(require('./theme')({
