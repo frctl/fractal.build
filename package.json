@@ -1,37 +1,39 @@
 {
-  "name": "@frctl/docs",
-  "version": "1.0.0",
-  "description": "Fractal documentation.",
-  "author": "Mark Perkins <mark@clearleft.com> (http://clearleft.com)",
-  "license": "MIT",
-  "dependencies": {
-    "@frctl/fractal": "^1.0.0-rc.1",
-    "@frctl/nunjucks": "^1.0.1",
-    "lodash": "^4.13.1",
-    "marked": "^0.3.5"
-  },
-  "devDependencies": {
-    "babel-preset-es2015": "^6.9.0",
-    "babelify": "^7.3.0",
-    "browserify": "^13.0.1",
-    "cash-dom": "^1.3.4",
-    "del": "^2.2.0",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-buster": "^1.0.2",
-    "gulp-sass": "^2.2.0",
-    "gulp-sass-glob": "^1.0.5",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.4",
-    "highlight.js": "^9.5.0",
-    "normalize.css": "^4.2.0",
-    "picturefill": "^3.0.2",
-    "pjax": "^0.2.4",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.7.0"
-  },
-  "scripts": {
-    "start": "fractal start --sync",
-    "build": "fractal build"
-  }
+    "name": "@frctl/docs",
+    "version": "1.0.0",
+    "description": "Fractal documentation.",
+    "author": "Mark Perkins <mark@clearleft.com> (http://clearleft.com)",
+    "license": "MIT",
+    "dependencies": {
+        "@frctl/fractal": "^1.0.6",
+        "@frctl/nunjucks": "^1.0.1",
+        "lodash": "^4.13.1",
+        "marked": "^0.3.5"
+    },
+    "devDependencies": {
+        "babel-preset-es2015": "^6.9.0",
+        "babelify": "^7.3.0",
+        "browserify": "^13.0.1",
+        "cash-dom": "^1.3.4",
+        "del": "^2.2.0",
+        "gulp": "github:gulpjs/gulp#4.0",
+        "gulp-buster": "^1.0.2",
+        "gulp-sass": "^2.2.0",
+        "gulp-sass-glob": "^1.0.5",
+        "gulp-sourcemaps": "^1.6.0",
+        "gulp-uglify": "^1.5.4",
+        "highlight.js": "^9.5.0",
+        "normalize.css": "^4.2.0",
+        "picturefill": "^3.0.2",
+        "pjax": "^0.2.4",
+        "vinyl-buffer": "^1.0.0",
+        "vinyl-source-stream": "^1.1.0",
+        "watchify": "^3.7.0"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "dev": "fractal start --sync",
+        "now-build": "gulp",
+        "export": "fractal build"
+    }
 }
