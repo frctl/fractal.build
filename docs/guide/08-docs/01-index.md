@@ -122,3 +122,15 @@ Pages can be hidden from listings and navigation in two ways. You can either spe
 <div class="Note Note--callout">
 You can also combine *ordering* and *hiding* by constructing a filename such as `_01-changelog.md`.
 </div>
+
+## Escaping Handlebars expressions
+
+Sometimes you may want to show a piece of code that itself contains a Handlebars expression, without that expression being parsed out at the rendering step. To do this you can prefix the expression with an underscore:
+
+{% raw %}
+```handlebars
+\{{ foo }}
+```
+{% endraw %}
+
+This will prevent the Handlebars template engine from attempting to render that variable and will instead just keep it as a string.
