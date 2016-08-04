@@ -83,7 +83,7 @@ You could then use this in your documentation pages to iterate over your compone
 ```
 {% endraw %}
 
-Which would output soemthing like the following (depending on your components, obviously!):
+Which would output something like the following (depending on your components, obviously!):
 
 ```html
 <ul>
