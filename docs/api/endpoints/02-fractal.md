@@ -40,8 +40,8 @@ console.log(fractal.get('project.title')); // 'My Component Library'
 Listen out and respond to lifecycle events. See the [Events](#events) section for more details.
 
 ```js
-fractal.on('source:changed', function(sourceType, source, data){
-	console.log(`Change in ${sourceType} directory`);
+fractal.on('source:changed', function(source, eventData){
+	console.log(`Change in ${source.name} directory`);
 });
 ```
 
@@ -120,7 +120,7 @@ fractal.on('source:changed', function(source, eventData){
 ```
 
 * `source` - the source that has had a change to one of it's files
-* `eventData` - an event data object, e.g. `{ event: 'change', path: 'path/to/file.scss', type: 'asset' }`
+* `eventData` - an event data object, e.g. `{ event: 'change', path: 'path/to/file.scss' }`
 
 ### source:updated
 
@@ -133,4 +133,4 @@ fractal.on('source:updated', function(source, eventData){
 ```
 
 * `source` - the source object that has been updated
-* `eventData` - an event data object, e.g. `{ event: 'change', path: 'path/to/file.scss', type: 'asset' }`
+* `eventData` - an event data object, e.g. `{ event: 'change', path: 'path/to/file.scss' }`
