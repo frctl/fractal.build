@@ -148,6 +148,19 @@ If set to true, individual variants of this component will not be visible in the
 ```yaml
 collated: false
 ```
+
+### collator
+
+Function to be used when collating components. Can only be specified if using JS formatted config files.
+
+```js
+{
+    collator: function(markup, item) {
+        return `<!-- Start: @${item.handle} -->\n${markup}\n<!-- End: @${item.handle} -->\n`
+    }
+}
+```
+
 ### context
 
 The {{ link('@context-data', 'context data') }} to pass to the template when rendering previews.
@@ -354,6 +367,18 @@ Whether or not child components of this collection [should be collated](#collate
 
 ```yaml
 collated: false
+```
+
+### collator
+
+Function to be used when collating components in the collection. Can only be specified if using JS formatted config files.
+
+```js
+{
+    collator: function(markup, item) {
+        return `<!-- Start: @${item.handle} -->\n${markup}\n<!-- End: @${item.handle} -->\n`
+    }
+}
 ```
 
 ### context
