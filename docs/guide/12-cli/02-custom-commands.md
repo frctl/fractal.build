@@ -39,3 +39,39 @@ It can also be called programmatically using the {{ link('@api-cli#exec', '`frac
 ```js
 fractal.cli.exec('list-components');
 ```
+
+## Accepting arguments
+
+The first argument passed to the `fractal.cli.command()` method describes the format that your command should take.
+
+* **Required arguments** can be specified by surrounding the name with angle brackets, e.g. `<bar>`.
+* **Optional arguments** can be specified by surrounding the name with square brackets e.g. `[foo]`.
+
+For example:
+
+```js
+fractal.cli.command('foo <requiredArg> [optionalArg] [anotherOptionalArg]', function(args, done){
+    console.log(args.requiredArg);
+    done();
+});
+```
+
+The values for the arguments supplied when the command is run will be made available to the callback function within the firs `args` object.
+
+## Accepting options
+
+You can specify available options by adding them to the config object that can be provided as the third argument when registering a command:
+
+```js
+var config = {
+    options: [
+        ['-p, --port <number>', 'The port to use.'],
+    ]
+};
+
+fractal.cli.command('foo', function(args, done){
+    // do something
+    console.log(`Something was started on port ${args.options.port}`);
+    done();
+}, config);
+```

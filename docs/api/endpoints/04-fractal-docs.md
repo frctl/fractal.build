@@ -4,12 +4,11 @@ label: fractal.docs
 title: fractal.docs
 ---
 
-The following documentation details the methods and properties available on the `fractal.docs` object. You can access this as follows:
+The `.docs` property on the main fractal instance provides access to the **documentation source** object.
 
 ```
 const fractal = require('@frctl/fractal').create();
-
-fractal.docs.set('ext', '.html');
+fractal.docs.set('ext', '.html'); // set a configuration property on the documentation source object.
 ```
 
 <div class="Note Note--callout">

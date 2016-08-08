@@ -4,11 +4,10 @@ label: fractal.components
 title: fractal.components
 ---
 
-The following documentation details the methods and properties available on the `fractal.components` object. You can access this as follows:
+The `.components` property on the main fractal instance provides access to the **components source** object.
 
 ```
 const fractal = require('@frctl/fractal').create();
-
 fractal.components.set('ext', '.html');
 ```
 
