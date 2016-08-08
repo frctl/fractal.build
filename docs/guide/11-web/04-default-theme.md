@@ -70,8 +70,8 @@ The nav sections that should show up in the sidebar (and in which order):
 }
 ```
 
-* **Possible values:** `docs`, `components`, `assets`
-* **Default:** `["components", "docs", "assets"]`
+* **Possible values:** `docs`, `components`
+* **Default:** `["components", "docs"]`
 
 ### panels
 
