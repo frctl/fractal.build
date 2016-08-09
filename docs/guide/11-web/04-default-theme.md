@@ -79,11 +79,11 @@ The component info panels that should be displayed in the component browser (and
 
 ```js
 {
-    "panels": ["html", "context", "info", "notes"] // don't show the view template or the resources panels
+    "panels": ["html", "view", "context", "resources", "info", "notes"]
 }
 ```
 
-* **Possible values:** `html`, `html`, `context`, `resources`, `info`, `notes`
+* **Possible values:** `html`, `view`, `context`, `resources`, `info`, `notes`
 * **Default:** `["html", "view", "context", "resources", "info", "notes"]`
 
 ### styles
