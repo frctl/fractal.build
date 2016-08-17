@@ -152,7 +152,11 @@ This variable is only set in {{ link('@preview-layouts', 'component preview layo
 
 ## Customising Handlebars
 
-If you wish to customise the default Handlebars instance for components and/or documentation pages, you can do so by requiring the adapter and configuring it as follows:
+If you wish to customise the default Handlebars instance for components and/or documentation pages, you can do so by requiring the adapter and configuring it with custom helpers.
+
+<div class="Note Note--callout">
+<p>Note that you will need to run `npm install --save @frctl/handlebars` to install the `@frctl/handlebars` package into your project directly before you can strat customising it.</p>
+</div>
 
 ```js
 const hbs = require('@frctl/handlebars')({
@@ -215,18 +219,56 @@ Defaults to `false`. Set to `true` if you **do not wish** to automatically load 
 
 ### Accessing the underlying Handlebars instance
 
-If you need to access the underlying Handlebars instance to customise it further, you can do so by using the `engine` property of a configured adapter instance:
+Calling the `fractal.components.engine()` or `fractal.docs.engine()` method without any arguments will return the registered adapter for the components or docs, respectively.
+
+You can then access the underlying Handlebars instance by using the `handlebars` property:
+
+```js
+
+const instance = fractal.components.engine();
+
+// `instance.handlebars` is now a Handlebars instance that you can
+//  register helpers with or pass to other libraries/modules etc.
+
+instance.handlebars.registerHelper('foo', function(str){
+    /* handlebars helper code */
+});
+
+```
+
+This still works if you have customised your handlebars adapter previously:
 
 ```js
 const hbs = require('@frctl/handlebars')({
-    /* config */
+    /* configuration options here */
 });
 
-const engine = hbs.engine; /* The underlying Handlebars instance */
+const instance = fractal.components.engine(hbs);
 
-engine.registerHelper('foo', function(str){
-    /* handlebars helper code */
+instance.handlebars.registerHelper('bar', function(str){
+    /* do something */
+});
+
+```
+
+You can also pass this handlebars instance into other modules or libraries:
+
+```js
+const instance = fractal.components.engine();
+
+// Using handlebars-layouts (https://www.npmjs.com/package/handlebars-layouts)
+
+const layouts = require('handlebars-layouts');
+layouts.register(instance.handlebars);
+
+// Using handlebars-helpers (https://github.com/assemble/handlebars-helpers)
+
+const helpers = require('handlebars-helpers');
+helpers({
+    handlebars: instance.handlebars
 });
 ```
+
+> Note that you will need to `npm install` any other libraries that you use in your project before requiring them.
 
 {% endraw %}
