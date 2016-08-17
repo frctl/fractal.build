@@ -23,7 +23,7 @@ Optionally, components can also:
 * Include as many related files (such as JavaScript, CSS, tests and READMEs) as you like.
 * Have one or more *variants* - useful for when you have a component which needs to have a number of very similar instances.
 
-The markup for a component can either be written as 'vanilla' HTML or using a template language of your choosing. By default, Fractal expects that you are using [Handlebars](handlebarsjs.com) templates for your component view files, and that these files will have a `.hbs` file extension.
+The markup for a component can either be written as 'vanilla' HTML or using a template language of your choosing. By default, Fractal expects that you are using [Handlebars](http://handlebarsjs.com) templates for your component view files, and that these files will have a `.hbs` file extension.
 
 <div class="Note Note--callout">
 The {{ link('@views', 'view templates') }} documentation contains more details on the default Handlebars instance and the {{ link('@template-engines', 'template engine customisation') }} documentation has full details how to use and configure alternative template engines with Fractal.
