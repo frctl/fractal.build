@@ -15,7 +15,7 @@ Whilst Fractal lets you create rich standalone {{ link('@docs', 'documentation p
 
 If present, the contents of the README file will be run through the **full Fractal documentation parser** before being displayed to the user in places such as the {{ link('@web', "web UI") }}. That means that the file will be rendered with the documentation template engine (Handlebars by default) before being passed through a Markdown parser.
 
-This means you do almost anything that you can do in standard documentation pages in your component-specific documentation, including creating {{ link('@dynamic-docs', "'dynamic' documentation") }} that is tied tightly to the component's templates or context data.
+This means you can do almost anything that you can do in standard documentation pages in your component-specific documentation, including creating {{ link('@dynamic-docs', "'dynamic' documentation") }} that is tied tightly to the component's templates or context data.
 
 <div class="Note Note--callout">
 <p>Fractal does not support the use of YAML front-matter in README.md files.</p>

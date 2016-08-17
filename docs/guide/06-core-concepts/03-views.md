@@ -56,7 +56,7 @@ It's worth familiarising yourself with Handlebars using its [documentation](http
 
 On top of the standard set of [Handlebars helpers](http://handlebarsjs.com#helpers), Fractal makes a small set of additional helpers available to your component templates and documentation pages.
 
-Using these helpers is not required in any way, although they are often helpful. If you are need to integrate your templates directly into your production site or application build you _may_ find that using them ties your templates too tightly into Fractal, in which case you might be better off {{ link('@template-engines#pristine', 'disabling them') }} or {{ link('@template-engines', 'adding your own') }}.
+Using these helpers is not required in any way, although they are often helpful. If you need to integrate your templates directly into your production site or application build you _may_ find that using them ties your templates too tightly into Fractal, in which case you might be better off {{ link('@template-engines#pristine', 'disabling them') }} or {{ link('@template-engines', 'adding your own') }}.
 
 The available helpers are:
 
