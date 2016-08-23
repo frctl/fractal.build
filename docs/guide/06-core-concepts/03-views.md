@@ -101,10 +101,32 @@ The path argument should begin with a slash and be relative to the web root. Dur
 
 #### `context`
 
-Outputs the resolved context data for a component.
+Outputs a string of the resolved context data for a component.
 
 ```handlebars
 {{context '@example'}}
+```
+
+
+#### `contextData`
+
+Returns an object containing the resolved context data for the specified component. A second data object can optionally be passed in which will override any context data properties with the same keys.
+
+This returns an object, not a string, and so is really only useful within [Handlebars subexpressions](http://handlebarsjs.com/expressions.html#subexpressions).
+
+```handlebars
+<!--
+  Include the @button-1 component template but pass in
+  the context data from @button-2
+-->
+{{> '@button-1' (contextData '@button-2') }}
+
+<!--
+  The same as above, but passing in some data to override
+   some items in the @button-2 data. 'someData' is an
+   object, i.e. {text: 'foo'}
+-->
+{{> '@button-1' (contextData '@button-2' someData) }}
 ```
 
 #### `view`
