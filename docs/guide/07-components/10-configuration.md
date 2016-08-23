@@ -173,6 +173,14 @@ context:
   listItems: ['foo','bar','baz']
 ```
 
+### default
+
+The name of the variant that should be used as the default variant. Defaults to `default`.
+
+```yaml
+context: primary
+```
+
 ### display
 
 CSS property key/value pairs that preview UIs *may* choose to use to apply to the preview rendering area. Useful for doing things like setting max-widths for components that are designed to only be used in sidebars.

@@ -102,6 +102,29 @@ The 'default' variant is created implicitly from the component configuration dat
 }
 ```
 
+If you _don't_ want to use the name 'default', you can specify the name of the variant to be used as the default variant by using the `default` property within the component's configuration. For example:
+
+
+```js
+// notifications.config.json
+{
+	"title": "Notification Banner",
+	"default": "primary", // default will now be the variant with the name 'primary'
+	"variants": [
+		{
+			// this is the 'default' variant
+			"name": "primary",
+			"label": "Primary"
+		},
+		{
+			"name": "secondary",
+			"label": "Secondary"
+		},
+		// other variants...
+	]
+}
+```
+
 ### Creating file-based variants
 
 If you want to create a variant that has different markup from the default component view, you can also create a variant by adding another view file into the same directory as the default component view. This needs to be named in the format `<component-name>--<variant-name>.hbs` (or with the appropriate file extension for the template engine you are using).
