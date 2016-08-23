@@ -84,9 +84,35 @@ In this example all of the variants will use the same view template, but will p
 
 Similarly, by specifying a top-level `status` value, all variants will *inherit* that status unless explicitly specified, as the `success` variant does.
 
-#### The default variant
+### Creating file-based variants
 
-The 'default' variant is created implicitly from the component configuration data. However if you want to manually override anything for the default variant you can also explicitly create a variant with the name `default` and set its properties there. For example, to change the navigation label from 'Default' to 'Base' you could do this:
+If you want to create a variant that has different markup from the default component view, you can also create a variant by adding another view file into the same directory as the default component view. This needs to be named in the format `<component-name>--<variant-name>.hbs` (or with the appropriate file extension for the template engine you are using).
+
+For instance, we could recreate the example above using files by creating the following file structure:
+
+```
+├── components
+│   └── notification
+│   │   ├── notification--success.hbs
+│   │   ├── notification--warning.hbs
+│   │   └── notification.hbs
+```
+
+Each variant can then have its own markup, and by default will be rendered with whatever context data is defined in the parent component's configuration file (if any).
+
+### Mixing configuration and file based variants
+
+It is also possible to mix the two approaches described above, which is useful when you want to define a variant with its own view file but which also has some additional configuration data associated with it.
+
+By defining a variant view file called `notification--success.hbs` you are actually defining the view template to be used for the `success` variant. If that variant is **not** defined in the components' config file then it is rendered with the default component context data and information. However if a variant with that name *is* defined in the component configuration, then that view will be used when rendering that component, and any configuration data (such as `label` etc) will be applied to that view.
+
+So by combining both examples above, each of the notification banner variants would have both their own markup *and* their own context data (and status, etc).
+
+## The default variant
+
+Every component has a default variant. When you render a component, you are in fact rendering it's default variant, even if you have not explicitly created one.
+
+The 'default' variant is created implicitly from component configuration data. However if you want to manually override anything for the default variant you can also explicitly create a variant with the name `default` and set its properties there. For example, to change the navigation label from 'Default' to 'Base' you could do this:
 
 ```js
 // notifications.config.json
@@ -125,29 +151,28 @@ If you _don't_ want to use the name 'default', you can specify the name of the v
 }
 ```
 
-### Creating file-based variants
+### Default variants and context data
 
-If you want to create a variant that has different markup from the default component view, you can also create a variant by adding another view file into the same directory as the default component view. This needs to be named in the format `<component-name>--<variant-name>.hbs` (or with the appropriate file extension for the template engine you are using).
+Context data defined at the component level will cascade down to all the variants of that component. If you do not wish to have context data shared between variants, but _do_ wish to have context data available to the default variant, then simply skip defining a top-level context object and instead set it directly on the default component, like so:
 
-For instance, we could recreate the example above using files by creating the following file structure:
-
+```js
+// notifications.config.json
+{
+	"title": "Notification Banner",
+	"context": {}, // no shared context
+	"variants": [
+		{
+			"name": "default",
+			"label": "Base",
+			"context": {
+				// this context is only applied to the default variant
+				"message": "This is a standard notification"
+			}
+		},
+		// other variants...
+	]
+}
 ```
-├── components
-│   └── notification
-│   │   ├── notification--success.hbs
-│   │   ├── notification--warning.hbs
-│   │   └── notification.hbs
-```
-
-Each variant can then have its own markup, and by default will be rendered with whatever context data is defined in the parent component's configuration file (if any).
-
-### Mixing configuration and file based variants
-
-It is also possible to mix the two approaches described above, which is useful when you want to define a variant with its own view file but which also has some additional configuration data associated with it.
-
-By defining a variant view file called `notification--success.hbs` you are actually defining the view template to be used for the `success` variant. If that variant is **not** defined in the components' config file then it is rendered with the default component context data and information. However if a variant with that name *is* defined in the component configuration, then that view will be used when rendering that component, and any configuration data (such as `label` etc) will be applied to that view.
-
-So by combining both examples above, each of the notification banner variants would have both their own markup *and* their own context data (and status, etc).
 
 ## Referencing variants
 
