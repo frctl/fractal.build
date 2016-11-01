@@ -125,7 +125,7 @@ You can also combine *ordering* and *hiding* by constructing a filename such as 
 
 ## Escaping Handlebars expressions
 
-Sometimes you may want to show a piece of code that itself contains a Handlebars expression, without that expression being parsed out at the rendering step. To do this you can prefix the expression with an underscore:
+Sometimes you may want to show a piece of code that itself contains a Handlebars expression, without that expression being parsed out at the rendering step. To do this you can prefix the expression with a backslash:
 
 {% raw %}
 ```handlebars
