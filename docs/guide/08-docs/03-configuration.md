@@ -126,7 +126,7 @@ fractal.docs.set('statuses', {
 How the collection of documentation pages will be referenced in any titles.
 
 ```js
-fractal.components.set('title', 'Pages'); // default is 'Documentation'
+fractal.docs.set('title', 'Pages'); // default is 'Documentation'
 ```
 
 ## Page properties
