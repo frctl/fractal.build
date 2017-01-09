@@ -107,7 +107,7 @@ fractal.components.set('path', __dirname + '/src/components');
 The set of available statuses that can be assigned to components. See the {{ link('@statuses', 'statuses documentation') }} for details of the default values and how to override them as required.
 
 ```js
-fractal.components.set('statuse', {
+fractal.components.set('statuses', {
     doing: {
         label: "Doing",
         description: "I'm doing it.",
