@@ -5,7 +5,7 @@ title: Components
 
 'Component' is a generic term used by Fractal to describe individual pieces of your website's UI.
 
-**Fractal considers every piece of you markup to be a component**. A component could be a tiny chunk of HTML for a text input, it could be a whole page or it could be something in between.
+**Fractal considers every piece of your markup to be a component**. A component could be a tiny chunk of HTML for a text input, it could be a whole page or it could be something in between.
 
 Unlike some other systems, Fractal does not enforce any specific nomenclature or taxonomy on your components - you are free to organise and name them as you wish.
 
