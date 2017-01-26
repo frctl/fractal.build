@@ -42,7 +42,7 @@ So a `button.hbs` file in the components directory will be identified as a compo
 │   └── button.hbs
 ```
 
-Simple components can have {{ link('@configuration-files', 'configuration files') }} associated with them. These must must reside in the same directory and have the same name as the component but have a `.config.{js|json|yml}` file extension. So a JSON configuration file for the button component would be called `button.config.json`.
+Simple components can have {{ link('@configuration-files', 'configuration files') }} associated with them. These must reside in the same directory and have the same name as the component but have a `.config.{js|json|yml}` file extension. So a JSON configuration file for the button component would be called `button.config.json`.
 
 ```tree
 ├── components
