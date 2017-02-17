@@ -177,7 +177,7 @@ This variable is only set in {{ link('@preview-layouts', 'component preview layo
 If you wish to customise the default Handlebars instance for components and/or documentation pages, you can do so by requiring the adapter and configuring it with custom helpers.
 
 <div class="Note Note--callout">
-<p>Note that you will need to run `npm install --save @frctl/handlebars` to install the `@frctl/handlebars` package into your project directly before you can strat customising it.</p>
+<p>Note that you will need to run `npm install --save @frctl/handlebars` to install the `@frctl/handlebars` package into your project directly before you can start customising it.</p>
 </div>
 
 ```js
