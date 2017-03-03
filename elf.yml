@@ -6,4 +6,4 @@ deploy:
   server: fractal
   domain: fractal.build
 devbox:
-    domain: fractal-docs.elf
+    domain: fractal-build.elf

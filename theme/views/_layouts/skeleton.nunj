@@ -47,8 +47,8 @@
     <footer class="Frame-footer">
         <div class="Coda Frame-inner">
             <div class="Coda-section">
-                <a  class="Coda-clearleft" href="https://clearleft.com">
-                    {{ macros.svg('clearleft', '55') }}
+                <a class="Coda-clearleft" href="https://clearleft.com">
+                    <img width="80" src="http://clearleft.s3.amazonaws.com/logo.png" style="position: relative; top: 7px;">
                 </a>
             </div>
             <div class="Coda-section">
