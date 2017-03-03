@@ -47,12 +47,12 @@
     <footer class="Frame-footer">
         <div class="Coda Frame-inner">
             <div class="Coda-section">
-                <a  class="Coda-clearleft" href="http://clearleft.com">
+                <a  class="Coda-clearleft" href="https://clearleft.com">
                     {{ macros.svg('clearleft', '55') }}
                 </a>
             </div>
             <div class="Coda-section">
-                <p class="Coda-credit">A <a href="http://clearleft.com">Clearleft</a> project.</p>
+                <p class="Coda-credit">A <a href="https://clearleft.com">Clearleft</a> project.</p>
                 <p class="Coda-copyright">&copy; 2016 <a href="http://allmarkedup.com">Mark Perkins</a>. Released under an <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
             </div>
         </div>
