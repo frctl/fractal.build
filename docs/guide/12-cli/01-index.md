@@ -25,6 +25,7 @@ module.exports = fractal; // export the configured Fractal instance for use by t
 ```
 
 <div class="Note Note--callout">
+<h3>Note for Windows users</h3>
 <p>On Windows, a conflicting command-line application prevents you from running Fractal commands from the project's root directory (where <code>fractal.js</code> is). To use the CLI, you can <strong>run commands from a subdirectory</strong> or <strong>change the name of Fractal's configuration file</strong>. (See <a href="https://github.com/frctl/fractal/issues/118#issuecomment-255254117" title="frctl/fractal issue 118">the Github issue</a> for more details.)</p>
 </div>
 
