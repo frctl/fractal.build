@@ -1,9 +1,0 @@
-repository: git@github.com:frctl/docs.git
-webroot: dist
-build: ['npm update', 'gulp', 'gulp fractal:build']
-deploy:
-  branch: master
-  server: fractal
-  domain: fractal.build
-devbox:
-    domain: fractal-build.elf

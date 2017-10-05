@@ -33,7 +33,7 @@
     "scripts": {
         "start": "node index.js",
         "dev": "fractal start --sync",
-        "now-build": "gulp",
-        "export": "fractal build"
+        "export": "fractal build",
+        "deploy": "fractal build && cd site && now"
     }
 }

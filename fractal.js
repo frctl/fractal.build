@@ -26,7 +26,7 @@ fractal.docs.set('path', `${__dirname}/docs`);
  * Configure the web interface.
  */
 
-fractal.web.set('builder.dest', 'dist');
+fractal.web.set('builder.dest', 'site/pages');
 
 fractal.web.theme(require('./theme')({
     imagePath: 'assets/img',
