@@ -73,7 +73,7 @@ An example sub-theme folder structure, based on the default Mandelbrot theme wit
 
 Some things to note:
 
-* Theme customisation is be done in the `index.js` file, and this file should then `export` the customised theme instance (see example `index.js` file below).
+* Theme customisation is done in the `index.js` file, and this file should then `export` the customised theme instance (see example `index.js` file below).
 * The `views` directory is where templates used override the default theme templates live. In this case the partial `header.nunj` is being customised.
 * The `assets` directory contains static assets for the sub theme that can be linked to from the templates.
 
