@@ -26,20 +26,20 @@ The button component can be included within other components like this:
 This template for this component looks like this:
 
 ```
-{{view @button}}
+{{view '@button'}}
 ```
 
 and it therefore expects a set of data to render it that is in the following format:
 
 ```
-{{context @button}}
+{{context '@button'}}
 ```
 
 ````
 
 
 
-When rendered, the `{{view @button}}` and `{{context @button}}` expressions would be evaluated, and the _actual_ view template code and sample context data would be rendered in place.
+When rendered, the `{{view '@button'}}` and `{{context '@button'}}` expressions would be evaluated, and the _actual_ view template code and sample context data would be rendered in place.
 
 Later on, if the `button` component template or context data is updated, then the documentation will also be automatically updated to match the changes, so it will never go out of date.
 
