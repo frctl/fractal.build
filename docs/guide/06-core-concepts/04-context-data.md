@@ -110,9 +110,9 @@ The reference syntax only applies to items of **the same type** - a component ca
 
  ## Dynamic data
 
- Fractal provides the option {{ link('@configuration-files#javascript-module-format', 'to use CommonJS-style modules') }} to define configuration data for components and documentation pages. Whilst slightly more complex than using JSON or YAML as a data format, it has the advantage of letting you be able to use the full power of JavaScript to generate context data for your components.
+ Fractal provides the option {{ link('@configuration-files#javascript-module-format', 'to use CommonJS-style modules') }} to define configuration data for components and documentation pages. Whilst slightly more complex than using JSON or YAML as a data format, it has the advantage of allowing you to use the full power of JavaScript to generate context data for your components.
 
- This can be handy if you want to provide data to your components from an API, or to use a library such as [Faker](https://github.com/marak/Faker.js) to generate placeholder data for your components.
+ This can be handy if you want to provide data to your components from an API, or use a library such as [Faker](https://github.com/marak/Faker.js) to generate placeholder data for your components.
 
  You can use any NodeJS functionality or NPM modules you like in your configuration data files, so the possibilities for generating dynamic data are effectively endless!
 
@@ -122,7 +122,7 @@ The reference syntax only applies to items of **the same type** - a component ca
 
  First you'll need to make sure you have installed Faker in your component library project - `npm install faker --save`.
 
- And now let's look at an example `member-list.config.js` file and see how we can use Faker to dynamically generate a list of members for us.
+ Now let's look at an example `member-list.config.js` file and see how we can use Faker to dynamically generate a list of members for us.
 
  ```js
  // member-list.config.js
@@ -146,7 +146,7 @@ The reference syntax only applies to items of **the same type** - a component ca
  };
  ```
 
- When our component is now rendered with this data, we will get a list of ten members, all with realistic names and email addresses. And if we want to generate 100 list items instead, all we have to do is update the value of the `memberCount` constant to 100.
+ When our component is rendered with this data, we will get a list of ten members, all with realistic names and email addresses. And if we want to generate 100 list items instead, all we have to do is update the value of the `memberCount` constant to 100.
 
  Obviously this is a simple example, but the principle can often be useful when you want to preview components with large amounts of data in them.
 
@@ -154,7 +154,7 @@ The reference syntax only applies to items of **the same type** - a component ca
 
  If you already have an API for your site or application, and you want to preview your components using 'real' data (or indeed if you want to use content from any other APIs) then you can handle that in your component configuration files too.
 
- The key to this is that if any values in the context data are [Promises](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise), Fractal will first wait for those promises to be resolved before rendering the template using the context data. So we can use a Promise-based request module (such as [request-promise](https://github.com/request/request-promise)) to make API requests and then just pass the returned promise into our context data object.
+ The key to this is, if any values in the context data are [Promises](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise), Fractal will first wait for those promises to be resolved before rendering the template using the context data. So we can use a Promise-based request module (such as [request-promise](https://github.com/request/request-promise)) to make API requests and then pass the returned promise into our context data object.
 
  In the following example, we are going to make a request to our fictional members API endpoint, which returns a JSON-encoded list of members.
 
@@ -189,4 +189,4 @@ The reference syntax only applies to items of **the same type** - a component ca
  };
  ```
 
- Now when the component is rendered, it will first make an API request to the endpoint and wait for the Promise (and its associated `then()` step) to be resolved before using the output to pass as context data to the template.
+ Now when the component is rendered, it will first make an API request to the endpoint and wait for the Promise (and its associated `then()` step) to be resolved, before passing the output as context data to the template.
