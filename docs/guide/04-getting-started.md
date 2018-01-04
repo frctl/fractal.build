@@ -76,7 +76,7 @@ A full list of project configuration options for the various parts of Fractal ca
 
 ### 3. Create your first component
 
-Components can be very simple, consisting of just a single view template file, or much more complex. To get up and running we are going just create the simplest possible component by adding a single file called `alert.hbs` into **the components directory**.
+Components can be very simple, consisting of just a single view template file, or much more complex. To get up and running we are going create the simplest possible component by adding a single file called `alert.hbs` into **the components directory**.
 
 ```html
 <!-- src/components/alert.hbs -->
