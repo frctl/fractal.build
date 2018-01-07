@@ -122,4 +122,4 @@ Once it has booted up you should see something like this in your terminal window
 
 If so, visit the 'Local URL' (It should be something like http://localhost:3000) and have a look at your component library's web UI.
 
-The {{ link('@web', 'web UI docs') }} has full details on the options available when starting up development servers, as well as information on0 how to run static HTML exports of your component library UI and more.
+The {{ link('@web', 'web UI docs') }} has full details on the options available when starting up development servers, as well as information on how to run static HTML exports of your component library UI and more.
