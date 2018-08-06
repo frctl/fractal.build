@@ -1,5 +1,6 @@
 {% macro wrap(start, end) %}
 {{ start }}
-{{ caller() | md }}
+{% set result = caller() %}
+{{ result.toString() | md }}
 {{ end }}
 {% endmacro %}
