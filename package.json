@@ -34,6 +34,6 @@
         "start": "node index.js",
         "dev": "fractal start --sync",
         "export": "fractal build",
-        "deploy": "fractal build && cd site && now"
+        "deploy": "fractal build && cd site && now --public"
     }
 }
