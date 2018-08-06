@@ -8,10 +8,12 @@ Built using Fractal's own documentation engine with a custom theme, exported to 
 
 1. Download or clone this repo
 2. Install dependencies: `npm install`
-3. Start the development server: `gulp dev`
+3. Start the development server: `npm run dev`
 
-## Exporting static build (for hosting)
+# fractal.build deployment and hosting
 
-To export a static build, use the `gulp build` command.
+http://fractal.build is hosted using [Zeit Now](https://zeit.co/now). In order to deploy updates to the live site you need to be a member of the frctl team on Zeit.
 
-The static build includes an `.htaccess` file to generate 'pretty' URLs.
+You can generate a new Now-compatible export and automatically deploy a new instance using the `npm run deploy` command.
+
+> Note that this will deploy a new instance at a temporary URL - if you are happy with the changes you must then [alias the fractal.build domain to the latest deployment](https://zeit.co/docs/getting-started/assign-a-domain-name#2.-using-a-custom-domain,-managed-by-now) - i.e. `now alias temporary-domain-name.now.sh fractal.build`
