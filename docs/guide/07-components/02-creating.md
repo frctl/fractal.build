@@ -194,4 +194,4 @@ In order to associate files with our blockquote component, we will need to turn 
 │   │   └── README.md
 ```
 
-`README.md` files, if present, will parsed and used by Fractal to generate notes about the component. Other files (which can be called anything you like) will be taken to be associated with this component. Web UI themes can then display these alongside the rendered views.
+`README.md` files, if present, will be parsed and used by Fractal to generate notes about the component. Other files (which can be called anything you like) will be taken to be associated with this component. Web UI themes can then display these alongside the rendered views.
